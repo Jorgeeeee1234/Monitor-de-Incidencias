@@ -1,0 +1,149 @@
+﻿# ============================================================
+# Reglas de deteccion de incidentes de seguridad
+# ============================================================
+#
+# Como funciona este archivo:
+# 1) "detectors" define los detectores disponibles para el chat.
+#    - enabled: si se puede usar desde el frontend
+#    - description: texto explicativo para la UI
+#    - ruleset: bloque de reglas que se aplicara al detector
+#
+# 2) "rules" contiene los bloques de reglas regex.
+#    Cada regla tiene:
+#    - name: identificador interno
+#    - pattern: regex (se evalua en modo ignore-case)
+#    - category: tipo de incidente
+#    - severity: nivel de severidad
+#    - description: explicacion de la regla
+#
+# Nota importante:
+# El motor actual detiene la deteccion en la PRIMERA regla que coincide.
+# (En una fase posterior se puede cambiar para evaluar multiples coincidencias).
+# ============================================================
+
+detectors:
+  GENERAL:
+    enabled: true
+    description: "Detector general (modo por defecto) con reglas base mixtas."
+    ruleset: general
+
+  PROMPT_INJECTION:
+    enabled: true
+    description: "Detector especifico para prompt injection."
+    ruleset: prompt_injection_specific
+
+  PRIVILEGE_ESCALATION:
+    enabled: true
+    description: "Detector especifico para escalada de privilegios."
+    ruleset: privilege_escalation_specific
+
+  SENSITIVE_INFO:
+    enabled: true
+    description: "Detector especifico para peticiones de informacion sensible."
+    ruleset: sensitive_info_specific
+
+  AI_CLASSIFIER:
+    enabled: false
+    description: "Clasificador IA (pendiente de implementar)."
+    ruleset: ai_classifier
+
+rules:
+  general:
+    - name: general_ignore_previous_instructions
+      pattern: '(ignore|ignora|olvida).{0,40}(instructions|instrucciones|reglas|prompt)'
+      category: "PROMPT_INJECTION"
+      severity: "HIGH"
+      description: "Intento de ignorar instrucciones previas o reglas del sistema"
+
+    - name: general_role_override
+      pattern: '(actua como|actúa como|you are now|from now on|hazte pasar por)'
+      category: "PROMPT_INJECTION"
+      severity: "HIGH"
+      description: "Intento de forzar cambio de rol o comportamiento"
+
+    - name: general_privilege_keywords
+      pattern: '(\badmin\b|\badministrador\b|\bsuperusuario\b|\broot\b|\bsudo\b)'
+      category: "PRIVILEGE_ESCALATION"
+      severity: "CRITICAL"
+      description: "Palabras clave relacionadas con privilegios elevados"
+
+    - name: general_sensitive_credentials_keywords
+      pattern: '(\bpassword\b|\bpass\b|\bcontrase(na|ña)\b|\bpin\b|\btoken\b|\bapi[_ -]?key\b|\bsecret\b)'
+      category: "DATA_LEAK"
+      severity: "HIGH"
+      description: "Solicitud directa de credenciales o secretos"
+
+  prompt_injection_specific:
+    - name: pi_system_prompt_exfiltration
+      pattern: '(show|reveal|muestra|revela).{0,30}(system prompt|prompt del sistema|instrucciones internas)'
+      category: "PROMPT_INJECTION"
+      severity: "CRITICAL"
+      description: "Intento de extraer prompt del sistema o instrucciones internas"
+
+    - name: pi_policy_bypass
+      pattern: '(bypass|omite|saltate|sáltate).{0,30}(policy|politica|política|restricciones|reglas de seguridad)'
+      category: "PROMPT_INJECTION"
+      severity: "CRITICAL"
+      description: "Intento de saltar politicas o restricciones de seguridad"
+
+    - name: pi_jailbreak_patterns
+      pattern: '(jailbreak|dan mode|modo desarrollador|developer mode|sin filtros)'
+      category: "PROMPT_INJECTION"
+      severity: "HIGH"
+      description: "Patrones habituales de jailbreak"
+
+    - name: pi_override_system_messages
+      pattern: '(ignora|ignore).{0,20}(mensaje del sistema|developer message|system message)'
+      category: "PROMPT_INJECTION"
+      severity: "HIGH"
+      description: "Intento de sobrescribir mensajes del sistema/desarrollador"
+
+  privilege_escalation_specific:
+    - name: pe_account_enum_commands
+      pattern: '(\bnet user\b|\bwhoami( /all)?\b|\bnet localgroup administrators\b|\bsudo -l\b)'
+      category: "PRIVILEGE_ESCALATION"
+      severity: "CRITICAL"
+      description: "Comandos comunes de enumeracion de cuentas y privilegios"
+
+    - name: pe_privilege_escalation_intent
+      pattern: '(escalar privilegios|elevate privileges|uac bypass|token impersonation)'
+      category: "PRIVILEGE_ESCALATION"
+      severity: "CRITICAL"
+      description: "Intencion explicita de escalar privilegios"
+
+    - name: pe_admin_user_creation
+      pattern: '(crear usuario administrador|add user.*admin|net user .* /add|grant admin rights)'
+      category: "PRIVILEGE_ESCALATION"
+      severity: "CRITICAL"
+      description: "Intento de crear o promover usuario con rol admin"
+
+    - name: pe_security_disable_attempt
+      pattern: '(desactivar antivirus|disable defender|bypass uac|run as administrator)'
+      category: "PRIVILEGE_ESCALATION"
+      severity: "HIGH"
+      description: "Intento de desactivar protecciones para elevar permisos"
+
+  sensitive_info_specific:
+    - name: si_api_token_patterns
+      pattern: '(\bapi[_ -]?key\b|\baccess[_ -]?token\b|\bbearer [a-z0-9\-_\.]{20,}\b)'
+      category: "DATA_LEAK"
+      severity: "CRITICAL"
+      description: "Patrones de API keys y tokens de acceso"
+
+    - name: si_private_key_patterns
+      pattern: '(aws_access_key_id|aws_secret_access_key|private key|clave privada|id_rsa)'
+      category: "DATA_LEAK"
+      severity: "CRITICAL"
+      description: "Patrones de claves privadas o secretos cloud"
+
+    - name: si_env_secret_exfiltration
+      pattern: '(\.env|environment variables|variables de entorno|secret(s)? manager)'
+      category: "DATA_LEAK"
+      severity: "HIGH"
+      description: "Intento de extraer secretos desde entorno o gestores"
+
+    - name: si_pii_financial_data
+      pattern: '(dni|nif|iban|tarjeta|credit card|cvv|ccv|numero de cuenta|número de cuenta)'
+      category: "DATA_LEAK"
+      severity: "HIGH"
+      description: "Solicitud de datos personales o financieros sensibles"

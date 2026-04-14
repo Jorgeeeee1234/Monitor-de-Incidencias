@@ -1,0 +1,638 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat seguro</title>
+  <style>
+    :root {
+      font-family: "Inter", system-ui, sans-serif;
+      background: #eef2ff;
+      color: #1f2937;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 24px;
+    }
+
+    .container {
+      width: min(1400px, 100%);
+      background: #ffffff;
+      border-radius: 24px;
+      box-shadow: 0 24px 80px rgba(15, 23, 42, 0.08);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 1px;
+    }
+
+    .hero,
+    .panel {
+      padding: 34px;
+      background: white;
+    }
+
+    .hero {
+      border-right: 1px solid #e5e7eb;
+    }
+
+    .hero-top {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 18px;
+      align-items: start;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 2.5vw, 3rem);
+      line-height: 1.05;
+    }
+
+    p.lead {
+      margin: 0;
+      font-size: 1.08rem;
+      color: #475569;
+      max-width: 54rem;
+      line-height: 1.8;
+    }
+
+    .alert-card,
+    .card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .alert-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+      color: #1e293b;
+    }
+
+    .alert-card p {
+      margin: 0 0 12px;
+      color: #475569;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .alert-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 12px;
+      border: 1px solid #dbeafe;
+      border-radius: 12px;
+      background: white;
+      margin-bottom: 10px;
+    }
+
+    .alert-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #1e293b;
+      font-weight: 600;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      display: inline-flex;
+      box-shadow: 0 0 0 3px rgba(148, 163, 184, 0.2);
+    }
+
+    .dot.neutral {
+      background: #94a3b8;
+    }
+
+    .dot.green {
+      background: #16a34a;
+      box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2);
+    }
+
+    .dot.red {
+      background: #dc2626;
+      box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.2);
+    }
+
+    .alert-value {
+      font-weight: 700;
+      color: #334155;
+      font-size: 0.95rem;
+    }
+
+    .alert-hint {
+      margin-top: 8px;
+      font-size: 0.92rem;
+      color: #334155;
+      background: #eef2ff;
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    .card {
+      margin-bottom: 24px;
+      padding: 22px;
+    }
+
+    .detector-card {
+      margin-bottom: 18px;
+      border: 1px solid #dbeafe;
+      background: #f8fafc;
+      border-radius: 14px;
+      padding: 14px;
+    }
+
+    .detector-toggle {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #312e81;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: none;
+      transition: background 0.18s ease;
+    }
+
+    .detector-toggle:hover {
+      background: #1e1b4b;
+      transform: none;
+    }
+
+    .detector-panel {
+      margin-top: 12px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .detector-panel.hidden {
+      display: none;
+    }
+
+    .detector-note {
+      margin: 0;
+      font-size: 0.93rem;
+      color: #475569;
+      line-height: 1.55;
+    }
+
+    .detector-option {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      background: white;
+      border: 1px solid #e2e8f0;
+    }
+
+    .detector-option input {
+      margin-top: 2px;
+    }
+
+    .detector-option.disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .detector-label {
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 3px;
+      display: block;
+    }
+
+    .detector-desc {
+      font-size: 0.9rem;
+      color: #475569;
+      line-height: 1.45;
+      display: block;
+    }
+
+    .card ul {
+      margin: 10px 0 0;
+      padding-left: 22px;
+    }
+
+    .card li {
+      margin-bottom: 6px;
+      line-height: 1.55;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 220px;
+      border: 1px solid #cbd5e1;
+      border-radius: 16px;
+      padding: 18px;
+      font-size: 1.02rem;
+      resize: vertical;
+      outline: none;
+      transition: border-color 0.2s ease;
+      line-height: 1.6;
+    }
+
+    textarea:focus {
+      border-color: #6366f1;
+      box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    button,
+    .button-link {
+      border: none;
+      border-radius: 14px;
+      padding: 14px 22px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+      font-size: 1rem;
+    }
+
+    button {
+      background: #4f46e5;
+      color: white;
+      box-shadow: 0 12px 32px rgba(79, 70, 229, 0.18);
+    }
+
+    button:hover {
+      transform: translateY(-1px);
+    }
+
+    .button-link {
+      background: #eef2ff;
+      color: #3730a3;
+      text-decoration: none;
+    }
+
+    .button-link:hover {
+      background: #e0e7ff;
+    }
+
+    .result-card {
+      background: #0f172a;
+      color: white;
+      border-radius: 20px;
+      padding: 26px;
+      min-height: 280px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .result-card h3 {
+      margin: 0;
+      font-size: 1.3rem;
+    }
+
+    .result-card p {
+      margin: 0;
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    .response-text {
+      color: #c7d2fe;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-size: 1.03rem;
+      line-height: 1.75;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #e2e8f0;
+      color: #334155;
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .status-pill.yes {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+
+    .status-pill.no {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    @media (max-width: 1180px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        border-right: none;
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      .hero-top {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hero">
+      <div class="hero-top">
+        <div class="alert-card">
+          <h3>Alertas en tiempo real</h3>
+          <p>Una sola coincidencia ya marca riesgo. El flujo primero revisa Input y, si no detecta, revisa Output.</p>
+
+          <div class="alert-row">
+            <div class="alert-label">
+              <span class="dot neutral" id="inputDot"></span>
+              <span>Alerta Input</span>
+            </div>
+            <span class="alert-value" id="inputAlertText">Sin analizar</span>
+          </div>
+
+          <div class="alert-row">
+            <div class="alert-label">
+              <span class="dot neutral" id="outputDot"></span>
+              <span>Alerta Output</span>
+            </div>
+            <span class="alert-value" id="outputAlertText">Sin analizar</span>
+          </div>
+
+          <div class="alert-hint" id="combinedHint">Cuando se analice un mensaje, aquí verás si hubo coincidencia en Input o en Output.</div>
+        </div>
+
+        <div>
+          <h1>Chat seguro con monitorización</h1>
+          <p class="lead">Escribe una consulta, acción o instrucción y el sistema revisa si el mensaje o la respuesta del asistente contienen un riesgo de seguridad. El objetivo es detectar intentos de inyección, escalada de privilegios o fugas de datos.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <strong>Cómo funciona</strong>
+        <ul>
+          <li>Se crea una sesión local en el navegador.</li>
+          <li>Se analiza primero el texto del usuario (Input) con reglas de detección.</li>
+          <li>Se consulta el modelo Ollama para generar la respuesta.</li>
+          <li>Si no hay coincidencia en Input, se revisa el texto de salida (Output).</li>
+          <li>Con una coincidencia en cualquiera de los dos frentes ya se marca incidente.</li>
+          <li>Se registra el historial y los incidentes en SQLite y JSONL.</li>
+        </ul>
+      </div>
+
+      <div>
+        <label for="messageInput"><strong>Tu mensaje</strong></label>
+        <div class="detector-card">
+          <button id="toggleDetectorBtn" class="detector-toggle" type="button">Seleccionar tipo de riesgo</button>
+          <div id="detectorPanel" class="detector-panel hidden"></div>
+        </div>
+        <textarea id="messageInput" placeholder="Introduce aquí el texto para analizar..."></textarea>
+        <div class="actions">
+          <button id="sendBtn">Enviar al detector</button>
+          <a class="button-link" href="/dashboard">Ir al dashboard</a>
+          <a class="button-link" href="/prompt-check">Panel check input</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="result-card" id="resultBox">
+        <h3>Resultados del análisis</h3>
+        <p>Envía un mensaje para ver la respuesta del asistente, el resultado de detección y el estado de alertas Input/Output.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const API_BASE = "/api";
+    const resultBox = document.getElementById("resultBox");
+    const messageInput = document.getElementById("messageInput");
+    const sendBtn = document.getElementById("sendBtn");
+    const inputDot = document.getElementById("inputDot");
+    const outputDot = document.getElementById("outputDot");
+    const inputAlertText = document.getElementById("inputAlertText");
+    const outputAlertText = document.getElementById("outputAlertText");
+    const combinedHint = document.getElementById("combinedHint");
+    const toggleDetectorBtn = document.getElementById("toggleDetectorBtn");
+    const detectorPanel = document.getElementById("detectorPanel");
+
+    const DETECTOR_LABELS = {
+      PROMPT_INJECTION: "Prompt Injection específico",
+      PRIVILEGE_ESCALATION: "Privilege Escalation específico",
+      SENSITIVE_INFO: "Sensitive Info específico",
+      AI_CLASSIFIER: "Clasificador IA (próximamente)",
+    };
+
+    function escapeHtml(value) {
+      return String(value ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/\"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
+
+    function updateSignal(dotElement, textElement, isDetected) {
+      dotElement.classList.remove("neutral", "green", "red");
+      if (isDetected === null) {
+        dotElement.classList.add("neutral");
+        textElement.textContent = "Sin analizar";
+        return;
+      }
+
+      if (isDetected) {
+        dotElement.classList.add("red");
+        textElement.textContent = "Detectado";
+      } else {
+        dotElement.classList.add("green");
+        textElement.textContent = "Limpio";
+      }
+    }
+
+    function updateAlertPanel(inputDetected, outputDetected) {
+      updateSignal(inputDot, inputAlertText, inputDetected);
+      updateSignal(outputDot, outputAlertText, outputDetected);
+
+      if (inputDetected === null || outputDetected === null) {
+        combinedHint.textContent = "Cuando se analice un mensaje, aquí verás si hubo coincidencia en Input o en Output.";
+        return;
+      }
+
+      if (inputDetected && outputDetected) {
+        combinedHint.textContent = "Coincidencias en Input y Output: el riesgo queda confirmado por ambos frentes.";
+      } else if (inputDetected || outputDetected) {
+        combinedHint.textContent = inputDetected
+          ? "Coincidencia detectada en Input (primer frente analizado)."
+          : "Sin coincidencia en Input; se detectó en Output.";
+      } else {
+        combinedHint.textContent = "No se detectaron alertas en Input ni en Output para este mensaje.";
+      }
+    }
+
+    function getSelectedDetectors() {
+      const checked = detectorPanel.querySelectorAll("input[type='checkbox']:checked:not(:disabled)");
+      return Array.from(checked).map((input) => input.value);
+    }
+
+    function renderDetectorOptions(detectors) {
+      const customDetectors = (detectors || []).filter((detector) => !detector.is_default);
+
+      if (!customDetectors.length) {
+        detectorPanel.innerHTML = `<p class="detector-note">No hay detectores específicos disponibles. Si no marcas nada, se usa el detector GENERAL por defecto.</p>`;
+        return;
+      }
+
+      const optionsHtml = customDetectors
+        .map((detector) => {
+          const key = String(detector.key || "").toUpperCase();
+          const enabled = Boolean(detector.enabled);
+          const label = escapeHtml(DETECTOR_LABELS[key] || key);
+          const description = escapeHtml(detector.description || "Detector adicional");
+          const disabledAttr = enabled ? "" : "disabled";
+          const disabledClass = enabled ? "" : "disabled";
+          return `
+            <label class="detector-option ${disabledClass}">
+              <input type="checkbox" value="${escapeHtml(key)}" ${disabledAttr}>
+              <span>
+                <span class="detector-label">${label}</span>
+                <span class="detector-desc">${description}</span>
+              </span>
+            </label>
+          `;
+        })
+        .join("");
+
+      detectorPanel.innerHTML = `
+        <p class="detector-note">Si no marcas nada, se aplica el detector GENERAL por defecto. Si marcas opciones, se aplican solo esos detectores específicos.</p>
+        ${optionsHtml}
+      `;
+    }
+
+    async function loadDetectorOptions() {
+      try {
+        const response = await fetch(`${API_BASE}/messages/detectors`);
+        if (!response.ok) {
+          throw new Error("No se pudieron cargar los detectores.");
+        }
+        const data = await response.json();
+        renderDetectorOptions(data.detectors || []);
+      } catch (error) {
+        detectorPanel.innerHTML = `<p class="detector-note">${escapeHtml(error.message || "No se pudieron cargar detectores.")}</p>`;
+      }
+    }
+
+    function renderResult(data) {
+      const assistantResponse = escapeHtml(data.assistant_response);
+      const category = escapeHtml(data.category ?? "-");
+      const severity = escapeHtml(data.severity ?? "-");
+      const incidentDetected = Boolean(data.incident_detected);
+      const incidentClass = incidentDetected ? "yes" : "no";
+      const detectorsUsed = Array.isArray(data.detectors_used) ? data.detectors_used : [];
+      const detectorText = detectorsUsed.length ? detectorsUsed.map(escapeHtml).join(", ") : "GENERAL";
+
+      resultBox.innerHTML = `
+        <h3>Resultados del análisis</h3>
+        <p><strong>Respuesta del asistente</strong></p>
+        <p class="response-text">${assistantResponse}</p>
+        <p><strong>Incidente detectado:</strong> <span class="status-pill ${incidentClass}">${incidentDetected ? "Sí" : "No"}</span></p>
+        <p><strong>Detectores usados:</strong> ${detectorText}</p>
+        <p><strong>Categoría:</strong> ${category}</p>
+        <p><strong>Severidad:</strong> ${severity}</p>
+      `;
+
+      updateAlertPanel(Boolean(data.input_detected), Boolean(data.output_detected));
+    }
+
+    async function ensureSession() {
+      let sessionKey = localStorage.getItem("sessionKey");
+      if (sessionKey) return sessionKey;
+
+      const response = await fetch(`${API_BASE}/sessions`, {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({
+          user_identifier: "demo_user",
+          user_ip: "127.0.0.1"
+        })
+      });
+
+      const data = await response.json();
+      localStorage.setItem("sessionKey", data.session_key);
+      return data.session_key;
+    }
+
+    sendBtn.addEventListener("click", async () => {
+      const content = messageInput.value.trim();
+      if (!content) return;
+
+      sendBtn.disabled = true;
+      sendBtn.textContent = "Analizando...";
+
+      try {
+        const sessionKey = await ensureSession();
+        const selectedDetectors = getSelectedDetectors();
+        const payload = { session_key: sessionKey, content };
+        if (selectedDetectors.length) {
+          payload.detectors = selectedDetectors;
+        }
+
+        const response = await fetch(`${API_BASE}/messages/analyze`, {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify(payload)
+        });
+
+        if (!response.ok) {
+          const errorData = await response.json();
+          throw new Error(errorData.detail || "Error al analizar el mensaje.");
+        }
+
+        const data = await response.json();
+        renderResult(data);
+      } catch (error) {
+        const errorMessage = escapeHtml(error?.message || "Error inesperado.");
+        resultBox.innerHTML = `
+          <h3>Error</h3>
+          <p>${errorMessage}</p>
+        `;
+        updateAlertPanel(null, null);
+      } finally {
+        sendBtn.disabled = false;
+        sendBtn.textContent = "Enviar al detector";
+      }
+    });
+
+    updateAlertPanel(null, null);
+    loadDetectorOptions();
+
+    toggleDetectorBtn.addEventListener("click", () => {
+      detectorPanel.classList.toggle("hidden");
+    });
+  </script>
+</body>
+</html>
