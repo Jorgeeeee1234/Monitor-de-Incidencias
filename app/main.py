@@ -1,6 +1,10 @@
 from fastapi import FastAPI
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
+from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi.errors import RateLimitExceeded
+from slowapi.middleware import SlowAPIMiddleware
+from slowapi.util import get_remote_address
 
 from app.database import Base, engine
 from app.api.controllers.session_controller import router as session_router
@@ -10,7 +14,12 @@ from app.api.controllers.dashboard_controller import router as dashboard_router
 from app.api.controllers.viewbd_controller import router as viewbd_router
 from app.api.controllers.prompt_check_controller import router as prompt_check_router
 
+limiter = Limiter(key_func=get_remote_address, default_limits=["60/minute"])
+
 app = FastAPI(title="Security Incident Registry")
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
+app.add_middleware(SlowAPIMiddleware)
 
 Base.metadata.create_all(bind=engine)
 

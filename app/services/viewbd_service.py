@@ -1,7 +1,10 @@
+import re
 from datetime import date, datetime
 
 from sqlalchemy import MetaData, Table, func, inspect, select
 from sqlalchemy.orm import Session
+
+_VALID_TABLE_NAME = re.compile(r'^[a-zA-Z_][a-zA-Z0-9_]*$')
 
 
 class ViewBDService:
@@ -43,6 +46,8 @@ class ViewBDService:
         return {"tables": tables_data}
 
     def get_table_rows(self, table_name: str, limit: int = 100):
+        if not _VALID_TABLE_NAME.match(table_name):
+            raise ValueError("Invalid table name")
         if table_name not in self._table_names():
             raise ValueError("Table not found")
 

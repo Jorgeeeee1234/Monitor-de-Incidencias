@@ -1,3 +1,4 @@
+from sqlalchemy import func, not_
 from app.domain.models import SecurityIncident
 
 
@@ -6,11 +7,20 @@ class DashboardService:
         self.db = db
 
     def get_summary(self):
-        incidents = self.db.query(SecurityIncident).all()
+        total = self.db.query(func.count(SecurityIncident.id)).scalar()
+        critical = self.db.query(func.count(SecurityIncident.id)).filter(
+            SecurityIncident.severity == "CRITICAL"
+        ).scalar()
+        high = self.db.query(func.count(SecurityIncident.id)).filter(
+            SecurityIncident.severity == "HIGH"
+        ).scalar()
+        open_count = self.db.query(func.count(SecurityIncident.id)).filter(
+            not_(SecurityIncident.status.in_(["RESOLVED", "CLOSED"]))
+        ).scalar()
 
         return {
-            "total_incidents": len(incidents),
-            "critical_count": sum(1 for i in incidents if i.severity == "CRITICAL"),
-            "high_count": sum(1 for i in incidents if i.severity == "HIGH"),
-            "open_count": sum(1 for i in incidents if i.status not in {"RESOLVED", "CLOSED"}),
+            "total_incidents": total,
+            "critical_count": critical,
+            "high_count": high,
+            "open_count": open_count,
         }

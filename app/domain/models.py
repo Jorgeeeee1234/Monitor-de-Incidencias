@@ -1,5 +1,5 @@
 from datetime import datetime
-from sqlalchemy import Column, Integer, String, Text, DateTime, Float, ForeignKey, Boolean
+from sqlalchemy import Column, Index, Integer, String, Text, DateTime, Float, ForeignKey, Boolean
 from sqlalchemy.orm import relationship
 
 from app.database import Base
@@ -49,16 +49,16 @@ class SecurityIncident(Base):
     id = Column(Integer, primary_key=True, index=True)
     incident_code = Column(String(40), unique=True, nullable=False)
     session_id = Column(Integer, ForeignKey("user_sessions.id"), nullable=False)
-    category = Column(String(40), nullable=False)
-    severity = Column(String(20), nullable=False)
+    category = Column(String(40), nullable=False, index=True)
+    severity = Column(String(20), nullable=False, index=True)
     priority = Column(String(20), nullable=False)
-    status = Column(String(30), nullable=False)
+    status = Column(String(30), nullable=False, index=True)
     confidence = Column(Float, default=0.0)
     detection_method = Column(String(60), nullable=False)
     input_text = Column(Text, nullable=False)
     output_text = Column(Text, nullable=True)
     notes = Column(Text, nullable=True)
-    created_at = Column(DateTime, default=datetime.utcnow)
+    created_at = Column(DateTime, default=datetime.utcnow, index=True)
     resolved_at = Column(DateTime, nullable=True)
 
     session = relationship("UserSession", back_populates="incidents")

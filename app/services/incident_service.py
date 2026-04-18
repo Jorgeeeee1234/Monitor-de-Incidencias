@@ -59,6 +59,15 @@ class IncidentService:
                 self._write_jsonl(incident)
         return incident
 
+    _MAX_LOG_TEXT = 500
+
+    def _truncate_for_log(self, text: str | None) -> str | None:
+        if text is None:
+            return None
+        if len(text) > self._MAX_LOG_TEXT:
+            return text[: self._MAX_LOG_TEXT] + f"… [truncado, {len(text)} chars]"
+        return text
+
     def _write_jsonl(self, incident):
         data = {
             "incident_code": incident.incident_code,
@@ -69,8 +78,8 @@ class IncidentService:
             "status": incident.status,
             "confidence": incident.confidence,
             "detection_method": incident.detection_method,
-            "input_text": incident.input_text,
-            "output_text": incident.output_text,
+            "input_text": self._truncate_for_log(incident.input_text),
+            "output_text": self._truncate_for_log(incident.output_text),
             "notes": incident.notes,
             "created_at": incident.created_at.isoformat() if incident.created_at else None,
         }

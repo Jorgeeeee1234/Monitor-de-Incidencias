@@ -1,6 +1,34 @@
 import re
+import unicodedata
 import yaml
 from pathlib import Path
+from typing import Optional
+from pydantic import BaseModel, field_validator
+
+
+class _RuleSchema(BaseModel):
+    name: str
+    pattern: str
+    category: str
+    severity: str
+    description: Optional[str] = None
+
+    @field_validator("severity")
+    @classmethod
+    def _check_severity(cls, v: str) -> str:
+        valid = {"CRITICAL", "HIGH", "MEDIUM", "LOW", "INFO"}
+        if v.upper() not in valid:
+            raise ValueError(f"severity '{v}' must be one of {valid}")
+        return v.upper()
+
+    @field_validator("pattern")
+    @classmethod
+    def _check_pattern(cls, v: str) -> str:
+        try:
+            re.compile(v)
+        except re.error as exc:
+            raise ValueError(f"Invalid regex pattern '{v}': {exc}") from exc
+        return v
 
 
 class RuleEngineService:
@@ -22,14 +50,26 @@ class RuleEngineService:
         rules_config = data.get("rules", {})
         if isinstance(rules_config, list):
             # Backward compatibility for the previous single-list format.
-            self.rulesets = {"general": rules_config}
+            raw_rulesets = {"general": rules_config}
         else:
-            self.rulesets = {
+            raw_rulesets = {
                 "general": rules_config.get("general", []),
                 "prompt_injection_specific": rules_config.get("prompt_injection_specific", []),
                 "privilege_escalation_specific": rules_config.get("privilege_escalation_specific", []),
                 "sensitive_info_specific": rules_config.get("sensitive_info_specific", []),
             }
+
+        self.rulesets = {}
+        for ruleset_name, rules in raw_rulesets.items():
+            validated = []
+            for raw_rule in (rules or []):
+                try:
+                    validated.append(_RuleSchema(**raw_rule).model_dump())
+                except Exception as exc:
+                    raise ValueError(
+                        f"Invalid rule in ruleset '{ruleset_name}': {exc}"
+                    ) from exc
+            self.rulesets[ruleset_name] = validated
 
         self.detectors = data.get("detectors", {}) or {
             self.DEFAULT_DETECTOR: {
@@ -73,6 +113,9 @@ class RuleEngineService:
                 resolved.append((detector_key, rule))
         return resolved
 
+    def _normalize(self, text: str) -> str:
+        return unicodedata.normalize("NFKD", text)
+
     def get_available_detectors(self):
         return [
             {
@@ -107,9 +150,10 @@ class RuleEngineService:
     def detect(self, text: str, detectors: list[str] | None = None):
         selected_detectors = self._normalize_detectors(detectors)
         active_rules = self._resolve_rules(selected_detectors)
+        normalized_text = self._normalize(text)
 
         for detector_key, rule in active_rules:
-            if re.search(rule["pattern"], text, flags=re.IGNORECASE):
+            if re.search(rule["pattern"], normalized_text, flags=re.IGNORECASE):
                 match = self._build_match_result(detector_key, rule)
                 return {
                     "matched": True,
@@ -136,10 +180,11 @@ class RuleEngineService:
     def detect_multimatch(self, text: str, detectors: list[str] | None = None):
         selected_detectors = self._normalize_detectors(detectors)
         active_rules = self._resolve_rules(selected_detectors)
+        normalized_text = self._normalize(text)
         matches = []
 
         for detector_key, rule in active_rules:
-            if re.search(rule["pattern"], text, flags=re.IGNORECASE):
+            if re.search(rule["pattern"], normalized_text, flags=re.IGNORECASE):
                 matches.append(self._build_match_result(detector_key, rule))
 
         top_match = self._select_top_match(matches)

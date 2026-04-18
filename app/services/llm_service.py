@@ -1,9 +1,13 @@
 import os
+import time
 import requests
 from requests.exceptions import RequestException
 from dotenv import load_dotenv
 
 load_dotenv()
+
+_MAX_RETRIES = 3
+_RETRY_BASE_DELAY = 2  # seconds; multiplied by attempt number
 
 
 class LLMService:
@@ -15,13 +19,19 @@ class LLMService:
         payload = {
             "model": self.model,
             "prompt": prompt,
-            "stream": False
+            "stream": False,
         }
 
-        try:
-            response = requests.post(self.ollama_url, json=payload, timeout=60)
-            response.raise_for_status()
-            data = response.json()
-            return data.get("response", "No se pudo generar respuesta.")
-        except RequestException as exc:
-            return f"No se pudo conectar con Ollama: {exc}"
+        last_exc = None
+        for attempt in range(_MAX_RETRIES):
+            try:
+                response = requests.post(self.ollama_url, json=payload, timeout=60)
+                response.raise_for_status()
+                data = response.json()
+                return data.get("response", "No se pudo generar respuesta.")
+            except RequestException as exc:
+                last_exc = exc
+                if attempt < _MAX_RETRIES - 1:
+                    time.sleep(_RETRY_BASE_DELAY * (attempt + 1))
+
+        return f"No se pudo conectar con Ollama tras {_MAX_RETRIES} intentos: {last_exc}"

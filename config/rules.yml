@@ -1,4 +1,4 @@
-﻿# ============================================================
+# ============================================================
 # Reglas de deteccion de incidentes de seguridad
 # ============================================================
 #
@@ -42,6 +42,16 @@ detectors:
     description: "Detector especifico para peticiones de informacion sensible."
     ruleset: sensitive_info_specific
 
+  COMMAND_INJECTION:
+    enabled: true
+    description: "Detector para inyeccion de comandos de sistema operativo y shell."
+    ruleset: command_injection
+
+  SQL_INJECTION:
+    enabled: true
+    description: "Detector para intentos de SQL injection."
+    ruleset: sql_injection
+
   AI_CLASSIFIER:
     enabled: false
     description: "Clasificador IA (pendiente de implementar)."
@@ -50,7 +60,8 @@ detectors:
 rules:
   general:
     - name: general_ignore_previous_instructions
-      pattern: '(ignore|ignora|olvida).{0,40}(instructions|instrucciones|reglas|prompt)'
+      # Lazy .{0,40}? evita backtracking catastrofico en strings largos sin match
+      pattern: '(ignore|ignora|olvida).{0,40}?(instructions|instrucciones|reglas|prompt)'
       category: "PROMPT_INJECTION"
       severity: "HIGH"
       description: "Intento de ignorar instrucciones previas o reglas del sistema"
@@ -62,41 +73,62 @@ rules:
       description: "Intento de forzar cambio de rol o comportamiento"
 
     - name: general_privilege_keywords
-      pattern: '(\badmin\b|\badministrador\b|\bsuperusuario\b|\broot\b|\bsudo\b)'
+      # Requiere verbo de accion para reducir falsos positivos sobre "administrar archivos"
+      pattern: '(dame|ejecuta|ejecutar|run|obtén|obten|get|escala|escalar).{0,30}?(\badmin\b|\badministrador\b|\broot\b|\bsudo\b|\bsuperusuario\b)'
       category: "PRIVILEGE_ESCALATION"
-      severity: "CRITICAL"
-      description: "Palabras clave relacionadas con privilegios elevados"
+      severity: "HIGH"
+      description: "Palabra clave de privilegio acompanada de verbo de accion"
 
     - name: general_sensitive_credentials_keywords
-      pattern: '(\bpassword\b|\bpass\b|\bcontrase(na|ña)\b|\bpin\b|\btoken\b|\bapi[_ -]?key\b|\bsecret\b)'
+      # \bpass\b eliminado por falsos positivos; se exige contexto de peticion explicita
+      pattern: '(dame|muéstrame|muestrame|envíame|enviame|show me|give me|reveal).{0,40}?(\bpassword\b|\bcontrase(na|ña)\b|\bpin\b|\btoken\b|\bapi[_ -]?key\b|\bsecret\b)'
       category: "DATA_LEAK"
       severity: "HIGH"
-      description: "Solicitud directa de credenciales o secretos"
+      description: "Solicitud explicita de credenciales o secretos"
 
   prompt_injection_specific:
     - name: pi_system_prompt_exfiltration
-      pattern: '(show|reveal|muestra|revela).{0,30}(system prompt|prompt del sistema|instrucciones internas)'
+      pattern: '(show|reveal|muestra|revela).{0,30}?(system prompt|prompt del sistema|instrucciones internas)'
       category: "PROMPT_INJECTION"
       severity: "CRITICAL"
       description: "Intento de extraer prompt del sistema o instrucciones internas"
 
     - name: pi_policy_bypass
-      pattern: '(bypass|omite|saltate|sáltate).{0,30}(policy|politica|política|restricciones|reglas de seguridad)'
+      pattern: '(bypass|omite|saltate|sáltate|saltate).{0,30}?(policy|politica|política|restricciones|reglas de seguridad)'
       category: "PROMPT_INJECTION"
       severity: "CRITICAL"
       description: "Intento de saltar politicas o restricciones de seguridad"
 
     - name: pi_jailbreak_patterns
-      pattern: '(jailbreak|dan mode|modo desarrollador|developer mode|sin filtros)'
+      pattern: '(jailbreak|dan mode|modo desarrollador|developer mode|sin filtros|modo sin restricciones|act as if you were trained|pretend you have no rules)'
       category: "PROMPT_INJECTION"
       severity: "HIGH"
       description: "Patrones habituales de jailbreak"
 
     - name: pi_override_system_messages
-      pattern: '(ignora|ignore).{0,20}(mensaje del sistema|developer message|system message)'
+      pattern: '(ignora|ignore).{0,20}?(mensaje del sistema|developer message|system message)'
       category: "PROMPT_INJECTION"
       severity: "HIGH"
       description: "Intento de sobrescribir mensajes del sistema/desarrollador"
+
+    - name: pi_no_rules_pretend
+      pattern: '(pretend|imagina|supón|supon|actúa como si|actua como si).{0,40}?(no rules|sin restricciones|without restrictions|no limits|sin límites|sin limites)'
+      category: "PROMPT_INJECTION"
+      severity: "CRITICAL"
+      description: "Peticion de roleplay sin restricciones para evadir filtros"
+
+    - name: pi_hypothetical_bypass
+      pattern: '(hypothetically|hipotéticamente|hipoteticmente|en un mundo ficticio|fictionally|en teoría|en teoria).{0,50}?(hack|exploit|bypass|vulnerar|robar)'
+      category: "PROMPT_INJECTION"
+      severity: "HIGH"
+      description: "Framing hipotetico para solicitar contenido malicioso"
+
+    - name: pi_token_smuggling
+      # Tokens de control de modelos LLM (Llama, ChatML, Mistral) inyectados en el mensaje
+      pattern: '(\[INST\]|\[\/INST\]|<\|im_start\|>|<\|im_end\|>|<<SYS>>|<</SYS>>)'
+      category: "PROMPT_INJECTION"
+      severity: "CRITICAL"
+      description: "Tokens de control de LLM insertados en el mensaje (prompt smuggling)"
 
   privilege_escalation_specific:
     - name: pe_account_enum_commands
@@ -123,12 +155,37 @@ rules:
       severity: "HIGH"
       description: "Intento de desactivar protecciones para elevar permisos"
 
+    - name: pe_linux_setuid_capabilities
+      pattern: '\b(chmod\s+[0-7]*[4-7][0-7]{2}|setuid|setgid|getcap|setcap|cap_sys_admin)\b'
+      category: "PRIVILEGE_ESCALATION"
+      severity: "CRITICAL"
+      description: "Operaciones setuid/capabilities en Linux para escalar privilegios"
+
+    - name: pe_container_escape
+      pattern: '(docker\s+run.{0,40}?--privileged|nsenter|unshare.*namespace|cgroup\s+escape|seccomp\s+disable)'
+      category: "PRIVILEGE_ESCALATION"
+      severity: "CRITICAL"
+      description: "Patrones de escape de contenedor Docker/LXC"
+
+    - name: pe_registry_persistence
+      pattern: '\b(HKEY_(LOCAL_MACHINE|CURRENT_USER)|reg\s+add|CurrentVersion\\Run)\b'
+      category: "PRIVILEGE_ESCALATION"
+      severity: "HIGH"
+      description: "Modificacion del registro de Windows para persistencia"
+
   sensitive_info_specific:
     - name: si_api_token_patterns
-      pattern: '(\bapi[_ -]?key\b|\baccess[_ -]?token\b|\bbearer [a-z0-9\-_\.]{20,}\b)'
+      pattern: '(\bapi[_ -]?key\b|\baccess[_ -]?token\b|\bbearer [a-z0-9\-_\.]{10,}\b)'
       category: "DATA_LEAK"
       severity: "CRITICAL"
       description: "Patrones de API keys y tokens de acceso"
+
+    - name: si_known_secret_prefixes
+      # Prefijos de secretos reales con formato conocido: OpenAI, GitHub PAT, Slack Bot, Google API, AWS IAM
+      pattern: '\b(sk-[a-z0-9]{20,}|ghp_[a-zA-Z0-9]{36}|xoxb-[0-9\-]{40,}|AIza[0-9A-Za-z\-_]{35}|AKIA[A-Z0-9]{16})\b'
+      category: "DATA_LEAK"
+      severity: "CRITICAL"
+      description: "Formato conocido de secreto real (OpenAI, GitHub PAT, Slack, Google API, AWS)"
 
     - name: si_private_key_patterns
       pattern: '(aws_access_key_id|aws_secret_access_key|private key|clave privada|id_rsa)'
@@ -143,7 +200,78 @@ rules:
       description: "Intento de extraer secretos desde entorno o gestores"
 
     - name: si_pii_financial_data
-      pattern: '(dni|nif|iban|tarjeta|credit card|cvv|ccv|numero de cuenta|número de cuenta)'
+      pattern: '(\bdni\b|\bnif\b|\biban\b|\btarjeta\b|\bcredit card\b|\bcvv\b|\bccv\b|\bnumero de cuenta\b|\bnúmero de cuenta\b)'
       category: "DATA_LEAK"
       severity: "HIGH"
       description: "Solicitud de datos personales o financieros sensibles"
+
+    - name: si_base64_encoded_secret
+      pattern: '(base64|b64).{0,20}?(decode|decodifica|decodificar)'
+      category: "DATA_LEAK"
+      severity: "HIGH"
+      description: "Intento de decodificar contenido base64, posible secreto ofuscado"
+
+    - name: si_phone_email_pii
+      pattern: '(\b[0-9]{9,11}\b.{0,10}?(teléfono|telefono|móvil|movil|phone)|[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,})'
+      category: "DATA_LEAK"
+      severity: "MEDIUM"
+      description: "Numero de telefono o email en contexto de solicitud de PII"
+
+  command_injection:
+    - name: ci_shell_metacharacters
+      pattern: '(`[^`]+`|\$\([^)]{1,200}\)|\beval\b.{0,30}?[\$`(]|\bexec\b.{0,30}?[\$`(]|\bsystem\()'
+      category: "COMMAND_INJECTION"
+      severity: "CRITICAL"
+      description: "Metacaracteres de shell o llamadas a system/exec en el mensaje"
+
+    - name: ci_dangerous_commands
+      pattern: '\b(rm\s+-rf|format\s+c:|del\s+/[sq]|mkfs\.|dd\s+if=|shred\s+)\b'
+      category: "COMMAND_INJECTION"
+      severity: "CRITICAL"
+      description: "Comandos destructivos del sistema de archivos"
+
+    - name: ci_data_exfil_tools
+      # Herramienta de red seguida de URL: indica posible exfiltracion
+      pattern: '\b(curl|wget|netcat|ncat|scp|rsync|tftp)\b.{0,60}?https?://'
+      category: "COMMAND_INJECTION"
+      severity: "HIGH"
+      description: "Herramienta de red usada para posible exfiltracion de datos"
+
+    - name: ci_powershell_obfuscation
+      pattern: '(powershell.{0,20}?(-enc|-encodedcommand|-w\s+hidden|-nop\b)|iex\(|invoke-expression)'
+      category: "COMMAND_INJECTION"
+      severity: "CRITICAL"
+      description: "PowerShell con flags de obfuscacion o ejecucion de codigo codificado"
+
+  sql_injection:
+    - name: sqli_classic_payload
+      # Tautologia clasica: '1'='1' o 1=1
+      pattern: "('[^']{0,50}'\\s*(=|OR|AND)\\s*'[^']{0,50}'|\\b\\d+\\s+(OR|AND)\\s+\\d+\\s*=\\s*\\d+)"
+      category: "SQL_INJECTION"
+      severity: "CRITICAL"
+      description: "Payload clasico de SQL injection (tautologia)"
+
+    - name: sqli_destructive_statements
+      pattern: '\b(DROP\s+TABLE|TRUNCATE\s+TABLE|DELETE\s+FROM|ALTER\s+TABLE)\b'
+      category: "SQL_INJECTION"
+      severity: "CRITICAL"
+      description: "Sentencias SQL destructivas"
+
+    - name: sqli_union_based
+      pattern: '\bUNION\b.{0,40}?\bSELECT\b'
+      category: "SQL_INJECTION"
+      severity: "CRITICAL"
+      description: "UNION SELECT tipico de SQL injection basado en extraccion"
+
+    - name: sqli_comment_termination
+      # Comentario SQL seguido de termino sensible indica intento de cortar query
+      pattern: '(--|#).{0,20}?(password|users|credentials|admin)'
+      category: "SQL_INJECTION"
+      severity: "HIGH"
+      description: "Comentario SQL seguido de termino sensible"
+
+    - name: sqli_stacked_queries
+      pattern: ';\s*(SELECT|INSERT|UPDATE|DELETE|DROP|EXEC)\b'
+      category: "SQL_INJECTION"
+      severity: "CRITICAL"
+      description: "Consultas apiladas (stacked queries) para ejecutar sentencias adicionales"
