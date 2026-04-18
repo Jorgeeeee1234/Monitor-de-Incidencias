@@ -10,7 +10,8 @@ __pycache__/
 .venv/
 venv/
 env/
-
+enunciado.txt
+.claude/
 # Environment and secrets
 .env
 .env.*
