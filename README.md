@@ -9,7 +9,7 @@ Aplicacion FastAPI para:
 ## 1. Requisitos previos
 
 - Windows + PowerShell
-- Python 3.11+ instalado
+- Python 3.11+ instalado, 3.13.7
 - `pip` disponible
 - Conexion a internet para instalar dependencias/modelo la primera vez
 
