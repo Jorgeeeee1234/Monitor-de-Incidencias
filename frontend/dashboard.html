@@ -1,258 +1,219 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Dashboard de Incidencias</title>
-  <style>
-    :root {
-      font-family: "Inter", system-ui, sans-serif;
-      background: #eef2ff;
-      color: #0f172a;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      padding: 24px;
-    }
-
-    .page {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    header {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 18px;
-      margin-bottom: 28px;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(2rem, 2.4vw, 3rem);
-      line-height: 1.05;
-    }
-
-    .subtitle {
-      color: #475569;
-      max-width: 52rem;
-      line-height: 1.75;
-      margin-top: 10px;
-    }
-
-    .button-link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px 22px;
-      background: #4338ca;
-      color: white;
-      border-radius: 14px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: transform 0.18s ease, background 0.18s ease;
-    }
-
-    .button-link:hover {
-      transform: translateY(-1px);
-      background: #3730a3;
-    }
-
-    .header-actions {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .button-link.secondary {
-      background: #e0e7ff;
-      color: #312e81;
-    }
-
-    .button-link.secondary:hover {
-      background: #c7d2fe;
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-      margin-bottom: 28px;
-    }
-
-    .stat-card {
-      background: white;
-      border-radius: 20px;
-      padding: 24px;
-      border: 1px solid #dbeafe;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
-    }
-
-    .stat-card h2 {
-      margin: 0 0 10px;
-      font-size: 1.9rem;
-      color: #4338ca;
-    }
-
-    .stat-card p {
-      margin: 0;
-      color: #475569;
-      line-height: 1.7;
-    }
-
-    .incident-list {
-      display: grid;
-      gap: 18px;
-    }
-
-    .incident-item {
-      background: white;
-      border: 1px solid #c7d2fe;
-      border-radius: 20px;
-      padding: 20px;
-      transition: transform 0.18s ease, border-color 0.18s ease;
-    }
-
-    .incident-item:hover {
-      transform: translateY(-2px);
-      border-color: #4338ca;
-    }
-
-    .incident-row {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 12px;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-
-    .incident-row strong {
-      color: #1e293b;
-    }
-
-    .tag {
-      padding: 6px 12px;
-      border-radius: 999px;
-      background: #e0e7ff;
-      color: #3730a3;
-      font-weight: 700;
-      font-size: 0.92rem;
-      display: inline-flex;
-      align-items: center;
-    }
-
-    .incident-details p {
-      margin: 6px 0;
-      color: #475569;
-      line-height: 1.7;
-    }
-
-    @media (max-width: 860px) {
-      .stats-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Dashboard · Monitor de Incidencias</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/static/styles.css">
+<script src="/static/demo-fallback.js"></script>
 </head>
 <body>
-  <div class="page">
-    <header>
-      <div>
-        <h1>Dashboard de Incidencias</h1>
-        <p class="subtitle">Consulta el resumen de incidentes detectados, revisa los casos activos y revisa si hay intentos de escalada o fuga de datos.</p>
-      </div>
-      <div class="header-actions">
-        <a class="button-link secondary" href="/viewbd">Ver BD</a>
-        <a class="button-link" href="/">Volver al chat</a>
-      </div>
-    </header>
+<div class="aurora"></div>
+<div class="grain"></div>
 
-    <section class="stats-grid">
-      <article class="stat-card">
-        <h2 id="totalIncidents">0</h2>
-        <p>Total de incidentes registrados</p>
-      </article>
-      <article class="stat-card">
-        <h2 id="criticalCount">0</h2>
-        <p>Incidentes críticos</p>
-      </article>
-      <article class="stat-card">
-        <h2 id="openCount">0</h2>
-        <p>Incidentes abiertos</p>
-      </article>
-    </section>
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-mark"></div>
+    <div>Monitor de Incidencias<div><small>v2 · detección en vivo</small></div></div>
+  </div>
+  <nav class="nav">
+    <a href="/">Chat</a>
+    <a href="/prompt-check">Check input</a>
+    <a href="/dashboard" class="active">Dashboard</a>
+    <a href="/viewbd">Base de datos</a>
+  </nav>
+  <div class="live-indicator">
+    <span class="dot green" style="width:8px;height:8px"></span>
+    sync
+  </div>
+</header>
 
-    <section>
-      <h2>Incidentes recientes</h2>
-      <div class="incident-list" id="incidents"></div>
-    </section>
+<main class="page">
+  <div class="section-h">
+    <h2>Dashboard</h2>
+    <span class="tag">/ incidentes registrados</span>
   </div>
 
-    <script>
-    function escapeHtml(value) {
-      return String(value ?? "")
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/\"/g, "&quot;")
-        .replace(/'/g, "&#39;");
-    }
+  <section class="stats">
+    <div class="stat cyan fade-up">
+      <div class="glow"></div>
+      <div class="label"><span class="dot neutral" style="width:6px;height:6px;background:var(--cyan);box-shadow:0 0 8px var(--cyan);"></span>Total</div>
+      <div class="num"><span id="totalIncidents" data-num="0">0</span></div>
+      <svg class="spark" viewBox="0 0 200 36" preserveAspectRatio="none"><path stroke="var(--cyan)" d=""/></svg>
+    </div>
+    <div class="stat red fade-up" style="animation-delay: 80ms">
+      <div class="glow"></div>
+      <div class="label"><span class="dot neutral" style="width:6px;height:6px;background:var(--red);box-shadow:0 0 8px var(--red);"></span>Críticos</div>
+      <div class="num"><span id="criticalCount" data-num="0">0</span></div>
+      <svg class="spark" viewBox="0 0 200 36" preserveAspectRatio="none"><path stroke="var(--red)" d=""/></svg>
+    </div>
+    <div class="stat amber fade-up" style="animation-delay: 160ms">
+      <div class="glow"></div>
+      <div class="label"><span class="dot neutral" style="width:6px;height:6px;background:var(--amber);box-shadow:0 0 8px var(--amber);"></span>Abiertos</div>
+      <div class="num"><span id="openCount" data-num="0">0</span></div>
+      <svg class="spark" viewBox="0 0 200 36" preserveAspectRatio="none"><path stroke="var(--amber)" d=""/></svg>
+    </div>
+  </section>
 
-    async function loadSummary() {
-      const response = await fetch("/api/dashboard/summary");
-      const data = await response.json();
-      document.getElementById("totalIncidents").textContent = data.total_incidents;
-      document.getElementById("criticalCount").textContent = data.critical_count;
-      document.getElementById("openCount").textContent = data.open_count;
-    }
+  <div class="sec-head">
+    <h2>Incidentes recientes</h2>
+    <div class="filters" id="filters">
+      <button class="filter-btn active" data-filter="all">Todos</button>
+      <button class="filter-btn" data-filter="CRITICAL">Críticos</button>
+      <button class="filter-btn" data-filter="HIGH">Altos</button>
+      <button class="filter-btn" data-filter="MEDIUM">Medios</button>
+      <button class="filter-btn" data-filter="LOW">Bajos</button>
+    </div>
+  </div>
 
-    async function loadIncidents() {
-      const response = await fetch("/api/incidents");
-      const data = await response.json();
-      const container = document.getElementById("incidents");
+  <div id="incidents" class="incidents"></div>
+</main>
 
-      if (!data.length) {
-        container.innerHTML = "<p>No hay incidentes registrados todavía.</p>";
-        return;
-      }
+<script>
+function escapeHtml(v) {
+  return String(v ?? "").replace(/[&<>"']/g, (c) => ({ "&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;" }[c]));
+}
 
-      container.innerHTML = data.map(item => {
-        const incidentCode = escapeHtml(item.incident_code);
-        const severity = escapeHtml(item.severity);
-        const category = escapeHtml(item.category);
-        const status = escapeHtml(item.status);
-        const confidence = escapeHtml(item.confidence);
-        const inputText = escapeHtml(item.input_text);
-        const outputText = escapeHtml(item.output_text ?? "-");
+// Animated count-up
+function countUp(el, to, dur = 900) {
+  const start = Number(el.dataset.num) || 0;
+  const delta = to - start;
+  const t0 = performance.now();
+  function tick(now) {
+    const p = Math.min(1, (now - t0) / dur);
+    const eased = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.round(start + delta * eased).toString();
+    if (p < 1) requestAnimationFrame(tick);
+    else el.dataset.num = to;
+  }
+  requestAnimationFrame(tick);
+}
 
-        return `
-          <article class="incident-item">
-            <div class="incident-row">
-              <strong>${incidentCode}</strong>
-              <span class="tag">${severity}</span>
-            </div>
-            <div class="incident-details">
-              <p><strong>Categoría:</strong> ${category}</p>
-              <p><strong>Estado:</strong> ${status}</p>
-              <p><strong>Confianza:</strong> ${confidence}</p>
-              <p><strong>Input:</strong> ${inputText}</p>
-              <p><strong>Output:</strong> ${outputText}</p>
-            </div>
-          </article>
-        `;
-      }).join("");
-    }
+// Sparkline generator (fake-ish but seeded by value)
+function renderSpark(svg, value) {
+  const path = svg.querySelector("path");
+  const pts = [];
+  const n = 24;
+  const seed = Math.max(1, value);
+  for (let i = 0; i < n; i++) {
+    const t = i / (n - 1);
+    const noise = Math.sin(i * 1.7 + seed) * 0.3 + Math.cos(i * 0.9 + seed * 0.3) * 0.25;
+    const y = 18 + noise * 12 - t * 4;
+    pts.push([t * 200, y]);
+  }
+  // smooth curve
+  let d = `M ${pts[0][0]},${pts[0][1]}`;
+  for (let i = 1; i < pts.length; i++) {
+    const [x1, y1] = pts[i - 1];
+    const [x2, y2] = pts[i];
+    const cx = (x1 + x2) / 2;
+    d += ` Q ${cx},${y1} ${x2},${y2}`;
+  }
+  path.setAttribute("d", d);
+  // draw-on animation
+  const len = path.getTotalLength?.() || 300;
+  path.style.strokeDasharray = len;
+  path.style.strokeDashoffset = len;
+  requestAnimationFrame(() => {
+    path.style.transition = "stroke-dashoffset 1.2s ease-out";
+    path.style.strokeDashoffset = 0;
+  });
+}
 
-    loadSummary();
-    loadIncidents();
-  </script>
+async function loadSummary() {
+  try {
+    const r = await fetch("/api/dashboard/summary");
+    const d = await r.json();
+    const total = d.total_incidents ?? 0;
+    const crit  = d.critical_count ?? 0;
+    const open  = d.open_count ?? 0;
+    countUp(document.getElementById("totalIncidents"), total);
+    countUp(document.getElementById("criticalCount"), crit);
+    countUp(document.getElementById("openCount"), open);
+    document.querySelectorAll(".spark").forEach((svg, i) => {
+      const val = [total, crit, open][i] || 1;
+      renderSpark(svg, val);
+    });
+  } catch {}
+}
+
+let allIncidents = [];
+let activeFilter = "all";
+
+function sevClass(sev) {
+  const s = String(sev || "").toUpperCase();
+  if (s === "CRITICAL") return "sev-critical";
+  if (s === "HIGH") return "sev-high";
+  if (s === "MEDIUM") return "sev-medium";
+  return "sev-low";
+}
+function sevPill(sev) {
+  const s = String(sev || "").toUpperCase();
+  if (s === "CRITICAL" || s === "HIGH") return "danger";
+  if (s === "MEDIUM") return "warn";
+  return "ok";
+}
+
+function renderList() {
+  const container = document.getElementById("incidents");
+  const rows = allIncidents.filter(i => activeFilter === "all" || String(i.severity || "").toUpperCase() === activeFilter);
+  if (!rows.length) {
+    container.innerHTML = `<div class="empty"><div class="big">∅</div>Sin incidentes para este filtro.</div>`;
+    return;
+  }
+  container.innerHTML = rows.map((item, i) => {
+    const sev = escapeHtml(item.severity);
+    return `
+      <article class="incident ${sevClass(item.severity)} fade-up" style="animation-delay:${i * 40}ms" data-idx="${i}">
+        <div class="inc-code">${escapeHtml(item.incident_code)}</div>
+        <div class="inc-body">
+          <div class="cat">${escapeHtml(item.category)} · ${escapeHtml(item.status)}</div>
+          <div class="text">${escapeHtml(item.input_text || "—")}</div>
+        </div>
+        <div class="inc-meta">
+          <span class="pill ${sevPill(item.severity)}">${sev}</span>
+          <span class="mono" style="font-size:0.72rem; color:var(--ink-mute);">conf ${escapeHtml(item.confidence ?? "—")}</span>
+        </div>
+        <div class="inc-expand">
+          <dl class="kv">
+            <dt>input</dt><dd>${escapeHtml(item.input_text ?? "—")}</dd>
+            <dt>output</dt><dd>${escapeHtml(item.output_text ?? "—")}</dd>
+            <dt>estado</dt><dd>${escapeHtml(item.status)}</dd>
+            <dt>confianza</dt><dd>${escapeHtml(item.confidence ?? "—")}</dd>
+          </dl>
+        </div>
+      </article>
+    `;
+  }).join("");
+
+  container.querySelectorAll(".incident").forEach((el) => {
+    el.addEventListener("click", () => el.classList.toggle("open"));
+  });
+}
+
+async function loadIncidents() {
+  try {
+    const r = await fetch("/api/incidents");
+    allIncidents = await r.json();
+    renderList();
+  } catch {
+    document.getElementById("incidents").innerHTML = `<div class="empty">No se pudieron cargar los incidentes.</div>`;
+  }
+}
+
+document.getElementById("filters").addEventListener("click", (e) => {
+  const b = e.target.closest(".filter-btn"); if (!b) return;
+  document.querySelectorAll(".filter-btn").forEach(x => x.classList.remove("active"));
+  b.classList.add("active");
+  activeFilter = b.dataset.filter;
+  renderList();
+});
+
+loadSummary();
+loadIncidents();
+</script>
 </body>
 </html>
-
