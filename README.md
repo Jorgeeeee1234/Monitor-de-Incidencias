@@ -75,7 +75,7 @@ Con el `.venv` activo:
 uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
 ```
 
-## 8. URLs de la app
+## 8. URLs de la aplicación
 
 - Chat principal: `http://127.0.0.1:8000/`
 - Dashboard: `http://127.0.0.1:8000/dashboard`
@@ -101,7 +101,7 @@ En Swagger (`/docs`) puedes probar:
 
 ## 11. Memoria/RAM (Ollama)
 
-Para ver modelos cargados:
+Para ver los modelos cargados:
 
 ```powershell
 $ollama = "$env:LOCALAPPDATA\Programs\Ollama\ollama.exe"
@@ -120,8 +120,3 @@ if (!(Test-Path $ollama)) { throw "No encuentro ollama.exe" }
 
 & $ollama stop qwen2.5:3b
 ```
-
-## 12. Notas para GitHub
-
-- El proyecto ya ignora archivos sensibles en `.gitignore` (`.env`, `.venv`, `*.db`, logs temporales).
-- Al usar Ollama local, no necesitas exponer API keys de proveedores externos.
