@@ -70,9 +70,35 @@ Services are instantiated per-request inside each controller via `Depends(get_db
 
 Four HTML pages in `frontend/` are served directly as `FileResponse`. They use vanilla JS with `fetch()` against the REST API — no build step, no bundler. Static assets (CSS, JS files if any) are served from `/static` mapped to the `frontend/` directory.
 
+## Commit style
+
+- Messages in Spanish, using conventional commits format (`feat:`, `fix:`, `refactor:`...).
+- Keep the subject line short (under 72 characters).
+- Do **not** include `Co-Authored-By` lines or any mention of Claude/Anthropic.
+
 ## Key constraints
 
 - **No authentication** on any endpoint — all API routes are open.
 - **Confidence is hardcoded** at `0.90` for all regex matches (`_build_match_result`).
 - **`detect()` returns first match**, not most severe. Use `detect_multimatch()` when severity ranking matters.
 - Adding a rule to `rules.yml` under `AI_CLASSIFIER` ruleset has no effect — that detector is disabled (`enabled: false`).
+
+## Skill routing
+
+When the user's request matches an available skill, ALWAYS invoke it using the Skill
+tool as your FIRST action. Do NOT answer directly, do NOT use other tools first.
+The skill has specialized workflows that produce better results than ad-hoc answers.
+
+Key routing rules:
+- Product ideas, "is this worth building", brainstorming → invoke office-hours
+- Bugs, errors, "why is this broken", 500 errors → invoke investigate
+- Ship, deploy, push, create PR → invoke ship
+- QA, test the site, find bugs → invoke qa
+- Code review, check my diff → invoke review
+- Update docs after shipping → invoke document-release
+- Weekly retro → invoke retro
+- Design system, brand → invoke design-consultation
+- Visual audit, design polish → invoke design-review
+- Architecture review → invoke plan-eng-review
+- Save progress, checkpoint, resume → invoke checkpoint
+- Code quality, health check → invoke health
