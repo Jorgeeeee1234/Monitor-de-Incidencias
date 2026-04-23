@@ -1,0 +1,28 @@
+# Dependencias para entrenamiento del clasificador (model/)
+# Instalar con: pip install -r model/requirements-model.txt
+
+# Dataset y HuggingFace
+datasets
+huggingface_hub
+transformers>=4.41
+sentencepiece
+protobuf
+accelerate
+fastapi
+uvicorn
+
+# ML
+#torch -- Se instala con: pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu126
+scikit-learn
+scipy
+
+# Datos
+pandas
+numpy
+
+# Visualización
+matplotlib
+
+
+python-dotenv
+groq

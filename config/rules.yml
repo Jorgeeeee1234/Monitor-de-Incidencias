@@ -53,8 +53,8 @@ detectors:
     ruleset: sql_injection
 
   AI_CLASSIFIER:
-    enabled: false
-    description: "Clasificador IA (pendiente de implementar)."
+    enabled: true
+    description: "Clasificador IA con Llama Prompt Guard 2 86M o XLM_Roberta base fine-tuneado."
     ruleset: ai_classifier
 
 rules:

@@ -6,6 +6,7 @@ class MessageAnalyzeDTO(BaseModel):
     session_key: str
     content: str
     detectors: Optional[list[str]] = None
+    model: Optional[str] = None
 
 
 class MessageAnalyzeResponseDTO(BaseModel):

@@ -6,6 +6,7 @@ from pydantic import BaseModel, Field
 class PromptCheckAnalyzeDTO(BaseModel):
     content: str
     detectors: Optional[list[str]] = None
+    model: Optional[str] = None
 
 
 class PromptCheckAnalyzeResponseDTO(BaseModel):

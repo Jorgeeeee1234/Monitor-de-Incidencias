@@ -5,9 +5,9 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+
 model/modelo_final_xlmr_v2/
 model/data/
-upload_model.py
 # Virtual environments
 .venv/
 venv/

@@ -35,9 +35,9 @@ class PromptCheckService:
             cleaned.append(detector_key)
         return cleaned or None
 
-    def analyze_input(self, content: str, detectors: list[str] | None = None):
+    def analyze_input(self, content: str, detectors: list[str] | None = None, model: str | None = None):
         selected_detectors = self._sanitize_detectors(detectors)
-        detection = self.rule_engine.detect(content, detectors=selected_detectors)
+        detection = self.rule_engine.detect(content, model=model, detectors=selected_detectors)
 
         return {
             "incident_detected": bool(detection["matched"]),
@@ -50,9 +50,18 @@ class PromptCheckService:
             "detection_method": detection.get("detection_method"),
         }
 
-    def analyze_input_multimatch(self, content: str, detectors: list[str] | None = None):
+    def analyze_input_multimatch(
+        self,
+        content: str,
+        detectors: list[str] | None = None,
+        model: str | None = None,
+    ):
         selected_detectors = self._sanitize_detectors(detectors)
-        detection = self.rule_engine.detect_multimatch(content, detectors=selected_detectors)
+        detection = self.rule_engine.detect_multimatch(
+            content,
+            detectors=selected_detectors,
+            model=model,
+        )
 
         return {
             "incident_detected": bool(detection["matched"]),

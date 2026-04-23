@@ -5,6 +5,7 @@ from app.dto.prompt_check_dto import (
     PromptCheckAnalyzeMultiMatchResponseDTO,
     PromptCheckAnalyzeResponseDTO,
 )
+from app.services.ai_classifier_service import AIClassifierUnavailableError
 from app.services.prompt_check_service import PromptCheckService
 
 router = APIRouter()
@@ -19,9 +20,11 @@ def list_detectors():
 def analyze_input(dto: PromptCheckAnalyzeDTO):
     service = PromptCheckService()
     try:
-        return service.analyze_input(dto.content, dto.detectors)
+        return service.analyze_input(dto.content, dto.detectors, dto.model)
     except ValueError as exc:
         raise HTTPException(status_code=400, detail=str(exc))
+    except AIClassifierUnavailableError as exc:
+        raise HTTPException(status_code=503, detail=str(exc))
     except Exception as exc:
         raise HTTPException(status_code=500, detail=f"Error interno: {str(exc)}")
 
@@ -30,8 +33,10 @@ def analyze_input(dto: PromptCheckAnalyzeDTO):
 def analyze_input_multimatch(dto: PromptCheckAnalyzeDTO):
     service = PromptCheckService()
     try:
-        return service.analyze_input_multimatch(dto.content, dto.detectors)
+        return service.analyze_input_multimatch(dto.content, dto.detectors, dto.model)
     except ValueError as exc:
         raise HTTPException(status_code=400, detail=str(exc))
+    except AIClassifierUnavailableError as exc:
+        raise HTTPException(status_code=503, detail=str(exc))
     except Exception as exc:
         raise HTTPException(status_code=500, detail=f"Error interno: {str(exc)}")
