@@ -1,412 +1,185 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>ViewBD</title>
-  <style>
-    :root {
-      font-family: "Inter", system-ui, sans-serif;
-      background: #eef2ff;
-      color: #0f172a;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      padding: 24px;
-    }
-
-    .page {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      gap: 18px;
-    }
-
-    header {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 18px;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(2rem, 2.4vw, 3rem);
-      line-height: 1.05;
-    }
-
-    .subtitle {
-      color: #475569;
-      max-width: 60rem;
-      line-height: 1.7;
-      margin-top: 10px;
-    }
-
-    .header-actions {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .button-link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 12px 18px;
-      background: #4338ca;
-      color: white;
-      border-radius: 14px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: transform 0.18s ease, background 0.18s ease;
-    }
-
-    .button-link:hover {
-      transform: translateY(-1px);
-      background: #3730a3;
-    }
-
-    .button-link.secondary {
-      background: #e0e7ff;
-      color: #312e81;
-    }
-
-    .button-link.secondary:hover {
-      background: #c7d2fe;
-    }
-
-    .layout {
-      display: grid;
-      grid-template-columns: 320px 1fr;
-      gap: 18px;
-      align-items: start;
-    }
-
-    .panel {
-      background: white;
-      border-radius: 20px;
-      border: 1px solid #dbeafe;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
-      padding: 20px;
-    }
-
-    .panel h2 {
-      margin: 0 0 14px;
-      font-size: 1.2rem;
-    }
-
-    .table-buttons {
-      display: grid;
-      gap: 10px;
-    }
-
-    .table-btn {
-      border: 1px solid #c7d2fe;
-      background: #f8faff;
-      border-radius: 12px;
-      padding: 12px;
-      text-align: left;
-      cursor: pointer;
-      transition: border-color 0.16s ease, transform 0.16s ease;
-    }
-
-    .table-btn:hover {
-      border-color: #4338ca;
-      transform: translateY(-1px);
-    }
-
-    .table-btn.active {
-      background: #e0e7ff;
-      border-color: #4338ca;
-    }
-
-    .table-btn strong {
-      display: block;
-      color: #1e293b;
-      margin-bottom: 6px;
-    }
-
-    .table-btn span {
-      color: #475569;
-      font-size: 0.95rem;
-    }
-
-    .toolbar {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-bottom: 12px;
-      align-items: center;
-    }
-
-    .toolbar select,
-    .toolbar button {
-      border: 1px solid #cbd5e1;
-      border-radius: 10px;
-      padding: 9px 12px;
-      font-size: 0.95rem;
-      background: white;
-    }
-
-    .toolbar button {
-      cursor: pointer;
-      background: #4338ca;
-      color: white;
-      border-color: #4338ca;
-      font-weight: 600;
-    }
-
-    .toolbar button:hover {
-      background: #3730a3;
-    }
-
-    .meta {
-      color: #475569;
-      margin-bottom: 14px;
-    }
-
-    .table-shell {
-      border: 1px solid #dbeafe;
-      border-radius: 14px;
-      overflow: auto;
-      max-height: 66vh;
-      background: #ffffff;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      min-width: 720px;
-    }
-
-    th,
-    td {
-      padding: 10px 12px;
-      text-align: left;
-      border-bottom: 1px solid #eef2ff;
-      vertical-align: top;
-      word-break: break-word;
-      max-width: 360px;
-    }
-
-    th {
-      position: sticky;
-      top: 0;
-      background: #f8fafc;
-      color: #1e293b;
-      font-size: 0.94rem;
-      z-index: 1;
-    }
-
-    .empty-state,
-    .error-state {
-      padding: 22px;
-      border: 1px dashed #cbd5e1;
-      border-radius: 12px;
-      color: #475569;
-      background: #f8fafc;
-    }
-
-    .error-state {
-      border-color: #fecaca;
-      background: #fef2f2;
-      color: #991b1b;
-    }
-
-    @media (max-width: 1000px) {
-      .layout {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Base de datos · Monitor de Incidencias</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/static/styles.css">
+<script src="/static/demo-fallback.js"></script>
 </head>
 <body>
-  <div class="page">
-    <header>
-      <div>
-        <h1>Visualizador de Base de Datos</h1>
-        <p class="subtitle">Explora de forma visual las tablas de SQLite y revisa su contenido en tiempo real desde la aplicacion.</p>
-      </div>
-      <div class="header-actions">
-        <a class="button-link secondary" href="/dashboard">Volver al dashboard</a>
-        <a class="button-link" href="/">Volver al chat</a>
-      </div>
-    </header>
+<div class="aurora"></div>
+<div class="grain"></div>
 
-    <div class="layout">
-      <aside class="panel">
-        <h2>Tablas disponibles</h2>
-        <div id="tableButtons" class="table-buttons"></div>
-      </aside>
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-mark"></div>
+    <div>Monitor de Incidencias<div><small>v2 · detección en vivo</small></div></div>
+  </div>
+  <nav class="nav">
+    <a href="/">Chat</a>
+    <a href="/prompt-check">Check input</a>
+    <a href="/dashboard">Dashboard</a>
+    <a href="/viewbd" class="active">Base de datos</a>
+  </nav>
+  <div class="live-indicator">
+    <span class="dot green" style="width:8px;height:8px"></span>
+    sqlite
+  </div>
+</header>
 
-      <section class="panel">
-        <div class="toolbar">
-          <label for="limitSelect"><strong>Filas</strong></label>
-          <select id="limitSelect">
-            <option value="25">25</option>
-            <option value="50">50</option>
-            <option value="100" selected>100</option>
-            <option value="200">200</option>
-            <option value="500">500</option>
-          </select>
-          <button id="reloadBtn" type="button">Recargar</button>
-        </div>
-
-        <div id="tableMeta" class="meta">Selecciona una tabla para cargar su contenido.</div>
-        <div id="tableContainer"></div>
-      </section>
-    </div>
+<main class="page">
+  <div class="section-h">
+    <h2>Base de datos</h2>
+    <span class="tag">/ sqlite · inspector</span>
   </div>
 
-  <script>
-    const API_BASE = "/api/viewbd";
-    const tableButtons = document.getElementById("tableButtons");
-    const tableContainer = document.getElementById("tableContainer");
-    const tableMeta = document.getElementById("tableMeta");
-    const limitSelect = document.getElementById("limitSelect");
-    const reloadBtn = document.getElementById("reloadBtn");
+  <div class="layout">
+    <aside class="sidebar" id="tableButtons"></aside>
 
-    const state = {
-      tables: [],
-      activeTable: null,
-    };
-
-    function escapeHtml(value) {
-      return String(value ?? "")
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#39;");
-    }
-
-    function setError(message) {
-      tableContainer.innerHTML = `<div class="error-state">${escapeHtml(message)}</div>`;
-    }
-
-    function setEmpty(message) {
-      tableContainer.innerHTML = `<div class="empty-state">${escapeHtml(message)}</div>`;
-    }
-
-    function renderTableButtons() {
-      if (!state.tables.length) {
-        tableButtons.innerHTML = `<div class="empty-state">No hay tablas para mostrar.</div>`;
-        return;
-      }
-
-      tableButtons.innerHTML = state.tables
-        .map((table) => {
-          const activeClass = state.activeTable === table.name ? "active" : "";
-          return `
-            <button class="table-btn ${activeClass}" data-table="${escapeHtml(table.name)}" type="button">
-              <strong>${escapeHtml(table.name)}</strong>
-              <span>${escapeHtml(table.row_count)} filas</span>
-            </button>
-          `;
-        })
-        .join("");
-    }
-
-    function renderRows(payload) {
-      const columns = payload.columns || [];
-      const rows = payload.rows || [];
-
-      tableMeta.textContent = `Tabla: ${payload.table_name} | Mostrando ${payload.returned_rows} de ${payload.total_rows} filas`;
-
-      if (!columns.length) {
-        setEmpty("La tabla no contiene columnas.");
-        return;
-      }
-
-      if (!rows.length) {
-        setEmpty("La tabla no tiene filas.");
-        return;
-      }
-
-      const header = columns.map((column) => `<th>${escapeHtml(column)}</th>`).join("");
-      const body = rows
-        .map((row) => {
-          const cells = columns
-            .map((column) => `<td>${escapeHtml(row[column] ?? "")}</td>`)
-            .join("");
-          return `<tr>${cells}</tr>`;
-        })
-        .join("");
-
-      tableContainer.innerHTML = `
-        <div class="table-shell">
-          <table>
-            <thead><tr>${header}</tr></thead>
-            <tbody>${body}</tbody>
-          </table>
+    <section class="main">
+      <div class="toolbar">
+        <div class="search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3-3"/></svg>
+          <input type="text" id="searchInput" placeholder="Filtrar filas…">
         </div>
-      `;
+        <select id="limitSelect">
+          <option value="25">25 filas</option>
+          <option value="50">50 filas</option>
+          <option value="100" selected>100 filas</option>
+          <option value="200">200 filas</option>
+          <option value="500">500 filas</option>
+        </select>
+        <button class="btn" id="reloadBtn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 12a9 9 0 0 1 15.5-6.3M21 12a9 9 0 0 1-15.5 6.3"/><path d="M21 3v6h-6M3 21v-6h6"/></svg>
+          Recargar
+        </button>
+      </div>
+
+      <div class="meta-bar" id="tableMeta">Selecciona una tabla…</div>
+      <div id="tableContainer">
+        <div class="empty">Ninguna tabla cargada.</div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<script>
+const API_BASE = "/api/viewbd";
+const tableButtons = document.getElementById("tableButtons");
+const tableContainer = document.getElementById("tableContainer");
+const tableMeta = document.getElementById("tableMeta");
+const limitSelect = document.getElementById("limitSelect");
+const reloadBtn = document.getElementById("reloadBtn");
+const searchInput = document.getElementById("searchInput");
+
+const state = { tables: [], activeTable: null, columns: [], rows: [] };
+
+function escapeHtml(v) {
+  return String(v ?? "").replace(/[&<>"']/g, (c) => ({ "&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;" }[c]));
+}
+
+function tableIcon() {
+  return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16"/></svg>`;
+}
+
+function renderButtons() {
+  if (!state.tables.length) {
+    tableButtons.innerHTML = `<div class="empty">Sin tablas.</div>`;
+    return;
+  }
+  tableButtons.innerHTML = state.tables.map((t, i) => `
+    <button class="tbtn ${state.activeTable === t.name ? 'active' : ''} fade-up" style="animation-delay:${i * 50}ms" data-table="${escapeHtml(t.name)}">
+      <span class="name"><span class="icon">${tableIcon()}</span>${escapeHtml(t.name)}</span>
+      <span class="count">${escapeHtml(t.row_count)}</span>
+    </button>
+  `).join("");
+}
+
+function renderRows(filter = "") {
+  const cols = state.columns;
+  const rows = filter
+    ? state.rows.filter(r => cols.some(c => String(r[c] ?? "").toLowerCase().includes(filter.toLowerCase())))
+    : state.rows;
+
+  if (!cols.length) { tableContainer.innerHTML = `<div class="empty">Sin columnas.</div>`; return; }
+  if (!rows.length) { tableContainer.innerHTML = `<div class="empty">Sin filas${filter ? " para este filtro" : ""}.</div>`; return; }
+
+  const thead = cols.map(c => `<th>${escapeHtml(c)}</th>`).join("");
+  const tbody = rows.map((r, i) => {
+    const tds = cols.map(c => {
+      const v = r[c];
+      if (v === null || v === undefined || v === "") return `<td class="null">—</td>`;
+      const isNum = typeof v === "number" || (/^-?\d+(\.\d+)?$/.test(String(v)));
+      return `<td class="${isNum ? 'num' : ''}">${escapeHtml(v)}</td>`;
+    }).join("");
+    return `<tr style="animation-delay:${Math.min(i * 15, 500)}ms">${tds}</tr>`;
+  }).join("");
+
+  tableContainer.innerHTML = `
+    <div class="table-shell">
+      <table>
+        <thead><tr>${thead}</tr></thead>
+        <tbody>${tbody}</tbody>
+      </table>
+    </div>
+  `;
+}
+
+async function loadTable(name) {
+  state.activeTable = name;
+  renderButtons();
+  tableMeta.textContent = `Cargando ${name}…`;
+  tableContainer.innerHTML = `<div class="table-shell" style="padding:16px">
+    ${Array.from({length: 6}).map(() => `<div class="skeleton-row"></div>`).join("")}
+  </div>`;
+
+  const limit = Number(limitSelect.value) || 100;
+  try {
+    const r = await fetch(`${API_BASE}/tables/${encodeURIComponent(name)}?limit=${limit}`);
+    if (!r.ok) {
+      const err = await r.json().catch(() => ({}));
+      throw new Error(err.detail || "No se pudo cargar.");
     }
+    const data = await r.json();
+    state.columns = data.columns || [];
+    state.rows = data.rows || [];
+    tableMeta.innerHTML = `<span style="color: var(--ink)">${escapeHtml(data.table_name)}</span> · <span>${escapeHtml(data.returned_rows)} / ${escapeHtml(data.total_rows)} filas</span>`;
+    renderRows(searchInput.value);
+  } catch (e) {
+    tableContainer.innerHTML = `<div class="err">${escapeHtml(e.message || "Error")}</div>`;
+  }
+}
 
-    async function loadTable(tableName) {
-      state.activeTable = tableName;
-      renderTableButtons();
-
-      const limit = Number(limitSelect.value) || 100;
-      try {
-        const response = await fetch(`${API_BASE}/tables/${encodeURIComponent(tableName)}?limit=${limit}`);
-        if (!response.ok) {
-          const errorData = await response.json();
-          throw new Error(errorData.detail || "No se pudo cargar la tabla.");
-        }
-        const payload = await response.json();
-        renderRows(payload);
-      } catch (error) {
-        setError(error.message || "Error cargando la tabla.");
-      }
+async function loadTables() {
+  try {
+    const r = await fetch(`${API_BASE}/tables`);
+    if (!r.ok) throw new Error();
+    const d = await r.json();
+    state.tables = d.tables || [];
+    renderButtons();
+    if (state.tables.length) loadTable(state.tables[0].name);
+    else {
+      tableMeta.textContent = "Sin tablas disponibles.";
+      tableContainer.innerHTML = `<div class="empty">La base de datos está vacía.</div>`;
     }
+  } catch {
+    tableContainer.innerHTML = `<div class="err">No se pudieron cargar las tablas.</div>`;
+  }
+}
 
-    async function loadTables() {
-      try {
-        const response = await fetch(`${API_BASE}/tables`);
-        if (!response.ok) {
-          throw new Error("No se pudo cargar el listado de tablas.");
-        }
-        const payload = await response.json();
-        state.tables = payload.tables || [];
-        renderTableButtons();
+tableButtons.addEventListener("click", (e) => {
+  const b = e.target.closest("[data-table]"); if (!b) return;
+  loadTable(b.dataset.table);
+});
+reloadBtn.addEventListener("click", () => { if (state.activeTable) loadTable(state.activeTable); });
+limitSelect.addEventListener("change", () => { if (state.activeTable) loadTable(state.activeTable); });
+searchInput.addEventListener("input", () => renderRows(searchInput.value));
 
-        if (!state.tables.length) {
-          setEmpty("No hay tablas disponibles en la base de datos.");
-          return;
-        }
-
-        await loadTable(state.tables[0].name);
-      } catch (error) {
-        tableMeta.textContent = "No se pudo cargar la informacion de base de datos.";
-        setError(error.message || "Error cargando tablas.");
-      }
-    }
-
-    tableButtons.addEventListener("click", async (event) => {
-      const button = event.target.closest("button[data-table]");
-      if (!button) return;
-      const tableName = button.getAttribute("data-table");
-      await loadTable(tableName);
-    });
-
-    reloadBtn.addEventListener("click", async () => {
-      if (!state.activeTable) return;
-      await loadTable(state.activeTable);
-    });
-
-    limitSelect.addEventListener("change", async () => {
-      if (!state.activeTable) return;
-      await loadTable(state.activeTable);
-    });
-
-    loadTables();
-  </script>
+loadTables();
+</script>
 </body>
 </html>
