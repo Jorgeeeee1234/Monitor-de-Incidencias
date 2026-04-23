@@ -6,6 +6,8 @@ __pycache__/
 .mypy_cache/
 .ruff_cache/
 
+model/modelo_final_xlmr_v2/
+model/data/
 # Virtual environments
 .venv/
 venv/

@@ -1,0 +1,30 @@
+{
+  "label2id": {
+    "benign": 0,
+    "prompt_injection": 1,
+    "jailbreak": 2,
+    "harmful_content": 3
+  },
+  "id2label": {
+    "0": "benign",
+    "1": "prompt_injection",
+    "2": "jailbreak",
+    "3": "harmful_content"
+  },
+  "class_weights": {
+    "benign": 0.954,
+    "prompt_injection": 1.8346153846153845,
+    "jailbreak": 0.7361111111111112,
+    "harmful_content": 0.954
+  },
+  "splits": {
+    "train": 1335,
+    "validation": 286,
+    "test": 287
+  },
+  "sources": [
+    "deepset/prompt-injections",
+    "jackhhao/jailbreak-classification",
+    "allenai/wildjailbreak"
+  ]
+}

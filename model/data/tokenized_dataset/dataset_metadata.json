@@ -1,0 +1,25 @@
+{
+  "label2id": {
+    "benign": 0,
+    "prompt_injection": 1,
+    "harmful_content": 2
+  },
+  "id2label": {
+    "0": "benign",
+    "1": "prompt_injection",
+    "2": "harmful_content"
+  },
+  "class_weights": {
+    "benign": 0.9734867159682279,
+    "prompt_injection": 0.8725389109834536,
+    "harmful_content": 1.20965216799401
+  },
+  "splits": {
+    "train": 12446,
+    "validation": 2659,
+    "test": 2666
+  },
+  "sources": [
+    "local_csv"
+  ]
+}

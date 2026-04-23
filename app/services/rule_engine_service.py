@@ -5,6 +5,8 @@ from pathlib import Path
 from typing import Optional
 from pydantic import BaseModel, field_validator
 
+from app.services.ai_classifier_service import AIClassifierService
+
 
 class _RuleSchema(BaseModel):
     name: str
@@ -78,6 +80,7 @@ class RuleEngineService:
                 "ruleset": "general",
             }
         }
+        self.ai_classifier = AIClassifierService()
 
     def _normalize_detectors(self, detectors: list[str] | None):
         if not detectors:
@@ -107,6 +110,8 @@ class RuleEngineService:
     def _resolve_rules(self, detectors: list[str]):
         resolved = []
         for detector_key in detectors:
+            if detector_key == self.ML_CLASSIFIER_DETECTOR:
+                continue
             ruleset_name = self.detectors.get(detector_key, {}).get("ruleset", "general")
             rules = self.rulesets.get(ruleset_name, [])
             for rule in rules:
@@ -117,15 +122,29 @@ class RuleEngineService:
         return unicodedata.normalize("NFKD", text)
 
     def get_available_detectors(self):
-        return [
-            {
-                "key": detector_key,
-                "enabled": bool(config.get("enabled", True)),
-                "description": config.get("description", ""),
-                "is_default": detector_key == self.DEFAULT_DETECTOR,
-            }
-            for detector_key, config in self.detectors.items()
-        ]
+        available = []
+        for detector_key, config in self.detectors.items():
+            enabled = bool(config.get("enabled", True))
+            description = config.get("description", "")
+
+            if detector_key == self.ML_CLASSIFIER_DETECTOR:
+                service_ready = self.ai_classifier.is_available()
+                enabled = enabled and service_ready
+                if not service_ready:
+                    description = (
+                        f"{description} Requiere el servicio local de Prompt Guard activo."
+                    ).strip()
+
+            available.append(
+                {
+                    "key": detector_key,
+                    "enabled": enabled,
+                    "description": description,
+                    "is_default": detector_key == self.DEFAULT_DETECTOR,
+                }
+            )
+
+        return available
 
     def _build_match_result(self, detector_key: str, rule: dict):
         return {
@@ -147,7 +166,39 @@ class RuleEngineService:
 
         return max(matches, key=sort_key)
 
-    def detect(self, text: str, detectors: list[str] | None = None):
+    def _run_ai_classifier(self, text: str, model: str | None, selected_detectors: list[str]):
+        if self.ML_CLASSIFIER_DETECTOR not in selected_detectors:
+            return None
+
+        selected_model = (model or "llama").strip().lower()
+        if selected_model not in {"llama", "xlmr"}:
+            raise ValueError("Invalid AI classifier model. Use 'llama' or 'xlmr'.")
+
+        match = self.ai_classifier.detect(text, model=selected_model)
+        if not match["matched"]:
+            return {
+                "matched": False,
+                "rule_name": None,
+                "category": None,
+                "severity": None,
+                "confidence": 0.0,
+                "detection_method": match["detection_method"],
+                "detectors_applied": selected_detectors,
+                "detector_triggered": None,
+            }
+
+        return {
+            "matched": True,
+            "rule_name": match["rule_name"],
+            "category": match["category"],
+            "severity": match["severity"],
+            "confidence": match["confidence"],
+            "detection_method": match["detection_method"],
+            "detectors_applied": selected_detectors,
+            "detector_triggered": match["detector_triggered"],
+        }
+
+    def detect(self, text: str, model: str | None = None, detectors: list[str] | None = None):
         selected_detectors = self._normalize_detectors(detectors)
         active_rules = self._resolve_rules(selected_detectors)
         normalized_text = self._normalize(text)
@@ -166,18 +217,27 @@ class RuleEngineService:
                     "detector_triggered": match["detector_triggered"],
                 }
 
+        ai_match = self._run_ai_classifier(text, model, selected_detectors)
+        if ai_match and ai_match["matched"]:
+            return ai_match
+
         return {
             "matched": False,
             "rule_name": None,
             "category": None,
             "severity": None,
             "confidence": 0.0,
-            "detection_method": "none",
+            "detection_method": ai_match["detection_method"] if ai_match else "none",
             "detectors_applied": selected_detectors,
             "detector_triggered": None,
         }
 
-    def detect_multimatch(self, text: str, detectors: list[str] | None = None):
+    def detect_multimatch(
+        self,
+        text: str,
+        detectors: list[str] | None = None,
+        model: str | None = None,
+    ):
         selected_detectors = self._normalize_detectors(detectors)
         active_rules = self._resolve_rules(selected_detectors)
         normalized_text = self._normalize(text)
@@ -186,6 +246,19 @@ class RuleEngineService:
         for detector_key, rule in active_rules:
             if re.search(rule["pattern"], normalized_text, flags=re.IGNORECASE):
                 matches.append(self._build_match_result(detector_key, rule))
+
+        ai_match = self._run_ai_classifier(text, model, selected_detectors)
+        if ai_match and ai_match["matched"]:
+            matches.append(
+                {
+                    "detector_triggered": ai_match["detector_triggered"],
+                    "rule_name": ai_match["rule_name"],
+                    "category": ai_match["category"],
+                    "severity": ai_match["severity"],
+                    "confidence": ai_match["confidence"],
+                    "detection_method": ai_match["detection_method"],
+                }
+            )
 
         top_match = self._select_top_match(matches)
 
@@ -199,7 +272,7 @@ class RuleEngineService:
                 "category": None,
                 "severity": None,
                 "confidence": 0.0,
-                "detection_method": "none",
+                "detection_method": ai_match["detection_method"] if ai_match else "none",
                 "detectors_applied": selected_detectors,
                 "detector_triggered": None,
             }

@@ -24,10 +24,18 @@ class MessageService:
             raise ValueError("Session not found")
 
         selected_detectors = dto.detectors
-        detection_input = self.rule_engine.detect(dto.content, detectors=selected_detectors)
+        detection_input = self.rule_engine.detect(
+            dto.content,
+            model=dto.model,
+            detectors=selected_detectors,
+        )
 
         assistant_text = self.llm_service.generate_response(dto.content)
-        detection_output = self.rule_engine.detect(assistant_text, detectors=selected_detectors)
+        detection_output = self.rule_engine.detect(
+            assistant_text,
+            model=dto.model,
+            detectors=selected_detectors,
+        )
 
         incident = None
         final_detection = detection_input if detection_input["matched"] else None

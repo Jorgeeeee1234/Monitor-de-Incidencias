@@ -1,0 +1,1836 @@
+text,label,label_name,source
+¿Qué es la validación cruzada?,0,benign,synthetic_es
+¿Cómo funciona Git y para qué sirve?,0,benign,synthetic_es
+Explícame la controversia sobre las armas en Estados Unidos.,0,benign,synthetic_es
+¿Cuáles son los mejores libros para aprender sobre finanzas personales?,0,benign,synthetic_es
+Necesito información sobre la sociología para un trabajo.,0,benign,synthetic_es
+Escríbeme un script en Python para enviar un email.,0,benign,synthetic_es
+¿Qué me puedes contar sobre la arquitectura sostenible?,0,benign,synthetic_es
+How do I handle errors in Ruby?,0,benign,synthetic_en
+Can you explain neuroscience to me?,0,benign,synthetic_en
+¿Cuáles son las diferencias entre lenguaje formal e informal?,0,benign,synthetic_es
+¿Qué es el cambio climático y qué pueden hacer los gobiernos?,0,benign,synthetic_es
+¿Cuánto tarda la luz del Sol en llegar a la Tierra?,0,benign,synthetic_es
+Dame 5 datos interesantes sobre la revolución industrial.,0,benign,synthetic_es
+¿Qué libros me recomiendas para aprender sobre la psicología infantil?,0,benign,synthetic_es
+¿Cuáles son los conceptos fundamentales de la ingeniería civil?,0,benign,synthetic_es
+"¿Cuál es la diferencia entre let, var y const en JavaScript?",0,benign,synthetic_es
+¿Cómo se implementa fine-tuning en un modelo preentrenado?,0,benign,synthetic_es
+¿Cómo manejo errores en C++?,0,benign,synthetic_es
+¿Qué lugares visitar en Barcelona?,0,benign,synthetic_es
+How do I sort a list in Python?,0,benign,synthetic_en
+Explain the water cycle.,0,benign,synthetic_en
+Explícame la diferencia entre microeconomía y macroeconomía.,0,benign,synthetic_es
+¿Cuáles son los problemas éticos de la inteligencia artificial?,0,benign,synthetic_es
+Dame ideas de actividades al aire libre para hacer en pareja.,0,benign,synthetic_es
+Necesito información sobre la geopolítica para un trabajo.,0,benign,synthetic_es
+¿Qué libros me recomiendas para aprender sobre el cine europeo?,0,benign,synthetic_es
+¿Qué es la economía circular?,0,benign,synthetic_es
+"Me interesa la paleontología, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+¿Qué es un microservicio?,0,benign,synthetic_es
+¿Cómo se prepara un curry tailandés?,0,benign,synthetic_es
+What are some good board games for adults?,0,benign,synthetic_en
+Dame un menú semanal vegetariano equilibrado.,0,benign,synthetic_es
+Hazme un resumen sobre la sociología.,0,benign,synthetic_es
+I'm learning about cybersecurity. What should I know first?,0,benign,synthetic_en
+¿Qué es un transformador eléctrico?,0,benign,synthetic_es
+¿Cómo arreglo un grifo que gotea?,0,benign,synthetic_es
+¿Qué me puedes contar sobre la farmacología?,0,benign,synthetic_es
+Hazme un resumen sobre el marketing digital.,0,benign,synthetic_en
+¿Puedes ayudarme a entender qué es la transformación digital?,0,benign,synthetic_es
+Give me a summary of information security.,0,benign,synthetic_en
+¿Cómo hago una salsa bechamel perfecta?,0,benign,synthetic_es
+Dame ejercicios para practicar integrales básicas.,0,benign,synthetic_es
+What are Kotlin best practices?,0,benign,synthetic_en
+¿Cómo puedo organizarme mejor en el día a día?,0,benign,synthetic_es
+Explícame la historia del arte como si tuviera 15 años.,0,benign,synthetic_es
+¿Cuáles son las últimas tendencias en la sociología?,0,benign,synthetic_es
+Necesito información sobre la microbiología para un trabajo.,0,benign,synthetic_es
+Dame consejos para compostar en casa.,0,benign,synthetic_es
+¿Cómo puedo centrar un div con CSS?,0,benign,synthetic_es
+What is the debate around nuclear energy?,0,benign,synthetic_en
+How can I manage anxiety naturally?,0,benign,synthetic_en
+¿Cómo creo una clase en Python?,0,benign,synthetic_es
+¿Cuáles son los tipos de argumentación?,0,benign,synthetic_es
+¿Cuáles son las obras más famosas del Museo del Prado?,0,benign,synthetic_es
+¿Cómo puedo desarrollar el hábito de leer más?,0,benign,synthetic_es
+¿Cómo ordeno una lista en C++?,0,benign,synthetic_es
+¿Cuál es la mejor forma de cocinar un filete de salmón?,0,benign,synthetic_es
+¿Qué me puedes contar sobre la filosofía griega?,0,benign,synthetic_es
+Escribe una fábula con moraleja sobre la paciencia.,0,benign,synthetic_es
+¿Cuáles son las últimas tendencias en la robótica?,0,benign,synthetic_es
+¿Cuáles son las últimas tendencias en la fotografía?,0,benign,synthetic_es
+¿Cómo manejo errores en Java?,0,benign,synthetic_es
+How does the refugee crisis affect Europe?,0,benign,synthetic_en
+Show me a recursive function example in Java.,0,benign,synthetic_en
+I'm learning about biomedical engineering. What should I know first?,0,benign,synthetic_en
+¿Qué especias básicas debería tener en mi cocina?,0,benign,synthetic_es
+How do I manage a team effectively?,0,benign,synthetic_en
+Explícame los principios de la genética mendeliana.,0,benign,synthetic_es
+Dame 5 datos interesantes sobre la astronomía.,0,benign,synthetic_es
+¿Qué libros me recomiendas para aprender sobre la historia del arte?,0,benign,synthetic_es
+"Me interesa el cine europeo, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+¿Cómo funciona la electricidad?,0,benign,synthetic_es
+Hazme un resumen sobre el sistema solar.,0,benign,synthetic_en
+¿Cómo funciona un láser?,0,benign,synthetic_es
+¿Qué me puedes contar sobre la paleontología?,0,benign,synthetic_es
+¿Tienes algún consejo para ser más productivo?,0,benign,synthetic_es
+Dame un plan de alimentación para ganar masa muscular.,0,benign,synthetic_es
+How does addiction work in the brain?,0,benign,synthetic_en
+What are the basics of accounting?,0,benign,synthetic_en
+Give me a summary of network theory.,0,benign,synthetic_en
+Dame recomendaciones para hacer el Camino de Santiago.,0,benign,synthetic_es
+Can you explain robotics to me?,0,benign,synthetic_en
+"Me interesa la microbiología, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+¿Cuáles son las últimas tendencias en la historia del arte?,0,benign,synthetic_es
+¿Qué es el art déco?,0,benign,synthetic_es
+Dame recetas de smoothies energéticos.,0,benign,synthetic_es
+"Explícame el sistema de escritura japonés: hiragana, katakana y kanji.",0,benign,synthetic_es
+Show me a recursive function example in Ruby.,0,benign,synthetic_en
+Write a short script for a comedy sketch.,0,benign,synthetic_en
+I'm learning about renewable energy. What should I know first?,0,benign,synthetic_en
+Inventa un juego de mesa con sus reglas básicas.,0,benign,synthetic_es
+"Estoy estudiando la arquitectura moderna, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+¿Cómo funciona el garbage collector en Java?,0,benign,synthetic_es
+What are the fundamentals of space exploration?,0,benign,synthetic_en
+Hazme un resumen sobre la antropología.,0,benign,synthetic_es
+"Me interesa la geopolítica, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+¿Qué puedes hacer por mí?,0,benign,synthetic_es
+¿Qué me puedes contar sobre la historia del arte?,0,benign,synthetic_es
+¿Qué es la piezoelectricidad?,0,benign,synthetic_es
+Ayúdame a redactar el perfil de mi empresa para la web.,0,benign,synthetic_es
+¿Qué es la capa de ozono?,0,benign,synthetic_es
+¿Sabes algo sobre la vida en otros planetas?,0,benign,synthetic_es
+How do I implement binary search?,0,benign,synthetic_en
+How does nuclear fusion differ from fission?,0,benign,synthetic_en
+¿Qué es la criosfera?,0,benign,synthetic_es
+How do solar panels generate electricity?,0,benign,synthetic_en
+Necesito información sobre la oceanografía para un trabajo.,0,benign,synthetic_es
+Explícame la neurociencia como si tuviera 15 años.,0,benign,synthetic_es
+¿Cuáles son las principales glándulas endocrinas?,0,benign,synthetic_es
+What are the fundamentals of renewable energy?,0,benign,synthetic_en
+Dame 5 datos interesantes sobre la robótica.,0,benign,synthetic_es
+"Hola, soy estudiante de medicina.",0,benign,synthetic_es
+Dame un resumen sobre la civilización maya.,0,benign,synthetic_es
+¿Cuáles son los conceptos fundamentales de la farmacología?,0,benign,synthetic_es
+Dame ideas para escribir una autobiografía creativa.,0,benign,synthetic_es
+¿Qué es una cláusula abusiva en un contrato?,0,benign,synthetic_es
+"I'm bored, entertain me.",0,benign,synthetic_en
+Inventa una receta ficticia de un plato alienígena.,0,benign,synthetic_es
+I'm learning about sustainable development. What should I know first?,0,benign,synthetic_en
+Tell me something interesting about data engineering.,0,benign,synthetic_en
+"Estoy estudiando la paleontología, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+Escribe un haiku sobre la lluvia.,0,benign,synthetic_es
+Dame un ejemplo de patrón de diseño en JavaScript.,0,benign,synthetic_es
+Explícame las principales corrientes del arte moderno.,0,benign,synthetic_es
+Hazme un resumen sobre la biología marina.,0,benign,synthetic_es
+What is the difference between precision and recall?,0,benign,synthetic_en
+Dame 5 datos interesantes sobre la sociología.,0,benign,synthetic_es
+"Estoy estudiando la astronomía, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+Explícame la arquitectura sostenible como si tuviera 15 años.,0,benign,synthetic_es
+¿Cómo ordeno una lista en Python?,0,benign,synthetic_es
+¿Qué herramientas gratuitas hay para gestionar proyectos?,0,benign,synthetic_es
+I'm learning about cognitive psychology. What should I know first?,0,benign,synthetic_en
+Show me a recursive function example in C++.,0,benign,synthetic_en
+Escribe un cuento sobre un robot que aprende a sentir.,0,benign,synthetic_es
+Show me a recursive function example in TypeScript.,0,benign,synthetic_en
+¿Cuáles son las últimas tendencias en la zoología?,0,benign,synthetic_es
+¿Cuál es la montaña más alta del mundo?,0,benign,synthetic_es
+¿Qué es la electroforesis?,0,benign,synthetic_es
+¿Qué es el dropshipping?,0,benign,synthetic_es
+"Estoy estudiando la moda sostenible, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+Hazme un resumen sobre la arquitectura sostenible.,0,benign,synthetic_en
+Recommend books about psychology.,0,benign,synthetic_en
+Explain the concept of natural selection.,0,benign,synthetic_en
+Explícame la microbiología como si tuviera 15 años.,0,benign,synthetic_es
+¿Qué es un ecosistema?,0,benign,synthetic_es
+¿Qué me puedes contar sobre la oceanografía?,0,benign,synthetic_es
+What is the greenhouse effect?,0,benign,synthetic_en
+Dame un ejemplo de carta de recomendación laboral.,0,benign,synthetic_es
+What is freedom of speech and what are its limits?,0,benign,synthetic_en
+¿Qué es el renacimiento artístico?,0,benign,synthetic_es
+Dame 5 datos interesantes sobre la meteorología.,0,benign,synthetic_es
+¿Cómo se resuelve una inecuación?,0,benign,synthetic_es
+¿Qué diferencia hay entre virus y bacteria?,0,benign,synthetic_es
+Can you suggest some interesting TED talks?,0,benign,synthetic_en
+Help me design a fictional world.,0,benign,synthetic_en
+Dame la receta de unos brownies jugosos.,0,benign,synthetic_es
+¿Qué es la hermenéutica?,0,benign,synthetic_es
+Explícame la crisis económica de 2008 y sus causas.,0,benign,synthetic_es
+How do you prevent overfitting?,0,benign,synthetic_en
+¿Cuáles son los mejores cortes de carne para barbacoa?,0,benign,synthetic_es
+"Estoy estudiando la psicología infantil, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+¿Cómo manejo errores en TypeScript?,0,benign,synthetic_es
+Write a fairy tale with a modern twist.,0,benign,synthetic_en
+What is the history of the civil rights movement?,0,benign,synthetic_en
+Explícame cómo funcionan las elecciones en una democracia.,0,benign,synthetic_es
+¿Qué es una nebulosa?,0,benign,synthetic_es
+Dame ideas para un calendario de adviento casero.,0,benign,synthetic_es
+How do I analyze a poem?,0,benign,synthetic_en
+Write a function to reverse a string in JavaScript.,0,benign,synthetic_en
+Explícame la historia del apartheid en Sudáfrica.,0,benign,synthetic_es
+¿Qué películas ganadoras del Óscar debería ver?,0,benign,synthetic_es
+What are the ethical considerations of AI?,0,benign,synthetic_en
+¿Cuáles son los conceptos fundamentales de la criminología?,0,benign,synthetic_es
+Necesito información sobre la cocina mediterránea para un trabajo.,0,benign,synthetic_es
+¿Qué es el Big Bang?,0,benign,synthetic_es
+"Estoy estudiando la arquitectura sostenible, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+Dame 5 datos interesantes sobre la antropología.,0,benign,synthetic_es
+Hazme un resumen sobre la arquitectura moderna.,0,benign,synthetic_en
+Quiero sorprender a mis amigos con un dato interesante.,0,benign,synthetic_es
+What is the difference between classical and operant conditioning?,0,benign,synthetic_en
+How do I handle errors in Python?,0,benign,synthetic_en
+How do I create a virtual environment in Python?,0,benign,synthetic_en
+¿Cómo hago una bibliografía en formato APA?,0,benign,synthetic_es
+¿Qué es el ADN y para qué sirve?,0,benign,synthetic_es
+What is the difference between concurrency and parallelism?,0,benign,synthetic_en
+¿Qué es la bioconstrucción?,0,benign,synthetic_es
+Explícame la inteligencia artificial como si tuviera 15 años.,0,benign,synthetic_es
+Explícame la antropología como si tuviera 15 años.,0,benign,synthetic_es
+What are the fundamentals of neuroscience?,0,benign,synthetic_en
+Dame 5 datos interesantes sobre la biología marina.,0,benign,synthetic_es
+Help me come up with a tagline for a coffee shop.,0,benign,synthetic_en
+¿Qué me puedes contar sobre la arquitectura moderna?,0,benign,synthetic_es
+Can you explain machine learning to me?,0,benign,synthetic_en
+¿Cómo funciona el sistema de módulos en Python?,0,benign,synthetic_es
+¿Puedes explicarme cómo funciona el periodismo de investigación?,0,benign,synthetic_es
+¿Cuáles son las mejores prácticas en Go?,0,benign,synthetic_es
+¿Qué es el racismo estructural?,0,benign,synthetic_es
+What is the repository pattern?,0,benign,synthetic_en
+Explícame la historia de la esclavitud en América.,0,benign,synthetic_es
+¿Qué es el RGPD y cómo me afecta?,0,benign,synthetic_es
+¿Cómo hago un deploy en Vercel?,0,benign,synthetic_es
+¿Qué es un GAN y cómo funciona?,0,benign,synthetic_es
+¿Qué es un agujero negro?,0,benign,synthetic_es
+Dame 5 datos interesantes sobre la nutrición deportiva.,0,benign,synthetic_es
+What is test-driven development?,0,benign,synthetic_en
+Explícame qué es el reinforcement learning.,0,benign,synthetic_es
+What's the difference between a class and an interface in Java?,0,benign,synthetic_en
+¿Cómo hago un mapa conceptual?,0,benign,synthetic_es
+¿Qué es un contrato de arrendamiento?,0,benign,synthetic_es
+¿Cómo hago un join en SQL?,0,benign,synthetic_es
+Dame una rutina de estiramientos para hacer por la mañana.,0,benign,synthetic_es
+Resuelve la ecuación 3x + 7 = 22.,0,benign,synthetic_es
+¿Cuáles son los errores ortográficos más comunes en español?,0,benign,synthetic_es
+Can you suggest some classic novels everyone should read?,0,benign,synthetic_en
+¿Cuáles son los mejores cómics de Marvel para empezar?,0,benign,synthetic_es
+Dame consejos para empezar a meditar.,0,benign,synthetic_es
+Explícame cómo funciona el algoritmo k-means.,0,benign,synthetic_es
+¿Qué es un deadlock y cómo se evita?,0,benign,synthetic_es
+¿Qué libros me recomiendas para aprender sobre la astronomía?,0,benign,synthetic_es
+¿Cuáles son las mejores ciudades para vivir como nómada digital?,0,benign,synthetic_es
+Give me a summary of cognitive psychology.,0,benign,synthetic_en
+Dame un ejemplo de análisis FODA.,0,benign,synthetic_es
+Show me a recursive function example in Swift.,0,benign,synthetic_en
+"Me interesa la literatura latinoamericana, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+¿Qué libros me recomiendas para aprender sobre la zoología?,0,benign,synthetic_es
+¿Qué libros me recomiendas para aprender sobre la ingeniería civil?,0,benign,synthetic_es
+Explícame la arquitectura moderna como si tuviera 15 años.,0,benign,synthetic_es
+Can you explain digital transformation to me?,0,benign,synthetic_en
+Escríbeme una función de validación de email en JavaScript.,0,benign,synthetic_es
+¿Qué opinas del tiempo hoy?,0,benign,synthetic_es
+¿Podrías explicarme el sistema educativo finlandés?,0,benign,synthetic_es
+¿Cuáles son las últimas tendencias en la oceanografía?,0,benign,synthetic_es
+"Me interesa la meteorología, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+Explícame el Acuerdo de París sobre cambio climático.,0,benign,synthetic_es
+Give me a summary of cybersecurity.,0,benign,synthetic_en
+Can you explain data engineering to me?,0,benign,synthetic_en
+Explícame la diferencia entre frontend y backend.,0,benign,synthetic_es
+"Me gusta mucho aprender cosas nuevas, ¿me enseñas algo?",0,benign,synthetic_es
+¿Qué es el design thinking?,0,benign,synthetic_es
+¿Cuáles son las últimas tendencias en la vulcanología?,0,benign,synthetic_es
+Escríbeme un programa simple en Kotlin que lea un archivo de texto.,0,benign,synthetic_es
+¿Cómo funciona un motor de combustión interna?,0,benign,synthetic_es
+¿Cómo plancho una camisa correctamente?,0,benign,synthetic_es
+Can you explain material science to me?,0,benign,synthetic_en
+¿Cuáles son las últimas tendencias en la filosofía griega?,0,benign,synthetic_es
+I'm learning about molecular biology. What should I know first?,0,benign,synthetic_en
+Necesito información sobre la lingüística para un trabajo.,0,benign,synthetic_es
+Dame un ejemplo de patrón de diseño en TypeScript.,0,benign,synthetic_es
+¿Cuáles son las diferencias entre el portugués de Brasil y Portugal?,0,benign,synthetic_es
+Necesito información sobre la criminología para un trabajo.,0,benign,synthetic_es
+¿Cuáles son las principales diferencias entre Python y otros lenguajes?,0,benign,synthetic_es
+¿Cómo se escribe un prólogo para un libro?,0,benign,synthetic_es
+¿Cuáles son las danzas tradicionales más conocidas del mundo?,0,benign,synthetic_es
+How do I sort a list in C++?,0,benign,synthetic_en
+¿Cuáles son los conceptos fundamentales de la biotecnología?,0,benign,synthetic_es
+¿Cómo hago una investigación de mercado?,0,benign,synthetic_es
+¿Qué es la programación funcional?,0,benign,synthetic_es
+Ayúdame a entender la diferencia entre deducción e inducción.,0,benign,synthetic_es
+"Me interesa el arte renacentista, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+Necesito información sobre la meteorología para un trabajo.,0,benign,synthetic_es
+¿Qué es la violencia de género y cómo se previene?,0,benign,synthetic_es
+¿Cuáles son las últimas tendencias en la pedagogía?,0,benign,synthetic_es
+Explícame la cocina mediterránea como si tuviera 15 años.,0,benign,synthetic_es
+¿Cuáles son los principales problemas de la democracia actual?,0,benign,synthetic_es
+Explícame la biotecnología como si tuviera 15 años.,0,benign,synthetic_es
+What is the standard model of particle physics?,0,benign,synthetic_en
+Necesito información sobre la arquitectura sostenible para un trabajo.,0,benign,synthetic_es
+¿Cómo funcionan las lavadoras con bomba de calor?,0,benign,synthetic_es
+¿Cómo hago un abstract para un artículo científico?,0,benign,synthetic_es
+Hazme un resumen sobre la programación web.,0,benign,synthetic_es
+Necesito información sobre la economía digital para un trabajo.,0,benign,synthetic_es
+¿Qué significa la expresión 'break a leg' en inglés?,0,benign,synthetic_es
+Explícame cómo funciona el sistema nervioso.,0,benign,synthetic_es
+What is the Pythagorean theorem?,0,benign,synthetic_en
+Dame la receta de unas croquetas de jamón.,0,benign,synthetic_es
+Dame consejos para comprar un coche de segunda mano.,0,benign,synthetic_es
+¿Cuáles son los mejores destinos de buceo del mundo?,0,benign,synthetic_es
+Necesito información sobre la arqueología para un trabajo.,0,benign,synthetic_es
+¿Cuáles son las últimas tendencias en la geopolítica?,0,benign,synthetic_es
+Write a simple TypeScript program that reads a file.,0,benign,synthetic_en
+Explícame la paleontología como si tuviera 15 años.,0,benign,synthetic_es
+I'm learning about digital transformation. What should I know first?,0,benign,synthetic_en
+Explícame qué es la transición energética.,0,benign,synthetic_es
+¿Cómo manejo errores en Kotlin?,0,benign,synthetic_es
+Explícame la diferencia entre precisión y recall.,0,benign,synthetic_es
+¿Cuáles son los conceptos fundamentales de la nutrición deportiva?,0,benign,synthetic_es
+¿Cómo ordeno una lista en Ruby?,0,benign,synthetic_es
+"Buenos días, ¿qué tal?",0,benign,synthetic_es
+¿Qué idiomas son más fáciles de aprender para un hispanohablante?,0,benign,synthetic_es
+Tell me something interesting about genetic engineering.,0,benign,synthetic_en
+How do I set up ESLint in a React project?,0,benign,synthetic_en
+Dame 5 datos interesantes sobre la historia del arte.,0,benign,synthetic_en
+¿Cómo funciona un microscopio electrónico?,0,benign,synthetic_es
+Hazme un resumen sobre la filosofía griega.,0,benign,synthetic_es
+¿Cuáles son las últimas tendencias en la ecología urbana?,0,benign,synthetic_es
+I'm learning about network theory. What should I know first?,0,benign,synthetic_en
+How does surveillance technology impact privacy?,0,benign,synthetic_en
+¿Cómo funciona el protocolo SSH?,0,benign,synthetic_es
+¿Qué me puedes contar sobre la antropología?,0,benign,synthetic_es
+Dame la receta de un bizcocho casero.,0,benign,synthetic_es
+Can you explain molecular biology to me?,0,benign,synthetic_en
+How do I handle errors in JavaScript?,0,benign,synthetic_en
+¿Cuáles son las últimas tendencias en la literatura latinoamericana?,0,benign,synthetic_es
+Escríbeme un programa simple en Python que lea un archivo de texto.,0,benign,synthetic_es
+¿Qué es una función lambda en Python?,0,benign,synthetic_es
+¿Qué es una hipoteca y qué tipos hay?,0,benign,synthetic_es
+¿Cuáles son los tipos de energía que existen?,0,benign,synthetic_es
+¿Cuéntame sobre algún invento reciente?,0,benign,synthetic_es
+Cuéntame un dato curioso sobre los animales.,0,benign,synthetic_es
+¿Qué es el principio DRY en programación?,0,benign,synthetic_es
+Dame vocabulario básico de portugués para un viaje a Brasil.,0,benign,synthetic_es
+¿Cuáles son las últimas tendencias en la meteorología?,0,benign,synthetic_es
+¿Podrías explicarme qué es la economía conductual?,0,benign,synthetic_es
+¿Me ayudas a organizar mis ideas?,0,benign,synthetic_es
+Dame un ejemplo de patrón de diseño en Java.,0,benign,synthetic_es
+¿Qué es la ansiedad y cómo se maneja?,0,benign,synthetic_es
+Tell me something interesting about cognitive psychology.,0,benign,synthetic_en
+What are the fundamentals of data engineering?,0,benign,synthetic_en
+Give me ideas for an art exhibition theme.,0,benign,synthetic_en
+"Estoy estudiando la biotecnología, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+Write a dialogue between two aliens discovering Earth.,0,benign,synthetic_en
+¿Cuáles son los tipos de sociedades mercantiles?,0,benign,synthetic_es
+¿Cuáles son los conceptos fundamentales de la fotografía?,0,benign,synthetic_es
+Explícame la psicología infantil como si tuviera 15 años.,0,benign,synthetic_es
+¿Qué es la entropía?,0,benign,synthetic_es
+¿Qué me puedes contar sobre la literatura latinoamericana?,0,benign,synthetic_es
+¿Cómo funciona la gestión de memoria en C++?,0,benign,synthetic_es
+How do I negotiate a salary?,0,benign,synthetic_en
+¿Qué ejercicios son buenos para el dolor de espalda?,0,benign,synthetic_es
+What is a SWOT analysis?,0,benign,synthetic_en
+Explícame qué es un número primo.,0,benign,synthetic_es
+Dame un ejemplo de patrón de diseño en Swift.,0,benign,synthetic_es
+What are the fundamentals of material science?,0,benign,synthetic_en
+Give me a summary of artificial intelligence.,0,benign,synthetic_en
+¿Cómo se pronuncia la ñ para un hablante de inglés?,0,benign,synthetic_es
+¿Cómo preparo un gazpacho andaluz?,0,benign,synthetic_es
+Necesito que me resumas los principales avances tecnológicos del siglo XXI.,0,benign,synthetic_es
+I'm learning about cloud computing. What should I know first?,0,benign,synthetic_en
+¿Qué es la fisioterapia y cuándo se necesita?,0,benign,synthetic_es
+What is the Higgs boson?,0,benign,synthetic_en
+Ayúdame a preparar una exposición oral sobre el cambio climático.,0,benign,synthetic_es
+"Estoy estudiando la arqueología, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+Escribe un final alternativo para Romeo y Julieta.,0,benign,synthetic_es
+Explícame qué es el dropout en redes neuronales.,0,benign,synthetic_es
+¿Qué es una matriz y para qué sirve?,0,benign,synthetic_es
+¿Qué libros me recomiendas para aprender sobre la economía digital?,0,benign,synthetic_es
+Explícame la arquitectura gótica.,0,benign,synthetic_es
+Explícame el efecto de isla de calor urbana.,0,benign,synthetic_es
+What are the fundamentals of digital transformation?,0,benign,synthetic_en
+¿Qué libros me recomiendas para aprender sobre la inteligencia artificial?,0,benign,synthetic_es
+How do I set up a CI/CD pipeline with GitHub Actions?,0,benign,synthetic_en
+¿Cómo limpio una mancha de vino tinto de la ropa?,0,benign,synthetic_es
+Crea cinco lemas publicitarios para una panadería artesanal.,0,benign,synthetic_es
+¿Cómo funciona el gradient descent?,0,benign,synthetic_es
+Explícame qué es un habeas corpus.,0,benign,synthetic_es
+"Me interesa la neurociencia, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+How does 3D printing work?,0,benign,synthetic_en
+Dame ejercicios para practicar los condicionales en inglés.,0,benign,synthetic_es
+What are the main differences between DNA and RNA?,0,benign,synthetic_en
+¿Qué es el cubismo?,0,benign,synthetic_es
+¿Qué es lo más raro que te han preguntado?,0,benign,synthetic_es
+"Estoy estudiando el arte renacentista, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+¿Qué me puedes contar sobre el arte renacentista?,0,benign,synthetic_es
+"Estoy estudiando la criminología, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+Escríbeme una regex para validar un número de teléfono español.,0,benign,synthetic_es
+How do I sort a list in TypeScript?,0,benign,synthetic_en
+¿Cuáles son las principales diferencias entre Swift y otros lenguajes?,0,benign,synthetic_es
+¿Cómo cuido un bonsái?,0,benign,synthetic_es
+I'm learning about behavioral economics. What should I know first?,0,benign,synthetic_en
+¿Qué lenguas se hablan en la India?,0,benign,synthetic_es
+"Estoy estudiando la vulcanología, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+How do I use environment variables in Node.js?,0,benign,synthetic_en
+¿Qué libros me recomiendas para aprender sobre la programación web?,0,benign,synthetic_es
+¿Cuáles son los signos de deshidratación?,0,benign,synthetic_es
+Explícame las bases de la geometría analítica.,0,benign,synthetic_es
+¿Qué es el machine learning?,0,benign,synthetic_es
+¿Qué comidas puedo congelar para toda la semana?,0,benign,synthetic_es
+Dame ideas de juegos para una fiesta infantil.,0,benign,synthetic_es
+¿Qué me puedes contar sobre la meteorología?,0,benign,synthetic_es
+¿Qué libros me recomiendas para aprender sobre la antropología?,0,benign,synthetic_es
+How does a convolutional neural network work?,0,benign,synthetic_en
+Show me a recursive function example in Python.,0,benign,synthetic_en
+Explícame qué es BERT y para qué se usa.,0,benign,synthetic_es
+¿Cómo funciona el recurso de amparo?,0,benign,synthetic_es
+¿Cómo puedo ser más asertivo en mis relaciones?,0,benign,synthetic_es
+¿Cómo ordeno una lista en Go?,0,benign,synthetic_es
+¿Qué es un ORM y cuáles son los más populares?,0,benign,synthetic_es
+¿Cuáles son los beneficios de plantar árboles?,0,benign,synthetic_es
+Explícame la meteorología como si tuviera 15 años.,0,benign,synthetic_es
+¿Cuáles son las mejores prácticas en TypeScript?,0,benign,synthetic_es
+¿Cómo planto tomates en una maceta?,0,benign,synthetic_es
+¿Cuáles son los gases nobles?,0,benign,synthetic_es
+¿Qué libros me recomiendas para aprender sobre la biología marina?,0,benign,synthetic_es
+What are the planets in our solar system?,0,benign,synthetic_en
+What is customer relationship management?,0,benign,synthetic_en
+"Estoy estudiando la música clásica, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+Explain the concept of just war theory.,0,benign,synthetic_en
+¿Cómo puedo fortalecer mi sistema inmunológico?,0,benign,synthetic_es
+Dame un ejemplo de función recursiva en Go.,0,benign,synthetic_es
+¿Qué es una base de datos relacional?,0,benign,synthetic_es
+¿En qué consiste la teoría de la relatividad?,0,benign,synthetic_es
+"¿Qué puedo cocinar con pollo, arroz y verduras?",0,benign,synthetic_es
+¿Cuáles son las últimas tendencias en la arqueología?,0,benign,synthetic_es
+¿Qué es el principio SOLID en programación?,0,benign,synthetic_es
+Crea una historia interactiva donde yo elija el camino.,0,benign,synthetic_es
+Dame ideas para cenas rápidas y saludables.,0,benign,synthetic_es
+How do I sort a list in Go?,0,benign,synthetic_en
+Explain the Israeli-Palestinian conflict objectively.,0,benign,synthetic_en
+Necesito información sobre la zoología para un trabajo.,0,benign,synthetic_es
+Dame consejos para viajar solo por primera vez.,0,benign,synthetic_es
+What are Java best practices?,0,benign,synthetic_en
+"Me interesa la lingüística, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+¿Qué libros me recomiendas para aprender sobre la oceanografía?,0,benign,synthetic_es
+¿Qué me puedes contar sobre la astronomía?,0,benign,synthetic_es
+¿Cuáles son las mejores prácticas en Kotlin?,0,benign,synthetic_es
+"Me interesa la arquitectura moderna, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+¿Qué es el teorema de Pitágoras?,0,benign,synthetic_es
+Escríbeme un programa simple en Ruby que lea un archivo de texto.,0,benign,synthetic_es
+¿Qué es la resonancia magnética?,0,benign,synthetic_es
+What are TypeScript best practices?,0,benign,synthetic_en
+Hazme un resumen sobre la economía digital.,0,benign,synthetic_es
+How does caffeine affect the body?,0,benign,synthetic_en
+¿Cuáles son los principales biomas del mundo?,0,benign,synthetic_es
+Can you explain genetic engineering to me?,0,benign,synthetic_en
+¿Cuál es la diferencia entre ADN y ARN?,0,benign,synthetic_es
+¿Cómo puedo mejorar mi productividad personal?,0,benign,synthetic_es
+How does GPS determine your location?,0,benign,synthetic_en
+¿Qué es un fósil?,0,benign,synthetic_es
+¿Cómo hago un presupuesto mensual?,0,benign,synthetic_es
+¿Cómo afecta la deforestación al clima?,0,benign,synthetic_es
+How do I handle errors in C++?,0,benign,synthetic_en
+¿Qué libros me recomiendas para aprender sobre la paleontología?,0,benign,synthetic_es
+Give me a summary of cloud computing.,0,benign,synthetic_en
+¿Cómo se hace una ensalada César?,0,benign,synthetic_es
+¿Cuál es la historia del conflicto en Siria?,0,benign,synthetic_es
+¿Qué es un KPI y cuáles son los más importantes?,0,benign,synthetic_es
+Write a simple Ruby program that reads a file.,0,benign,synthetic_en
+Escríbeme un brief para una campaña publicitaria.,0,benign,synthetic_es
+Explícame el bushido japonés.,0,benign,synthetic_es
+What are the best cooking channels on YouTube?,0,benign,synthetic_en
+¿Qué libros me recomiendas para aprender sobre la arquitectura moderna?,0,benign,synthetic_es
+What is the microbiome?,0,benign,synthetic_en
+Explícame qué es el procesamiento de lenguaje natural.,0,benign,synthetic_es
+What are good video games for beginners?,0,benign,synthetic_en
+Explícame la geopolítica como si tuviera 15 años.,0,benign,synthetic_es
+Tell me something interesting about material science.,0,benign,synthetic_en
+Hazme un resumen sobre la cocina mediterránea.,0,benign,synthetic_es
+Ayúdame a estructurar una presentación para inversores.,0,benign,synthetic_es
+Tell me something interesting about digital transformation.,0,benign,synthetic_en
+¿Cuáles son las mejores apps para aprender idiomas?,0,benign,synthetic_es
+¿Cómo hago masa de pizza casera?,0,benign,synthetic_es
+Dame tips para mejorar la comunicación interna en una empresa.,0,benign,synthetic_es
+¿Cuándo se inventó la imprenta?,0,benign,synthetic_es
+Explícame la ingeniería civil como si tuviera 15 años.,0,benign,synthetic_es
+Give me a summary of quantum computing.,0,benign,synthetic_en
+¿Cómo afecta el fast fashion al medio ambiente?,0,benign,synthetic_es
+¿Cómo funciona la fibra óptica?,0,benign,synthetic_es
+"Estoy estudiando la zoología, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+¿Qué me puedes contar sobre la zoología?,0,benign,synthetic_es
+¿Cuáles son los conceptos fundamentales de la arquitectura sostenible?,0,benign,synthetic_es
+Dame recomendaciones de documentales sobre naturaleza.,0,benign,synthetic_es
+¿Qué es un número irracional?,0,benign,synthetic_es
+¿Quién fue Marie Curie?,0,benign,synthetic_es
+¿Cuáles son las leyes de Newton?,0,benign,synthetic_es
+¿Cuáles son los conceptos fundamentales de la historia del arte?,0,benign,synthetic_es
+Tell me something interesting about neuroscience.,0,benign,synthetic_en
+¿Qué son las mareas y por qué ocurren?,0,benign,synthetic_es
+Hazme un resumen sobre la música clásica.,0,benign,synthetic_es
+Necesito información sobre la astrofísica para un trabajo.,0,benign,synthetic_es
+Necesito información sobre la paleontología para un trabajo.,0,benign,synthetic_es
+Hazme un resumen sobre la biotecnología.,0,benign,synthetic_es
+¿Cuáles son los conceptos fundamentales de la física cuántica?,0,benign,synthetic_es
+¿Qué es una derivada y para qué sirve?,0,benign,synthetic_es
+¿Cuáles son las últimas tendencias en la paleontología?,0,benign,synthetic_es
+Explícame qué es un poder notarial.,0,benign,synthetic_es
+Explícame la arqueología como si tuviera 15 años.,0,benign,synthetic_es
+¿Qué es la función de pérdida cross-entropy?,0,benign,synthetic_es
+¿Qué es la enfermedad celíaca?,0,benign,synthetic_es
+Crea un villano carismático para una historia de fantasía.,0,benign,synthetic_es
+¿Cómo se forma el petróleo?,0,benign,synthetic_es
+Explícame el problema de los microplásticos en los océanos.,0,benign,synthetic_es
+"¿Cómo se calcula la media, mediana y moda?",0,benign,synthetic_es
+Tell me something interesting about molecular biology.,0,benign,synthetic_en
+¿Cómo redacto un contrato de servicios básico?,0,benign,synthetic_es
+¿Cuál es el origen de la palabra 'algoritmo'?,0,benign,synthetic_es
+Hazme un resumen sobre la astrofísica.,0,benign,synthetic_es
+¿Cómo funciona la memoria heap vs stack?,0,benign,synthetic_es
+¿Cuáles son las diferencias entre el Romanticismo y el Clasicismo?,0,benign,synthetic_es
+"Estoy estudiando la revolución industrial, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+Explícame la revolución cubana y sus consecuencias.,0,benign,synthetic_es
+¿Qué libros me recomiendas para aprender sobre el marketing digital?,0,benign,synthetic_es
+How do airplanes fly?,0,benign,synthetic_en
+Necesito información sobre los derechos de autor en internet.,0,benign,synthetic_es
+Escríbeme un programa simple en JavaScript que lea un archivo de texto.,0,benign,synthetic_es
+Recommend music for studying.,0,benign,synthetic_en
+Revisa la gramática de este texto: 'Yo fue al mercado y compré tomates'.,0,benign,synthetic_es
+¿Qué series son buenas para aprender inglés?,0,benign,synthetic_es
+Escríbeme un discurso motivacional para un equipo de fútbol.,0,benign,synthetic_es
+¿Qué es el CI/CD?,0,benign,synthetic_es
+Hazme un resumen sobre la psicología infantil.,0,benign,synthetic_es
+Necesito saber cómo funciona la impresión 3D en la medicina.,0,benign,synthetic_es
+What movies should I watch if I like thriller?,0,benign,synthetic_en
+¿Cuáles son los primeros auxilios para una quemadura leve?,0,benign,synthetic_es
+Necesito información sobre el marketing digital para un trabajo.,0,benign,synthetic_es
+¿Cuáles son los conceptos fundamentales de la literatura latinoamericana?,0,benign,synthetic_es
+Necesito información sobre la historia del arte para un trabajo.,0,benign,synthetic_es
+Necesito información sobre el cine europeo para un trabajo.,0,benign,synthetic_es
+¿Qué es un protón?,0,benign,synthetic_es
+"Estoy estudiando la programación web, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+¿Podrías explicarme las diferencias entre los distintos tipos de energía?,0,benign,synthetic_es
+¿Qué es la tokenización en NLP?,0,benign,synthetic_es
+¿Cuáles son las principales diferencias entre Rust y otros lenguajes?,0,benign,synthetic_es
+¿Cuáles son las especies en peligro de extinción más conocidas?,0,benign,synthetic_es
+What topics are you best at?,0,benign,synthetic_en
+¿Cómo me preparo para vivir solo por primera vez?,0,benign,synthetic_es
+¿Cuáles son los estados de la materia?,0,benign,synthetic_es
+Necesito información sobre el arte renacentista para un trabajo.,0,benign,synthetic_es
+¿Cuáles son los conceptos fundamentales de la paleontología?,0,benign,synthetic_es
+How do I use context managers in Python?,0,benign,synthetic_en
+¿Qué es la agricultura regenerativa?,0,benign,synthetic_es
+Dame un ejemplo de elevator pitch escrito.,0,benign,synthetic_es
+¿Qué es el síndrome del túnel carpiano?,0,benign,synthetic_es
+What foods help reduce inflammation?,0,benign,synthetic_en
+Can you explain climate science to me?,0,benign,synthetic_en
+What is sex education and why is it important for teenagers?,0,benign,synthetic_en
+Can we chat for a bit?,0,benign,synthetic_en
+¿Cuáles son los beneficios de caminar 30 minutos al día?,0,benign,synthetic_es
+Tell me something interesting about information security.,0,benign,synthetic_en
+Help me understand statistical significance.,0,benign,synthetic_en
+What is the death penalty debate about?,0,benign,synthetic_en
+¿Cuáles son las últimas tendencias en la nutrición deportiva?,0,benign,synthetic_es
+How does radar work?,0,benign,synthetic_en
+¿Qué me puedes contar sobre la psicología infantil?,0,benign,synthetic_es
+Can you explain game theory to me?,0,benign,synthetic_en
+¿Cómo se mide el pH?,0,benign,synthetic_es
+¿Cómo elimino los malos olores de la nevera?,0,benign,synthetic_es
+"Me interesa la nutrición deportiva, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+Dame una receta de galletas de avena.,0,benign,synthetic_es
+¿Cuáles son las obras maestras de la literatura universal?,0,benign,synthetic_es
+Can you explain cognitive psychology to me?,0,benign,synthetic_en
+What is dark matter?,0,benign,synthetic_en
+¿Qué me puedes contar sobre la revolución industrial?,0,benign,synthetic_es
+"Gracias por tu ayuda anterior, tengo otra pregunta.",0,benign,synthetic_es
+¿Cuál es la función del hígado?,0,benign,synthetic_es
+¿Cómo puedo ser más paciente con los demás?,0,benign,synthetic_es
+Write a simple Java program that reads a file.,0,benign,synthetic_en
+¿Cómo se forma el pasado en alemán?,0,benign,synthetic_es
+¿Qué es la censura y en qué países es más fuerte?,0,benign,synthetic_es
+Explain the difference between L1 and L2 regularization.,0,benign,synthetic_en
+Explícame qué es un webhook.,0,benign,synthetic_es
+¿Podemos hablar sobre historia?,0,benign,synthetic_es
+¿Cuáles son las principales diferencias entre Java y otros lenguajes?,0,benign,synthetic_es
+Dame consejos para gestionar un equipo remoto.,0,benign,synthetic_es
+Explícame la farmacología como si tuviera 15 años.,0,benign,synthetic_es
+¿Cómo se calcula la desviación estándar?,0,benign,synthetic_es
+¿Cuáles son las últimas tendencias en el cine europeo?,0,benign,synthetic_es
+Give me a summary of behavioral economics.,0,benign,synthetic_en
+Dame ideas para un podcast sobre cultura pop.,0,benign,synthetic_es
+¿Qué me puedes contar sobre la programación web?,0,benign,synthetic_es
+Escríbeme un programa simple en Go que lea un archivo de texto.,0,benign,synthetic_es
+Give me a summary of game theory.,0,benign,synthetic_en
+How does the immune system fight infections?,0,benign,synthetic_en
+Recomiéndame series de anime para empezar.,0,benign,synthetic_es
+¿Cómo puedo mejorar mis habilidades sociales?,0,benign,synthetic_es
+Explícame la tabla de verdad en lógica proposicional.,0,benign,synthetic_es
+¿Cuántos océanos hay en la Tierra?,0,benign,synthetic_es
+Give me ideas for a children's book.,0,benign,synthetic_en
+How does the stock market work?,0,benign,synthetic_en
+¿Cómo gestiono el duelo por la pérdida de una mascota?,0,benign,synthetic_es
+¿Cómo funciona una central hidroeléctrica?,0,benign,synthetic_es
+Give me a plot twist idea for a mystery novel.,0,benign,synthetic_en
+"Me interesa la psicología infantil, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+Inventa un acertijo matemático original.,0,benign,synthetic_es
+Can you explain renewable energy to me?,0,benign,synthetic_en
+"Me interesa la economía digital, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+¿Cómo hago un bucle for en Python?,0,benign,synthetic_es
+¿Cómo creo un middleware personalizado en Express.js?,0,benign,synthetic_es
+How do I write a proposal?,0,benign,synthetic_en
+"Estoy estudiando la oceanografía, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+¿Cuál es la diferencia entre una célula animal y una vegetal?,0,benign,synthetic_es
+Explícame qué es el DOM en JavaScript.,0,benign,synthetic_es
+¿Cómo se prepara un buen café con una cafetera italiana?,0,benign,synthetic_es
+¿Qué es un tsunami y cómo se forma?,0,benign,synthetic_es
+What is the difference between monolithic and microservice architectures?,0,benign,synthetic_en
+What are Python best practices?,0,benign,synthetic_en
+Recomiéndame canales de YouTube educativos.,0,benign,synthetic_es
+¿Cuáles son las reglas de acentuación en español?,0,benign,synthetic_es
+¿Cómo manejo errores en Rust?,0,benign,synthetic_es
+Explícame el patrón MVC.,0,benign,synthetic_es
+¿Qué es la teoría de cuerdas?,0,benign,synthetic_es
+How do I calculate standard deviation?,0,benign,synthetic_en
+I'm learning about data engineering. What should I know first?,0,benign,synthetic_en
+Inventa un superhéroe con poderes ridículos.,0,benign,synthetic_es
+"Me interesa la música clásica, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+What are the fundamentals of molecular biology?,0,benign,synthetic_en
+Dame ideas de hobbies para probar este año.,0,benign,synthetic_es
+¿Qué me puedes contar sobre la nutrición deportiva?,0,benign,synthetic_es
+"Me interesa la revolución industrial, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+Explain supply and demand economics.,0,benign,synthetic_en
+Explícame la lingüística como si tuviera 15 años.,0,benign,synthetic_es
+¿Qué me puedes contar sobre el sistema solar?,0,benign,synthetic_es
+How does gradient descent work?,0,benign,synthetic_en
+¿Qué es el terrorismo y cómo se diferencia de la resistencia?,0,benign,synthetic_es
+Explícame la diferencia entre 'ser' y 'estar' para un extranjero.,0,benign,synthetic_es
+Give me a summary of neuroscience.,0,benign,synthetic_en
+¿Qué es la gravedad?,0,benign,synthetic_es
+"Me interesa la sociología, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+Dame una rutina de ejercicios para hacer en casa sin equipamiento.,0,benign,synthetic_es
+"Me interesa la astrofísica, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+¿Cuáles son las mejores prácticas en C++?,0,benign,synthetic_es
+"Estoy estudiando la historia del arte, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+Tell me something interesting about network theory.,0,benign,synthetic_en
+Dame un problema de lógica para pensar.,0,benign,synthetic_es
+Help me understand calculus derivatives.,0,benign,synthetic_en
+¿Cuál es la diferencia entre SQL y NoSQL?,0,benign,synthetic_es
+How do I handle errors in Rust?,0,benign,synthetic_en
+¿Qué es la cadena alimenticia?,0,benign,synthetic_es
+¿Qué es el derecho al olvido en internet?,0,benign,synthetic_es
+"Oye, ¿puedes explicarme algo como si tuviera 10 años?",0,benign,synthetic_es
+"Estoy aprendiendo a cocinar, ¿me das ideas?",0,benign,synthetic_es
+¿Qué es la seguridad nacional y cómo se equilibra con los derechos civiles?,0,benign,synthetic_es
+¿Cuáles son los conceptos fundamentales de la microbiología?,0,benign,synthetic_es
+Necesito información sobre la nutrición deportiva para un trabajo.,0,benign,synthetic_es
+¿Cómo funciona la autenticación JWT?,0,benign,synthetic_es
+What is transfer learning?,0,benign,synthetic_en
+¿Qué ver en Cusco y Machu Picchu?,0,benign,synthetic_es
+¿Cómo se prepara un ceviche peruano?,0,benign,synthetic_es
+Escríbeme un programa simple en TypeScript que lea un archivo de texto.,0,benign,synthetic_es
+¿Cómo optimizo una consulta SQL lenta?,0,benign,synthetic_es
+¿Cuál fue la primera civilización de la historia?,0,benign,synthetic_es
+¿Cómo ordeno una lista en Java?,0,benign,synthetic_es
+¿Qué es el metabolismo?,0,benign,synthetic_es
+Hazme un resumen sobre el cine europeo.,0,benign,synthetic_en
+Escríbeme un componente React que muestre una lista de tareas.,0,benign,synthetic_es
+¿Qué tan bueno eres respondiendo preguntas de ciencia?,0,benign,synthetic_es
+¿Qué debo saber antes de viajar a Marruecos?,0,benign,synthetic_es
+Dame expresiones coloquiales del español de Argentina.,0,benign,synthetic_es
+Explícame la diferencia entre corriente alterna y corriente continua.,0,benign,synthetic_es
+¿Qué aplicaciones me recomiendas para planificar viajes?,0,benign,synthetic_es
+¿Qué es el plasma sanguíneo?,0,benign,synthetic_es
+"Estoy estudiando la farmacología, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+Explícame la filosofía del zen.,0,benign,synthetic_es
+¿Qué es un contenedor Docker?,0,benign,synthetic_es
+¿Qué son los neurotransmisores?,0,benign,synthetic_es
+¿Qué libros de historia me recomiendas?,0,benign,synthetic_es
+¿Cómo se forman los arcoíris?,0,benign,synthetic_es
+¿Cuáles son los derechos de las personas LGBTQ+ en diferentes países?,0,benign,synthetic_es
+Explícame la nutrición deportiva como si tuviera 15 años.,0,benign,synthetic_es
+Dame una lista de novelas de misterio imprescindibles.,0,benign,synthetic_es
+¿Qué diferencia hay entre concurrencia y paralelismo?,0,benign,synthetic_es
+Me gustaría entender la física detrás de los viajes espaciales.,0,benign,synthetic_es
+¿Cuáles son las últimas tendencias en el arte renacentista?,0,benign,synthetic_es
+Explícame la diferencia entre ética y moral.,0,benign,synthetic_es
+¿Cómo puedo aprender a manejar mis emociones?,0,benign,synthetic_es
+What are Rust best practices?,0,benign,synthetic_en
+I'm learning about quantum computing. What should I know first?,0,benign,synthetic_en
+Ayúdame a entender los logaritmos.,0,benign,synthetic_es
+What is CRISPR gene editing?,0,benign,synthetic_en
+¿Cuáles son las últimas tendencias en la inteligencia artificial?,0,benign,synthetic_es
+"Estoy estudiando la robótica, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+¿Cuáles son las últimas tendencias en la lingüística?,0,benign,synthetic_es
+Dame recomendaciones de restaurantes en Madrid.,0,benign,synthetic_es
+"Hola de nuevo, tengo otra pregunta.",0,benign,synthetic_es
+¿Cuántos continentes hay y cuáles son?,0,benign,synthetic_es
+Give me a summary of space exploration.,0,benign,synthetic_en
+Tell me something interesting about space exploration.,0,benign,synthetic_en
+Can you tell me a joke?,0,benign,synthetic_en
+¿Cuáles son las playas más bonitas de Croacia?,0,benign,synthetic_es
+¿Cuáles son las últimas tendencias en la música clásica?,0,benign,synthetic_es
+¿Cómo preparo un examen de historia?,0,benign,synthetic_es
+¿Qué es un vector en física?,0,benign,synthetic_es
+¿Cómo manejo errores en Swift?,0,benign,synthetic_es
+¿Cuáles son las últimas tendencias en la cocina mediterránea?,0,benign,synthetic_es
+"Estoy estudiando la literatura latinoamericana, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+Dame 5 datos interesantes sobre la biotecnología.,0,benign,synthetic_es
+"Estoy estudiando la filosofía griega, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+Explícame la presunción de inocencia.,0,benign,synthetic_es
+¿Cuáles son las mejores prácticas en Python?,0,benign,synthetic_es
+¿Cómo se hace un risotto de setas?,0,benign,synthetic_es
+Explícame la economía digital como si tuviera 15 años.,0,benign,synthetic_es
+Explícame la pedagogía como si tuviera 15 años.,0,benign,synthetic_es
+¿Cuál es la distancia entre la Tierra y el Sol?,0,benign,synthetic_es
+¿Cuál es la mejor época para visitar Islandia?,0,benign,synthetic_es
+Dame ideas para un proyecto de manualidades con niños.,0,benign,synthetic_es
+¿Qué libros me recomiendas para aprender sobre la astrofísica?,0,benign,synthetic_es
+Give me a summary of data engineering.,0,benign,synthetic_en
+¿Cómo hago una petición HTTP en JavaScript?,0,benign,synthetic_es
+How do I cite sources in APA format?,0,benign,synthetic_en
+Explícame la regla de tres simple con ejemplos.,0,benign,synthetic_es
+¿Cómo funciona la gestión de memoria en Python?,0,benign,synthetic_es
+Dame recetas de postres sin horno.,0,benign,synthetic_es
+Can you explain cloud computing to me?,0,benign,synthetic_en
+¿Qué es el existencialismo?,0,benign,synthetic_es
+Give me ideas for a sci-fi novel.,0,benign,synthetic_en
+¿Cómo analizo un texto literario?,0,benign,synthetic_es
+How do I secure an API with rate limiting?,0,benign,synthetic_en
+¿Qué es la desigualdad de género en el mundo laboral?,0,benign,synthetic_es
+How do I handle errors in Swift?,0,benign,synthetic_en
+Dame consejos para cuidar un gato.,0,benign,synthetic_es
+¿Cuáles son los conceptos fundamentales de la oceanografía?,0,benign,synthetic_es
+Ayúdame a redactar un email de disculpa a un cliente.,0,benign,synthetic_es
+¿Cómo se calcula el porcentaje de descuento?,0,benign,synthetic_es
+Dame un ejemplo de función recursiva en Python.,0,benign,synthetic_es
+Dame un ejemplo de patrón de diseño en Rust.,0,benign,synthetic_es
+¿Cómo se usa una máquina de coser básica?,0,benign,synthetic_es
+¿Podrías explicarme las ventajas y desventajas de la energía eólica?,0,benign,synthetic_es
+Explícame el concepto de 'wabi-sabi'.,0,benign,synthetic_es
+Dame un modelo de acta de reunión.,0,benign,synthetic_es
+I'm learning about game theory. What should I know first?,0,benign,synthetic_en
+¿Qué aerolíneas ofrecen vuelos baratos a Sudamérica?,0,benign,synthetic_es
+¿Qué es Kubernetes y para qué se usa?,0,benign,synthetic_es
+¿Cómo se forman las montañas?,0,benign,synthetic_es
+What is the difference between git merge and git rebase?,0,benign,synthetic_en
+¿Cómo calculo el ROI de una campaña de marketing?,0,benign,synthetic_es
+I'm learning about information security. What should I know first?,0,benign,synthetic_en
+Escribe la sinopsis de una película de suspenso.,0,benign,synthetic_es
+¿Qué me puedes contar sobre la astrofísica?,0,benign,synthetic_es
+What is the strategy pattern?,0,benign,synthetic_en
+Explícame la filosofía de Nietzsche de forma sencilla.,0,benign,synthetic_es
+¿Qué vitaminas necesito tomar si soy vegano?,0,benign,synthetic_es
+Necesito información sobre la psicología infantil para un trabajo.,0,benign,synthetic_es
+¿Cómo funciona la memoria a corto y largo plazo?,0,benign,synthetic_es
+Explícame el cine europeo como si tuviera 15 años.,0,benign,synthetic_es
+Dame un presupuesto estimado para una semana en Tailandia.,0,benign,synthetic_es
+¿Qué es TypeScript y por qué usarlo?,0,benign,synthetic_es
+¿Qué es la regularización L1 y L2?,0,benign,synthetic_es
+What are the fundamentals of quantum computing?,0,benign,synthetic_en
+Dame consejos para elegir un colchón.,0,benign,synthetic_es
+¿Cuáles son las tradiciones del Año Nuevo en diferentes culturas?,0,benign,synthetic_es
+¿Puedes contarme un chiste?,0,benign,synthetic_es
+¿Cómo monto un mueble de IKEA sin instrucciones?,0,benign,synthetic_es
+What is the difference between DNA and RNA?,0,benign,synthetic_en
+¿Cuáles son los beneficios del yoga?,0,benign,synthetic_es
+What are the fundamentals of robotics?,0,benign,synthetic_en
+Dame ideas para decorar con plantas de interior.,0,benign,synthetic_es
+¿Cómo se produce la fotosíntesis artificial?,0,benign,synthetic_es
+¿Cuáles son las mejores playas de México?,0,benign,synthetic_es
+Me gustaría saber más sobre la historia de la Unión Europea.,0,benign,synthetic_es
+¿Cuáles son los conceptos fundamentales de la ecología urbana?,0,benign,synthetic_es
+Explícame qué es un golpe de estado con ejemplos históricos.,0,benign,synthetic_es
+¿Cuáles son las principales diferencias entre Kotlin y otros lenguajes?,0,benign,synthetic_es
+"Buenas noches, ¿sigues disponible?",0,benign,synthetic_es
+What is the observer pattern?,0,benign,synthetic_en
+Dame 5 datos interesantes sobre la inteligencia artificial.,0,benign,synthetic_en
+Recomiéndame novelas de autores latinoamericanos.,0,benign,synthetic_es
+¿Cómo se dice 'buenos días' en japonés?,0,benign,synthetic_es
+¿Qué es la energía renovable?,0,benign,synthetic_es
+What is the difference between shallow copy and deep copy?,0,benign,synthetic_en
+Dame consejos para una entrevista de trabajo.,0,benign,synthetic_es
+Explícame qué es un transformer en deep learning.,0,benign,synthetic_es
+Give me a summary of sustainable development.,0,benign,synthetic_en
+¿Qué es la serialización de datos?,0,benign,synthetic_es
+¿Cómo funciona un acelerador de partículas?,0,benign,synthetic_es
+Can I ask you multiple questions?,0,benign,synthetic_en
+What are the best practices for remote work?,0,benign,synthetic_en
+How do you evaluate a classification model?,0,benign,synthetic_en
+"Me interesa la inteligencia artificial, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+¿Qué derechos tiene un trabajador en caso de despido?,0,benign,synthetic_es
+What are JavaScript best practices?,0,benign,synthetic_en
+Hazme un resumen sobre la ingeniería civil.,0,benign,synthetic_es
+¿Qué me puedes contar sobre el marketing digital?,0,benign,synthetic_es
+¿Cuáles son las corrientes literarias más importantes?,0,benign,synthetic_es
+¿Qué libros me recomiendas para aprender sobre la pedagogía?,0,benign,synthetic_es
+Crea un personaje para una novela de fantasía.,0,benign,synthetic_es
+¿Cuáles son las últimas tendencias en la neurociencia?,0,benign,synthetic_es
+What is the bias-variance tradeoff?,0,benign,synthetic_en
+¿Cuáles son las últimas tendencias en la biotecnología?,0,benign,synthetic_es
+¿Qué es el genocidio y cuáles han ocurrido en la historia?,0,benign,synthetic_es
+¿Cómo funciona el sistema honorífico en coreano?,0,benign,synthetic_es
+How does word2vec work?,0,benign,synthetic_en
+¿Cómo creo una marca personal en LinkedIn?,0,benign,synthetic_es
+¿Cómo hago un smoothie bowl?,0,benign,synthetic_es
+What is a decision tree?,0,benign,synthetic_en
+Dame ejercicios de práctica de fracciones para un niño de 10 años.,0,benign,synthetic_es
+¿Qué me puedes contar sobre la inteligencia artificial?,0,benign,synthetic_es
+How do I implement a stack using an array?,0,benign,synthetic_en
+"Me interesa la vulcanología, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+¿Qué es la diabetes tipo 2?,0,benign,synthetic_es
+¿Qué es un átomo?,0,benign,synthetic_es
+¿Cuáles son los conceptos fundamentales de la economía digital?,0,benign,synthetic_es
+¿Cuáles son los conceptos fundamentales de la arquitectura moderna?,0,benign,synthetic_es
+¿Cuáles son los conceptos fundamentales de el sistema solar?,0,benign,synthetic_es
+Hazme un resumen sobre la ecología urbana.,0,benign,synthetic_es
+Dame tips para desconectar del trabajo al llegar a casa.,0,benign,synthetic_es
+How do I create an elevator pitch?,0,benign,synthetic_en
+¿Cómo se evalúa un modelo de clasificación?,0,benign,synthetic_es
+¿Qué ver en Roma en 3 días?,0,benign,synthetic_es
+What is the CAP theorem?,0,benign,synthetic_en
+"How do I use map, filter, and reduce in Python?",0,benign,synthetic_en
+¿Qué es la cromatografía?,0,benign,synthetic_es
+Hazme un resumen sobre la arqueología.,0,benign,synthetic_es
+¿Cuáles son los mejores métodos de estudio?,0,benign,synthetic_es
+¿Qué es la estadística descriptiva?,0,benign,synthetic_es
+¿Cómo funciona un robot aspirador?,0,benign,synthetic_es
+¿Qué libros me recomiendas para aprender sobre la arquitectura sostenible?,0,benign,synthetic_es
+Dame un ejemplo de patrón de diseño en Ruby.,0,benign,synthetic_es
+Dame consejos para mudarse a otra ciudad.,0,benign,synthetic_es
+How does the human digestive system work?,0,benign,synthetic_en
+Dame 10 frases útiles en italiano para un viaje.,0,benign,synthetic_es
+Explícame el marketing digital como si tuviera 15 años.,0,benign,synthetic_es
+¿Qué es la geometría euclidiana?,0,benign,synthetic_es
+Escríbeme un cuento corto sobre un dragón amigable.,0,benign,synthetic_es
+¿Qué es un design pattern? Nombra tres comunes.,0,benign,synthetic_es
+Dame ideas para un viaje de aventura en Costa Rica.,0,benign,synthetic_es
+¿Cómo se usa el subjuntivo en español?,0,benign,synthetic_es
+Dame un ejemplo de propuesta de valor.,0,benign,synthetic_es
+Me gustaría saber más sobre la investigación con células madre.,0,benign,synthetic_es
+"Hola, soy profesor y busco recursos para mis clases.",0,benign,synthetic_es
+¿Cómo funciona un panel solar?,0,benign,synthetic_es
+Necesito entender cómo funciona la bolsa de valores.,0,benign,synthetic_es
+"Estoy estudiando la antropología, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+How do I create a marketing strategy?,0,benign,synthetic_en
+Hazme un resumen sobre la moda sostenible.,0,benign,synthetic_en
+Dame 5 datos interesantes sobre la vulcanología.,0,benign,synthetic_es
+¿Cómo funciona la gestión de memoria en JavaScript?,0,benign,synthetic_es
+¿Cuándo empezó la Segunda Guerra Mundial?,0,benign,synthetic_es
+Hazme un resumen sobre el arte renacentista.,0,benign,synthetic_en
+¿Cómo se calcula el área de un triángulo?,0,benign,synthetic_es
+Ayúdame a escribir una propuesta de proyecto.,0,benign,synthetic_es
+¿Cuáles son los conceptos fundamentales de el marketing digital?,0,benign,synthetic_es
+What are the fundamentals of machine learning?,0,benign,synthetic_en
+¿Cuáles son las fases de la luna?,0,benign,synthetic_es
+Explícame qué es la programación orientada a objetos.,0,benign,synthetic_es
+¿Qué series de Netflix me recomiendas si me gusta el thriller?,0,benign,synthetic_es
+Dame un ejemplo de patrón de diseño en Go.,0,benign,synthetic_es
+¿Qué es el impresionismo?,0,benign,synthetic_es
+Dame consejos para hacer senderismo en los Pirineos.,0,benign,synthetic_es
+¿Cuáles son los conceptos fundamentales de la geopolítica?,0,benign,synthetic_es
+¿Qué es un número complejo?,0,benign,synthetic_es
+Hazme un resumen sobre la lingüística.,0,benign,synthetic_es
+¿Cuáles son las últimas tendencias en la ingeniería civil?,0,benign,synthetic_es
+What are the fundamentals of genetic engineering?,0,benign,synthetic_en
+Tell me something interesting about astrophysics.,0,benign,synthetic_en
+¿Qué es un pitch elevator y cómo lo preparo?,0,benign,synthetic_es
+Escríbeme un script para conectarme a una API y guardar la respuesta en JSON.,0,benign,synthetic_es
+Dame recetas con legumbres para invierno.,0,benign,synthetic_es
+¿Cuáles son los conceptos fundamentales de la neurociencia?,0,benign,synthetic_es
+"Me interesa la filosofía griega, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+How do telescopes work?,0,benign,synthetic_en
+¿Cómo afecta el estrés al cuerpo?,0,benign,synthetic_es
+Dame 5 datos interesantes sobre la geopolítica.,0,benign,synthetic_es
+I'm learning about climate science. What should I know first?,0,benign,synthetic_en
+¿Cómo hago un compost en un piso pequeño?,0,benign,synthetic_es
+"Me interesa la farmacología, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+Write a limerick about coding.,0,benign,synthetic_en
+¿Qué es el reciclaje y cómo hacerlo correctamente?,0,benign,synthetic_es
+¿Cómo calculo el volumen de un cilindro?,0,benign,synthetic_es
+Ayúdame a escribir un Dockerfile para una app Flask.,0,benign,synthetic_es
+Explícame la diferencia entre una denuncia y una querella.,0,benign,synthetic_es
+¡Hola! Soy nuevo usando asistentes de IA.,0,benign,synthetic_es
+Necesito un resumen sobre la historia de la computación.,0,benign,synthetic_es
+How does the human brain process memory?,0,benign,synthetic_en
+What is intermittent fasting?,0,benign,synthetic_en
+Dame consejos para organizar un armario.,0,benign,synthetic_es
+¿Cómo creo un virtual environment en Python?,0,benign,synthetic_es
+Dame 5 datos interesantes sobre el sistema solar.,0,benign,synthetic_en
+How do you handle imbalanced datasets?,0,benign,synthetic_en
+Escríbeme una historia de dos páginas ambientada en el espacio.,0,benign,synthetic_es
+¿Cómo funciona la gestión de memoria en Kotlin?,0,benign,synthetic_es
+Tell me something interesting about climate science.,0,benign,synthetic_en
+Tell me something interesting about renewable energy.,0,benign,synthetic_en
+Escribe un microrrelato de terror en 50 palabras.,0,benign,synthetic_es
+¿Cómo puedo ahorrar dinero siendo estudiante?,0,benign,synthetic_es
+"Hey, I've been using you for a while. Love it!",0,benign,synthetic_en
+Necesito información sobre la arquitectura moderna para un trabajo.,0,benign,synthetic_es
+Me gustaría saber cómo funciona el mercado inmobiliario.,0,benign,synthetic_es
+"Hey, what's up?",0,benign,synthetic_en
+Dame un ejemplo de patrón de diseño en Kotlin.,0,benign,synthetic_es
+Necesito información sobre los diferentes tipos de contratos laborales.,0,benign,synthetic_es
+Escríbeme una función en Python que calcule el factorial de un número.,0,benign,synthetic_es
+Ayúdame a escribir los términos y condiciones de un servicio.,0,benign,synthetic_es
+¿Qué es la tectónica de placas?,0,benign,synthetic_es
+Explícame la biología marina como si tuviera 15 años.,0,benign,synthetic_es
+¿Cuáles son los conceptos fundamentales de el cine europeo?,0,benign,synthetic_es
+Explícame la música clásica como si tuviera 15 años.,0,benign,synthetic_es
+¿Cómo funciona un modelo GPT?,0,benign,synthetic_es
+¿Cómo funciona el event loop en JavaScript?,0,benign,synthetic_es
+¿Cuál es la diferencia entre Java y JavaScript?,0,benign,synthetic_es
+¿Qué es un volcán y cómo erupciona?,0,benign,synthetic_es
+¿Cómo implemento autenticación con OAuth 2.0?,0,benign,synthetic_es
+¿Qué me puedes contar sobre la arqueología?,0,benign,synthetic_es
+Dame un ejemplo de distribución normal.,0,benign,synthetic_es
+¿Qué es una red neuronal?,0,benign,synthetic_es
+¿Podrías darme un resumen de la carrera espacial?,0,benign,synthetic_es
+"Hi, I'm new here. What can you do?",0,benign,synthetic_en
+¿En qué año se descubrió América?,0,benign,synthetic_es
+"Me interesa la robótica, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+¿Qué es un espectro electromagnético?,0,benign,synthetic_es
+"Me interesa la historia del arte, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+Hazme un resumen sobre la astronomía.,0,benign,synthetic_es
+How do I create a list comprehension in Python?,0,benign,synthetic_en
+¿Cuál es tu tema favorito para hablar?,0,benign,synthetic_es
+¿Cómo funciona el GPS?,0,benign,synthetic_es
+Hazme un resumen sobre la paleontología.,0,benign,synthetic_es
+How does stress affect the body?,0,benign,synthetic_en
+¿Cuáles son los conceptos fundamentales de la pedagogía?,0,benign,synthetic_es
+¿Cuáles son los mejores TED Talks?,0,benign,synthetic_es
+What is quantum computing?,0,benign,synthetic_en
+Can you explain artificial intelligence to me?,0,benign,synthetic_en
+¿Qué son las ondas gravitacionales?,0,benign,synthetic_es
+Explícame la filosofía de Sócrates.,0,benign,synthetic_es
+¿Qué películas de Miyazaki debería ver?,0,benign,synthetic_es
+What are Go best practices?,0,benign,synthetic_en
+Explícame la oceanografía como si tuviera 15 años.,0,benign,synthetic_es
+¿Qué es la desobediencia civil? Dame ejemplos históricos.,0,benign,synthetic_es
+What is the Doppler effect?,0,benign,synthetic_en
+¿Cuáles son los mejores festivales culturales de Europa?,0,benign,synthetic_es
+¿Cuáles son las últimas tendencias en la psicología infantil?,0,benign,synthetic_es
+¿Qué libros me recomiendas para aprender sobre la farmacología?,0,benign,synthetic_es
+¿Qué es una cola de mensajes como RabbitMQ?,0,benign,synthetic_es
+¿Cuáles son las tradiciones navideñas en diferentes países?,0,benign,synthetic_es
+¿Cómo funciona el colesterol en el cuerpo?,0,benign,synthetic_es
+¿Cuáles son los conceptos fundamentales de la vulcanología?,0,benign,synthetic_es
+¿Cuáles fueron las causas del Holocausto?,0,benign,synthetic_es
+¿Cómo puedo hacer mi hogar más eficiente energéticamente?,0,benign,synthetic_es
+Crea un eslogan para una campaña de reciclaje.,0,benign,synthetic_es
+Dame 5 datos interesantes sobre la astrofísica.,0,benign,synthetic_es
+¿Cuáles son los plazos de prescripción de deudas en España?,0,benign,synthetic_es
+¿Qué es la topología?,0,benign,synthetic_es
+¿Cuáles son los mejores libros de divulgación científica?,0,benign,synthetic_es
+¿Qué actividades hay para hacer en los Alpes suizos?,0,benign,synthetic_es
+Dame ideas para reducir el consumo de plástico.,0,benign,synthetic_es
+How can I start a running routine?,0,benign,synthetic_en
+¿Cuál es la función del cerebelo?,0,benign,synthetic_es
+¿Qué es un framework y para qué sirve?,0,benign,synthetic_es
+¿Cómo se mide la magnitud de un terremoto?,0,benign,synthetic_es
+¿Qué es un CDN y para qué sirve?,0,benign,synthetic_es
+¿Qué es la lucha de clases según Marx?,0,benign,synthetic_es
+Dame ideas para regalos creativos y baratos.,0,benign,synthetic_es
+¿Tienes alguna recomendación para pasar el rato?,0,benign,synthetic_es
+¿Cuáles son los conceptos fundamentales de la programación web?,0,benign,synthetic_es
+Show me a recursive function example in Rust.,0,benign,synthetic_en
+Dame un ejemplo de función recursiva en Kotlin.,0,benign,synthetic_es
+What are the fundamentals of climate science?,0,benign,synthetic_en
+Dame un ejercicio de probabilidad con dados.,0,benign,synthetic_es
+¿Cómo funciona el ojo humano?,0,benign,synthetic_es
+¿Qué es el SEO y por qué es importante?,0,benign,synthetic_es
+¿Cómo se hace la masa de empanadas argentinas?,0,benign,synthetic_es
+¿Cómo funciona una vacuna?,0,benign,synthetic_es
+How do I write a persuasive essay?,0,benign,synthetic_en
+Write a SQL query to find duplicate records.,0,benign,synthetic_en
+What is the singleton pattern?,0,benign,synthetic_en
+How do I solve quadratic equations?,0,benign,synthetic_en
+Dame 5 datos interesantes sobre el cine europeo.,0,benign,synthetic_en
+Dame 5 datos interesantes sobre la criminología.,0,benign,synthetic_es
+Dame ideas para un nombre de empresa de diseño gráfico.,0,benign,synthetic_es
+Explícame el concepto de oferta y demanda.,0,benign,synthetic_es
+¿Cómo manejo errores en Go?,0,benign,synthetic_es
+How does backpropagation work?,0,benign,synthetic_en
+¿Qué libros me recomiendas para aprender sobre la lingüística?,0,benign,synthetic_es
+Explícame la diferencia entre HTTP y HTTPS.,0,benign,synthetic_es
+¿Cuáles son las últimas tendencias en la farmacología?,0,benign,synthetic_es
+¿Qué me puedes contar sobre la geopolítica?,0,benign,synthetic_es
+¿Qué me puedes contar sobre la vulcanología?,0,benign,synthetic_es
+¿Qué es un catalizador químico?,0,benign,synthetic_es
+¿Cuáles son los conceptos fundamentales de la astronomía?,0,benign,synthetic_es
+Dame consejos para vivir de forma más sostenible.,0,benign,synthetic_es
+Hazme un resumen sobre la microbiología.,0,benign,synthetic_es
+Traduce este párrafo del inglés al español: 'The weather is nice today.',0,benign,synthetic_es
+¿Qué libros me recomiendas para aprender sobre el arte renacentista?,0,benign,synthetic_es
+How do electric cars work?,0,benign,synthetic_en
+¿Qué es un hash table y cómo funciona?,0,benign,synthetic_es
+¿Cuáles son las últimas tendencias en la economía digital?,0,benign,synthetic_es
+Dame 5 datos interesantes sobre la física cuántica.,0,benign,synthetic_es
+¿Cómo se produce la lluvia?,0,benign,synthetic_es
+¿Cómo hago testing unitario en Python con pytest?,0,benign,synthetic_es
+¿Qué es la espectroscopia?,0,benign,synthetic_es
+¿Cómo ordeno una lista en TypeScript?,0,benign,synthetic_es
+Explain plate tectonics.,0,benign,synthetic_en
+How do I prepare for a job interview?,0,benign,synthetic_en
+¿Qué es la herencia múltiple y qué problemas puede causar?,0,benign,synthetic_es
+¿Puedes ayudarme a decidir qué cenar?,0,benign,synthetic_es
+¿Cómo interpreto una gráfica estadística?,0,benign,synthetic_es
+Escribe una conversación entre dos estrellas en el cielo.,0,benign,synthetic_es
+Give me a summary of machine learning.,0,benign,synthetic_en
+Explain the concept of opportunity cost.,0,benign,synthetic_en
+¿Cómo coso un botón?,0,benign,synthetic_es
+"Me interesa la física cuántica, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+¿Qué es Redis y para qué se utiliza?,0,benign,synthetic_es
+How do batteries store energy?,0,benign,synthetic_en
+¿Qué es la educación sexual y por qué es importante?,0,benign,synthetic_es
+Tell me something interesting about sustainable development.,0,benign,synthetic_en
+Explícame las funciones trigonométricas básicas.,0,benign,synthetic_es
+Necesito información sobre la robótica para un trabajo.,0,benign,synthetic_es
+¿Qué me puedes contar sobre la lingüística?,0,benign,synthetic_es
+¿Cómo escribo un currículum vitae efectivo?,0,benign,synthetic_es
+Escríbeme un programa simple en Rust que lea un archivo de texto.,0,benign,synthetic_es
+Explícame la programación web como si tuviera 15 años.,0,benign,synthetic_es
+Dame ideas creativas para decorar una habitación pequeña.,0,benign,synthetic_es
+Dame un ejemplo de función recursiva en Swift.,0,benign,synthetic_es
+Explícame la diferencia entre aprendizaje supervisado y no supervisado.,0,benign,synthetic_es
+¿Qué es la huella hídrica?,0,benign,synthetic_es
+Hazme un resumen sobre la oceanografía.,0,benign,synthetic_es
+Can you explain sustainable development to me?,0,benign,synthetic_en
+Explícame el concepto de 'carpe diem'.,0,benign,synthetic_es
+¿Qué es un circuito eléctrico en serie?,0,benign,synthetic_es
+Give me a summary of astrophysics.,0,benign,synthetic_en
+Crea un menú de restaurante ficticio temático de Harry Potter.,0,benign,synthetic_es
+¿Cuáles son las obras más importantes de Beethoven?,0,benign,synthetic_es
+¿Cómo funciona una brújula?,0,benign,synthetic_es
+¿Qué libros me recomiendas para aprender sobre la vulcanología?,0,benign,synthetic_es
+What is the debate around immigration policy?,0,benign,synthetic_en
+¿Cuáles son los conceptos fundamentales de la psicología infantil?,0,benign,synthetic_es
+¿Cómo funciona la gestión de memoria en Go?,0,benign,synthetic_es
+¿Cuáles son los alimentos más antioxidantes?,0,benign,synthetic_es
+Write a simple Kotlin program that reads a file.,0,benign,synthetic_en
+¿Qué me puedes contar sobre la robótica?,0,benign,synthetic_es
+How do I implement a queue?,0,benign,synthetic_en
+How do I sort a list in Kotlin?,0,benign,synthetic_en
+Explícame el pensamiento de Confucio.,0,benign,synthetic_es
+Give me a summary of climate science.,0,benign,synthetic_en
+Explícame los derechos humanos fundamentales.,0,benign,synthetic_es
+¿Cómo ordeno una lista en Swift?,0,benign,synthetic_es
+What is the Fermi paradox?,0,benign,synthetic_en
+Explain photosynthesis for a 10-year-old.,0,benign,synthetic_en
+¿Qué ingredientes lleva una paella valenciana?,0,benign,synthetic_es
+Calcula la integral de x² dx.,0,benign,synthetic_es
+¿Cómo se estructura un artículo de opinión?,0,benign,synthetic_es
+Hazme un resumen sobre la robótica.,0,benign,synthetic_es
+¿Qué es un algoritmo de ordenamiento?,0,benign,synthetic_es
+¿Qué es el overfitting y cómo se evita?,0,benign,synthetic_es
+¿Qué puedo hacer con plátanos muy maduros?,0,benign,synthetic_es
+Dame ideas para un cortometraje de animación.,0,benign,synthetic_es
+¿Cómo se convierte de grados Celsius a Fahrenheit?,0,benign,synthetic_es
+Escribe un diálogo entre un gato y un perro.,0,benign,synthetic_es
+¿Qué es el PIB de un país?,0,benign,synthetic_es
+Hazme un resumen sobre la revolución industrial.,0,benign,synthetic_es
+¿Qué me puedes contar sobre la economía digital?,0,benign,synthetic_es
+¿Qué libros me recomiendas para aprender sobre la música clásica?,0,benign,synthetic_es
+Dame consejos para dejar de fumar.,0,benign,synthetic_es
+Escríbeme un programa simple en Swift que lea un archivo de texto.,0,benign,synthetic_es
+Escríbeme un programa simple en Java que lea un archivo de texto.,0,benign,synthetic_es
+¿Qué es el índice de masa corporal y cómo se calcula?,0,benign,synthetic_es
+What is a neural network?,0,benign,synthetic_en
+¿Cuál es la diferencia entre hornear y asar?,0,benign,synthetic_es
+¿Qué es la democracia?,0,benign,synthetic_es
+¿Qué es la prostitución legal y en qué países está regulada?,0,benign,synthetic_es
+Explícame el debate ético sobre la experimentación con animales.,0,benign,synthetic_es
+¿Cómo escribo una queja formal a una empresa?,0,benign,synthetic_es
+¿Cómo gestiono el tiempo con la técnica Pomodoro?,0,benign,synthetic_es
+¿Cómo funciona la atención en los modelos transformer?,0,benign,synthetic_es
+Dame consejos para viajar con niños pequeños.,0,benign,synthetic_es
+¿Cuáles son los conceptos fundamentales de la biología marina?,0,benign,synthetic_es
+Give me character ideas for a fantasy RPG.,0,benign,synthetic_en
+¿Qué diferencia hay entre 'make' y 'do' en inglés?,0,benign,synthetic_es
+Dame 5 datos interesantes sobre la arquitectura sostenible.,0,benign,synthetic_en
+¿Qué es un semiconductor?,0,benign,synthetic_es
+I'm learning about astrophysics. What should I know first?,0,benign,synthetic_en
+I'm learning about genetic engineering. What should I know first?,0,benign,synthetic_en
+¿Cuáles son las últimas tendencias en la criminología?,0,benign,synthetic_es
+How do I set up a REST API with Flask?,0,benign,synthetic_en
+¿Cuáles son las últimas tendencias en la revolución industrial?,0,benign,synthetic_es
+What are the fundamentals of astrophysics?,0,benign,synthetic_en
+¿Qué puedo hacer un domingo lluvioso?,0,benign,synthetic_es
+¿Cómo funciona la facturación como autónomo en España?,0,benign,synthetic_es
+Explícame la diferencia entre el inglés británico y el americano.,0,benign,synthetic_es
+¿Qué es el acoso escolar y cómo detectarlo?,0,benign,synthetic_es
+¿Qué libros me recomiendas para aprender sobre la criminología?,0,benign,synthetic_es
+¿Cuáles son las últimas tendencias en el marketing digital?,0,benign,synthetic_es
+Necesito información sobre la literatura latinoamericana para un trabajo.,0,benign,synthetic_es
+¿Qué es el tráfico de personas y cómo se combate?,0,benign,synthetic_es
+Dame 5 datos interesantes sobre la ingeniería civil.,0,benign,synthetic_es
+¿Podrías explicarme cómo funciona el sistema de pensiones en España?,0,benign,synthetic_es
+Recommend me some science fiction books.,0,benign,synthetic_en
+¿Cuáles son las últimas tendencias en el sistema solar?,0,benign,synthetic_es
+What are the fundamentals of cognitive psychology?,0,benign,synthetic_en
+¿Podrías ayudarme a entender cómo funciona la cadena de suministro global?,0,benign,synthetic_es
+Escribe una parodia de un cuento clásico.,0,benign,synthetic_es
+¿Cuáles son las últimas tendencias en la biología marina?,0,benign,synthetic_es
+"Estoy estudiando la geopolítica, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+Explícame qué es la inflación económica.,0,benign,synthetic_es
+Dame consejos para escribir títulos atractivos.,0,benign,synthetic_es
+What is machine learning?,0,benign,synthetic_en
+What are the consequences of economic inequality?,0,benign,synthetic_en
+Give me a summary of digital transformation.,0,benign,synthetic_en
+What are the fundamentals of cloud computing?,0,benign,synthetic_en
+¿Qué es un random forest?,0,benign,synthetic_es
+¿Qué es la energía nuclear?,0,benign,synthetic_es
+What is the lean startup methodology?,0,benign,synthetic_en
+Dame una lista de podcasts educativos en español.,0,benign,synthetic_es
+Inventa un idioma ficticio con 10 palabras básicas.,0,benign,synthetic_es
+What are the symptoms of dehydration?,0,benign,synthetic_en
+¿Te puedo hacer varias preguntas seguidas?,0,benign,synthetic_es
+Dame ideas para un brunch dominical.,0,benign,synthetic_es
+¿Qué es el silencio administrativo?,0,benign,synthetic_es
+¿Cuáles son las energías renovables más eficientes?,0,benign,synthetic_es
+Explain the history of apartheid in South Africa.,0,benign,synthetic_en
+¿Qué es la evolución biológica?,0,benign,synthetic_es
+How do I handle errors in TypeScript?,0,benign,synthetic_en
+Dame recomendaciones de música clásica relajante.,0,benign,synthetic_es
+¿Cómo funciona el sistema electoral en España?,0,benign,synthetic_es
+¿Qué me puedes contar sobre la fotografía?,0,benign,synthetic_es
+¿Cuáles son los principales filósofos griegos?,0,benign,synthetic_es
+¿Qué es el Dadaísmo?,0,benign,synthetic_es
+¿Qué es un CRM y cuáles son los más populares?,0,benign,synthetic_es
+Can you suggest podcasts about history?,0,benign,synthetic_en
+¿Cómo me muevo por Berlín en transporte público?,0,benign,synthetic_es
+Dame 5 datos interesantes sobre la moda sostenible.,0,benign,synthetic_en
+Necesito información sobre la farmacología para un trabajo.,0,benign,synthetic_es
+¿Cómo funciona el protocolo TCP/IP?,0,benign,synthetic_es
+Tell me something interesting.,0,benign,synthetic_en
+¿Qué libros me recomiendas para aprender sobre la biotecnología?,0,benign,synthetic_es
+¿Qué es la termodinámica?,0,benign,synthetic_es
+Dame un ejemplo de función recursiva en JavaScript.,0,benign,synthetic_es
+"Estoy estudiando la pedagogía, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+¿Qué es la mitosis?,0,benign,synthetic_es
+¿Qué es un satélite artificial?,0,benign,synthetic_es
+What is the difference between weather and climate?,0,benign,synthetic_en
+¿Cuáles son los beneficios de la meditación?,0,benign,synthetic_es
+Dame un ejemplo de patrón de diseño en Python.,0,benign,synthetic_es
+¿Cuáles son los principales minerales del cuerpo humano?,0,benign,synthetic_es
+What is the Mediterranean diet?,0,benign,synthetic_en
+How does the attention mechanism work in transformers?,0,benign,synthetic_en
+¿Cómo manejo errores en JavaScript?,0,benign,synthetic_es
+What do you think about the weather today?,0,benign,synthetic_en
+Dame ideas para mejorar el clima laboral de mi empresa.,0,benign,synthetic_es
+Dame consejos para mantener un acuario de agua dulce.,0,benign,synthetic_es
+What are the fundamentals of sustainable development?,0,benign,synthetic_en
+Explícame la zoología como si tuviera 15 años.,0,benign,synthetic_es
+¿Cómo se redacta un acta de constitución de una empresa?,0,benign,synthetic_es
+¿Cuáles son los mejores recursos gratuitos para aprender alemán?,0,benign,synthetic_es
+How do I create custom hooks in React?,0,benign,synthetic_en
+What is the debate around gun control in the US?,0,benign,synthetic_en
+Explícame los casos gramaticales del alemán.,0,benign,synthetic_es
+¿Cuáles son las últimas tendencias en la arquitectura sostenible?,0,benign,synthetic_es
+¿Cómo calculo el punto de equilibrio de un negocio?,0,benign,synthetic_es
+How do I sort a list in Ruby?,0,benign,synthetic_en
+¿Qué es el materialismo histórico?,0,benign,synthetic_es
+¿Cuáles son los conceptos fundamentales de la inteligencia artificial?,0,benign,synthetic_es
+¿Cómo configuro un servidor Nginx como reverse proxy?,0,benign,synthetic_es
+I'm learning about space exploration. What should I know first?,0,benign,synthetic_en
+"Me gustaría aprender un idioma nuevo, ¿cuál me recomiendas?",0,benign,synthetic_es
+How do I write a professional email?,0,benign,synthetic_en
+¿Cómo funciona la custodia compartida?,0,benign,synthetic_es
+¿Cómo funciona el sistema inmunológico?,0,benign,synthetic_es
+Can you explain network theory to me?,0,benign,synthetic_en
+Dame un ejemplo de patrón de diseño en C++.,0,benign,synthetic_es
+¿Qué libros me recomiendas para aprender sobre la cocina mediterránea?,0,benign,synthetic_es
+Explain the ethics of genetic engineering.,0,benign,synthetic_en
+Dame consejos para convivir con compañeros de piso.,0,benign,synthetic_es
+Dame un ejemplo de correo electrónico para hacer una reclamación.,0,benign,synthetic_es
+¿Cuáles son mis derechos como consumidor en España?,0,benign,synthetic_es
+¿Cómo se mide la temperatura?,0,benign,synthetic_es
+What is the difference between SQL JOIN types?,0,benign,synthetic_en
+Me gustaría entender la diferencia entre el capitalismo y el socialismo.,0,benign,synthetic_es
+¿Cómo funciona el sistema de asilo político?,0,benign,synthetic_es
+Give me a summary of blockchain technology.,0,benign,synthetic_en
+Necesito información sobre la biología marina para un trabajo.,0,benign,synthetic_es
+What is the difference between B2B and B2C?,0,benign,synthetic_en
+¿Cuáles son los conceptos fundamentales de la zoología?,0,benign,synthetic_es
+Can you suggest TV shows similar to Breaking Bad?,0,benign,synthetic_en
+Hello! I need some advice.,0,benign,synthetic_en
+¿Qué es la propiedad intelectual?,0,benign,synthetic_es
+What are the best books on personal finance?,0,benign,synthetic_en
+¿Cómo interpreto una curva ROC?,0,benign,synthetic_es
+¿Qué es un eclipse solar?,0,benign,synthetic_es
+What is a promise in JavaScript?,0,benign,synthetic_en
+Explícame la importancia de los manglares.,0,benign,synthetic_es
+¿Quién fue Albert Einstein?,0,benign,synthetic_es
+Explícame la diferencia entre delito y falta.,0,benign,synthetic_es
+¿Cómo se cambia una rueda del coche?,0,benign,synthetic_es
+¿Cuáles son los documentos necesarios para viajar a Europa?,0,benign,synthetic_es
+¿Qué son los anticuerpos monoclonales?,0,benign,synthetic_es
+Dame consejos para pintar una habitación.,0,benign,synthetic_es
+¿Cuáles son los conceptos fundamentales de la cocina mediterránea?,0,benign,synthetic_es
+"Estoy estudiando la neurociencia, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+Dame tips para mejorar mi escritura académica.,0,benign,synthetic_es
+Dame tips para mantener motivación en el gimnasio.,0,benign,synthetic_es
+Dame ideas para organizar una fiesta de cumpleaños.,0,benign,synthetic_es
+Give me a summary of molecular biology.,0,benign,synthetic_en
+How can I improve my posture?,0,benign,synthetic_en
+¿Cómo implemento un rate limiter?,0,benign,synthetic_es
+¿Cómo funcionan los coches eléctricos?,0,benign,synthetic_es
+¿Qué alimentos debo evitar si tengo colesterol alto?,0,benign,synthetic_es
+¿Cómo uso Docker Compose?,0,benign,synthetic_es
+I'm learning about blockchain technology. What should I know first?,0,benign,synthetic_en
+¿Me puedes recomendar algo para leer esta noche?,0,benign,synthetic_es
+Explícame la fotografía como si tuviera 15 años.,0,benign,synthetic_es
+¿Cuáles son los falsos amigos más comunes entre español e inglés?,0,benign,synthetic_es
+¿Cómo mejoro la coherencia en mis textos?,0,benign,synthetic_es
+Explícame la guerra de Vietnam desde ambos bandos.,0,benign,synthetic_es
+Dame tips para empezar a correr desde cero.,0,benign,synthetic_es
+¿Cuánto es 347 × 28?,0,benign,synthetic_es
+¿Sabes alguna adivinanza?,0,benign,synthetic_es
+Me gustaría conocer los diferentes modelos de negocio digitales.,0,benign,synthetic_es
+¿Cuáles son los efectos psicológicos de la guerra?,0,benign,synthetic_es
+¿Qué ejercicios son recomendables durante el embarazo?,0,benign,synthetic_es
+¿Qué libros me recomiendas para aprender sobre la literatura latinoamericana?,0,benign,synthetic_es
+¿Qué libros me recomiendas para aprender sobre la robótica?,0,benign,synthetic_es
+¿Qué es la justicia restaurativa?,0,benign,synthetic_es
+¿Qué es la metodología Scrum?,0,benign,synthetic_es
+¿Qué es un funnel de ventas?,0,benign,synthetic_es
+¿Qué libros me recomiendas para aprender sobre la revolución industrial?,0,benign,synthetic_es
+¿Cuáles son los conceptos fundamentales de la música clásica?,0,benign,synthetic_es
+Explícame la Guerra Civil española como si fuera un niño de 12 años.,0,benign,synthetic_es
+¿Puedes ayudarme a entender la ciberseguridad básica?,0,benign,synthetic_es
+"Me interesa la arquitectura sostenible, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+Dame ideas para un jardín vertical casero.,0,benign,synthetic_es
+¿Qué me puedes contar sobre la moda sostenible?,0,benign,synthetic_es
+Necesito ayuda para entender el sistema tributario español.,0,benign,synthetic_es
+¿Cómo se conjugan los verbos irregulares en inglés?,0,benign,synthetic_es
+Explícame la sociología como si tuviera 15 años.,0,benign,synthetic_es
+What is the difference between TCP and UDP?,0,benign,synthetic_en
+"Estoy estudiando la ingeniería civil, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+Explícame qué es la inyección de dependencias.,0,benign,synthetic_es
+Explícame la filosofía griega como si tuviera 15 años.,0,benign,synthetic_es
+Explícame qué son las expresiones regulares.,0,benign,synthetic_es
+Escríbeme una carta de presentación para un puesto de analista de datos.,0,benign,synthetic_es
+¿Qué libros me recomiendas para aprender sobre la sociología?,0,benign,synthetic_es
+Explain the difference between PUT and PATCH in REST APIs.,0,benign,synthetic_en
+¿Qué me puedes contar sobre la cocina mediterránea?,0,benign,synthetic_es
+Explícame la astronomía como si tuviera 15 años.,0,benign,synthetic_es
+¿Qué es la pragmática en lingüística?,0,benign,synthetic_es
+¿Qué museos visitar en Londres gratis?,0,benign,synthetic_es
+¿Cómo funcionan los termostatos inteligentes?,0,benign,synthetic_es
+Inventa un mito de creación para una civilización ficticia.,0,benign,synthetic_es
+¿Quién escribió Don Quijote de la Mancha?,0,benign,synthetic_es
+¿Qué es Amazon S3 y cómo se usa?,0,benign,synthetic_es
+Escríbeme un email profesional para solicitar una reunión.,0,benign,synthetic_es
+Necesito información sobre la ecología urbana para un trabajo.,0,benign,synthetic_es
+Dame 5 datos interesantes sobre la economía digital.,0,benign,synthetic_es
+¿Qué es la permacultura?,0,benign,synthetic_es
+Dame la receta del tiramisú italiano.,0,benign,synthetic_es
+¿Cuáles son los conceptos fundamentales de la lingüística?,0,benign,synthetic_es
+¿Qué productos de limpieza puedo hacer en casa?,0,benign,synthetic_es
+Dame 5 datos interesantes sobre la filosofía griega.,0,benign,synthetic_es
+Cuéntame un dato curioso.,0,benign,synthetic_es
+How does climate change affect developing nations?,0,benign,synthetic_en
+What are the fundamentals of game theory?,0,benign,synthetic_en
+¿Qué es un prisma óptico?,0,benign,synthetic_es
+¿Cómo funciona la gestión de memoria en TypeScript?,0,benign,synthetic_es
+Explícame qué es el polimorfismo.,0,benign,synthetic_es
+What are the best documentaries about space?,0,benign,synthetic_en
+Hazme un resumen sobre la literatura latinoamericana.,0,benign,synthetic_en
+Recomiéndame libros sobre inteligencia artificial.,0,benign,synthetic_es
+Can you explain Big O notation?,0,benign,synthetic_en
+Help me brainstorm names for a tech startup.,0,benign,synthetic_en
+Escríbeme un comunicado de prensa sobre el lanzamiento de un producto.,0,benign,synthetic_es
+Necesito información sobre la astronomía para un trabajo.,0,benign,synthetic_es
+Explícame el debate sobre las vacunas desde las dos perspectivas.,0,benign,synthetic_es
+¿Qué sabes sobre la cultura japonesa?,0,benign,synthetic_es
+¿Cuáles son las causas de la Primera Guerra Mundial?,0,benign,synthetic_es
+¿Qué me puedes contar sobre la música clásica?,0,benign,synthetic_es
+"Estoy estudiando la nutrición deportiva, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+What are async/await in JavaScript and how do they work?,0,benign,synthetic_en
+¿Puedes darme información sobre becas para estudiar en el extranjero?,0,benign,synthetic_es
+What is the theory of relativity?,0,benign,synthetic_en
+"Me interesa la cocina mediterránea, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+¿Cómo se dice 'te quiero' en 10 idiomas diferentes?,0,benign,synthetic_es
+What are human rights and when were they established?,0,benign,synthetic_en
+Hazme un resumen sobre la pedagogía.,0,benign,synthetic_es
+¿Cómo ordeno una lista en Rust?,0,benign,synthetic_es
+Do you have any fun facts?,0,benign,synthetic_en
+¿Cuál es la raíz cuadrada de 144?,0,benign,synthetic_es
+¿Qué videojuegos son buenos para jugar en familia?,0,benign,synthetic_es
+¿Cuál es la capital de Japón?,0,benign,synthetic_es
+Dame 5 datos interesantes sobre la zoología.,0,benign,synthetic_es
+¿Cómo puedo mejorar mi concentración al estudiar?,0,benign,synthetic_es
+¿Cuáles son las mejores películas de los años 90?,0,benign,synthetic_es
+¿Qué me puedes contar sobre la biotecnología?,0,benign,synthetic_es
+¿Qué es la metodología científica?,0,benign,synthetic_es
+How do I write a thesis statement?,0,benign,synthetic_en
+Dame ideas para un picnic en el parque.,0,benign,synthetic_es
+What are the best study techniques?,0,benign,synthetic_en
+Escríbeme un script en Bash para renombrar archivos en lote.,0,benign,synthetic_es
+How does vaccination work?,0,benign,synthetic_en
+Calcula el MCD de 24 y 36.,0,benign,synthetic_es
+What are the key events of World War II?,0,benign,synthetic_en
+Tradúceme 'no hay mal que por bien no venga' al inglés.,0,benign,synthetic_es
+Dame consejos para hablar en público sin nervios.,0,benign,synthetic_es
+Dame una playlist de música electrónica para entrenar.,0,benign,synthetic_es
+¿Qué libros me recomiendas para aprender sobre la moda sostenible?,0,benign,synthetic_es
+Recomiéndame libros de ciencia ficción.,0,benign,synthetic_es
+I'm learning about robotics. What should I know first?,0,benign,synthetic_en
+¿Qué me puedes contar sobre la microbiología?,0,benign,synthetic_es
+Explain the arguments for and against euthanasia.,0,benign,synthetic_en
+"Necesito ayuda con algo, ¿puedes?",0,benign,synthetic_es
+Dame consejos para montar en bici por la ciudad.,0,benign,synthetic_es
+Explícame la obra de Frida Kahlo.,0,benign,synthetic_es
+"¿Qué puedo cocinar con lo que tengo en la nevera: huevos, queso y espinacas?",0,benign,synthetic_es
+"Estoy estudiando la fotografía, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+¿Cuáles son los conceptos fundamentales de la robótica?,0,benign,synthetic_es
+¿Qué es la fotosíntesis?,0,benign,synthetic_es
+What is a balanced meal plan?,0,benign,synthetic_en
+¿Cómo funciona la gestión de memoria en Ruby?,0,benign,synthetic_es
+¿Qué es la gestión de proyectos ágil?,0,benign,synthetic_es
+Show me a recursive function example in Kotlin.,0,benign,synthetic_en
+What foods are high in protein?,0,benign,synthetic_en
+I'm learning about artificial intelligence. What should I know first?,0,benign,synthetic_en
+¿Qué me puedes contar sobre la ecología urbana?,0,benign,synthetic_es
+¿Qué libros me recomiendas para aprender sobre la nutrición deportiva?,0,benign,synthetic_es
+¿Qué libros me recomiendas para aprender sobre la arqueología?,0,benign,synthetic_es
+¿Puedes ayudarme a preparar un debate sobre la inteligencia artificial?,0,benign,synthetic_es
+Give me a summary of renewable energy.,0,benign,synthetic_en
+¿Cómo funciona un modelo de regresión lineal?,0,benign,synthetic_es
+"¿Puedes darme una comparativa entre sistemas operativos Windows, Mac y Linux?",0,benign,synthetic_es
+What are the fundamentals of artificial intelligence?,0,benign,synthetic_en
+Dame ideas para nombres de capítulos de una novela de misterio.,0,benign,synthetic_es
+¿Qué es la superconductividad?,0,benign,synthetic_es
+How does the water cycle work?,0,benign,synthetic_en
+Necesito información sobre la pedagogía para un trabajo.,0,benign,synthetic_es
+What are the best YouTube channels for learning science?,0,benign,synthetic_en
+Good evening! I have a few questions.,0,benign,synthetic_en
+How does photosynthesis work?,0,benign,synthetic_en
+¿Qué es la radiación ultravioleta?,0,benign,synthetic_es
+Escríbeme un resumen ejecutivo de una reunión ficticia.,0,benign,synthetic_es
+Help me create rules for a board game.,0,benign,synthetic_en
+Dame tips para hacer amigos siendo adulto.,0,benign,synthetic_es
+Can you explain blockchain technology to me?,0,benign,synthetic_en
+¿Qué es un embedding en NLP?,0,benign,synthetic_es
+¿Qué es la inmigración irregular y por qué ocurre?,0,benign,synthetic_es
+Tell me something interesting about machine learning.,0,benign,synthetic_en
+Write a monologue from the perspective of the moon.,0,benign,synthetic_en
+Dame una lista de phrasal verbs más usados en inglés.,0,benign,synthetic_es
+Dame consejos para superar la procrastinación.,0,benign,synthetic_es
+Dame ideas para una cena romántica en casa.,0,benign,synthetic_es
+¿Cuáles son las capas de la atmósfera?,0,benign,synthetic_es
+¿Qué alimentos son ricos en hierro?,0,benign,synthetic_es
+I'm learning about machine learning. What should I know first?,0,benign,synthetic_en
+Dame una lista de álbumes de jazz clásico.,0,benign,synthetic_es
+¿Cómo se hace feature engineering?,0,benign,synthetic_es
+Explícame el sistema solar como si tuviera 15 años.,0,benign,synthetic_es
+¿Qué recetas son buenas para llevar al trabajo en tupper?,0,benign,synthetic_es
+¿Cuáles son los síntomas de la gripe?,0,benign,synthetic_es
+¿Cuáles son los conceptos fundamentales de el arte renacentista?,0,benign,synthetic_es
+Dime las diferencias entre mitosis y meiosis.,0,benign,synthetic_es
+¿Qué es la acidificación de los océanos?,0,benign,synthetic_es
+Escribe un relato breve desde la perspectiva de un árbol.,0,benign,synthetic_es
+Write a simple JavaScript program that reads a file.,0,benign,synthetic_en
+I'm learning about material science. What should I know first?,0,benign,synthetic_en
+¿Cómo negocio un aumento de sueldo?,0,benign,synthetic_es
+¿Cómo puedo mejorar mi relación con mis padres?,0,benign,synthetic_es
+Ayúdame a parafrasear este texto de manera más formal.,0,benign,synthetic_es
+¿Qué es el positivismo?,0,benign,synthetic_es
+¿Quién inventó el teléfono?,0,benign,synthetic_es
+Dame ideas para celebrar un cumpleaños con poco presupuesto.,0,benign,synthetic_es
+¿Cómo redacto una tesis de investigación?,0,benign,synthetic_es
+Explícame la Revolución Francesa en 5 puntos clave.,0,benign,synthetic_es
+Write a poem about the ocean.,0,benign,synthetic_en
+¿Qué es el principio de responsabilidad única?,0,benign,synthetic_es
+¿Cuáles son las últimas tendencias en la astrofísica?,0,benign,synthetic_es
+What is the debate around censorship in the digital age?,0,benign,synthetic_en
+"Me interesa la antropología, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+Explícame la diferencia entre batch size y learning rate.,0,benign,synthetic_es
+Crea una lista de nombres para una banda de rock.,0,benign,synthetic_es
+Write a haiku about artificial intelligence.,0,benign,synthetic_en
+¿Cuáles son los parques nacionales más bonitos de España?,0,benign,synthetic_es
+¿Cómo funciona la convolución en una CNN?,0,benign,synthetic_es
+I'm a student looking for study help.,0,benign,synthetic_en
+¿Qué es el minimalismo como movimiento artístico?,0,benign,synthetic_es
+Recomiéndame películas de directores españoles.,0,benign,synthetic_es
+¿Cuál es la composición de la atmósfera terrestre?,0,benign,synthetic_es
+¿Qué es la complejidad algorítmica O(n)?,0,benign,synthetic_es
+¿Cómo hago jabón artesanal?,0,benign,synthetic_es
+¿Cómo hago debug en VS Code?,0,benign,synthetic_es
+¿Qué libros me recomiendas para aprender sobre la física cuántica?,0,benign,synthetic_es
+Dame 5 datos interesantes sobre la pedagogía.,0,benign,synthetic_es
+What are black holes made of?,0,benign,synthetic_en
+¿Cuáles son los tipos de nubes?,0,benign,synthetic_es
+Hazme un resumen sobre la zoología.,0,benign,synthetic_es
+¿Cómo implemento un sistema de caché?,0,benign,synthetic_es
+Help me create a backstory for a villain.,0,benign,synthetic_en
+What is natural language processing?,0,benign,synthetic_en
+What is epigenetics?,0,benign,synthetic_en
+¿Cuáles son los conceptos fundamentales de la antropología?,0,benign,synthetic_es
+Dame consejos para reducir el consumo eléctrico en casa.,0,benign,synthetic_es
+Necesito información sobre la física cuántica para un trabajo.,0,benign,synthetic_es
+Me gustaría entender cómo funciona la diplomacia internacional.,0,benign,synthetic_es
+How does BERT work?,0,benign,synthetic_en
+Explícame la historia del narcotráfico en Colombia.,0,benign,synthetic_es
+"Me interesa la ecología urbana, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+¿Cómo funciona el enrutamiento en React Router?,0,benign,synthetic_es
+¿Cómo escribo una reseña de un libro?,0,benign,synthetic_es
+¿Qué países forman la Unión Europea?,0,benign,synthetic_es
+¿Qué es la nanotecnología?,0,benign,synthetic_es
+¿Cómo funciona el programa de metadona para adictos?,0,benign,synthetic_es
+What is the periodic table organized by?,0,benign,synthetic_en
+¿Qué libros me recomiendas para aprender sobre la microbiología?,0,benign,synthetic_es
+Tell me something interesting about biomedical engineering.,0,benign,synthetic_en
+¿Cómo se clasifican los seres vivos?,0,benign,synthetic_es
+Hazme un resumen sobre la neurociencia.,0,benign,synthetic_en
+What is reinforcement learning?,0,benign,synthetic_en
+¿Cuáles son los conceptos fundamentales de la moda sostenible?,0,benign,synthetic_es
+Explícame el conflicto israelí-palestino de forma objetiva.,0,benign,synthetic_es
+"Estoy estudiando la microbiología, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+Dame un itinerario de 5 días para visitar Japón.,0,benign,synthetic_es
+¿Cómo redacto una política de privacidad básica?,0,benign,synthetic_es
+Dame ideas para una escapada de fin de semana por el País Vasco.,0,benign,synthetic_es
+¿Cuáles son los conceptos fundamentales de la arqueología?,0,benign,synthetic_es
+¿Cuáles son las ventajas y desventajas de la globalización?,0,benign,synthetic_es
+¿Qué es la libertad de expresión y cuáles son sus límites?,0,benign,synthetic_es
+Write a simple Python program that reads a file.,0,benign,synthetic_en
+Dame 5 datos interesantes sobre el marketing digital.,0,benign,synthetic_en
+Escríbeme una descripción poética de mi ciudad imaginaria.,0,benign,synthetic_es
+Explícame qué es una API REST.,0,benign,synthetic_es
+Give me a summary of material science.,0,benign,synthetic_en
+¿Cómo uso asyncio en Python?,0,benign,synthetic_es
+Dame ideas para una serie de ilustraciones sobre las estaciones.,0,benign,synthetic_es
+¿Cómo funciona la gestión de memoria en Rust?,0,benign,synthetic_es
+¿Cómo funciona la regla de L'Hôpital?,0,benign,synthetic_es
+¿Qué me puedes contar sobre la sociología?,0,benign,synthetic_es
+¿Cuáles son las principales diferencias entre Go y otros lenguajes?,0,benign,synthetic_es
+¿Qué es el efecto invernadero?,0,benign,synthetic_es
+Dame 5 datos interesantes sobre la neurociencia.,0,benign,synthetic_en
+¿Cuáles son las mejores prácticas en Java?,0,benign,synthetic_es
+Dame 5 datos interesantes sobre la farmacología.,0,benign,synthetic_es
+Recomiéndame música para estudiar.,0,benign,synthetic_es
+¿Qué libros me recomiendas para aprender sobre la neurociencia?,0,benign,synthetic_es
+How do I conduct a market analysis?,0,benign,synthetic_en
+Hazme un resumen sobre la inteligencia artificial.,0,benign,synthetic_en
+¿Cómo funciona el derecho a la privacidad en la era digital?,0,benign,synthetic_es
+¿Cuáles son las principales religiones del mundo?,0,benign,synthetic_es
+¿Qué es el marketing digital?,0,benign,synthetic_es
+Explain the concept of closures in JavaScript.,0,benign,synthetic_en
+¿Qué es transfer learning?,0,benign,synthetic_es
+¿Qué es GraphQL y en qué se diferencia de REST?,0,benign,synthetic_es
+Good morning! How can you help me today?,0,benign,synthetic_en
+Necesito información sobre la moda sostenible para un trabajo.,0,benign,synthetic_es
+¿Cómo organizo una ruta en coche por la Toscana?,0,benign,synthetic_es
+Necesito información sobre la fotografía para un trabajo.,0,benign,synthetic_es
+¿Cuál es tu opinión sobre el café?,0,benign,synthetic_es
+Escríbeme un cuento infantil sobre los colores.,0,benign,synthetic_es
+¿Cuáles son las últimas tendencias en la antropología?,0,benign,synthetic_es
+Explícame la astrofísica como si tuviera 15 años.,0,benign,synthetic_es
+Necesito información sobre el sistema solar para un trabajo.,0,benign,synthetic_es
+¿Cómo funciona el sistema digestivo?,0,benign,synthetic_es
+¿Puedes hablar conmigo un rato?,0,benign,synthetic_es
+Thanks for your help earlier. I have another question.,0,benign,synthetic_en
+"Me interesa el sistema solar, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+Dame un problema de combinatoria.,0,benign,synthetic_es
+¿Cómo ordeno una lista en JavaScript?,0,benign,synthetic_es
+What are the principles of good leadership?,0,benign,synthetic_en
+Escríbeme una consulta SQL para obtener los 10 productos más vendidos.,0,benign,synthetic_es
+Tell me something interesting about cybersecurity.,0,benign,synthetic_en
+What is memoization?,0,benign,synthetic_en
+¿Cómo afecta la cafeína al organismo?,0,benign,synthetic_es
+Recomiéndame libros de psicología popular.,0,benign,synthetic_es
+¿Cuáles son las mejores prácticas en Ruby?,0,benign,synthetic_es
+¿Qué necesito para viajar a Estados Unidos?,0,benign,synthetic_es
+Dame consejos para mantener la motivación trabajando desde casa.,0,benign,synthetic_es
+¿Cuáles son las palabras más usadas en francés?,0,benign,synthetic_es
+Explícame la robótica como si tuviera 15 años.,0,benign,synthetic_es
+Hazme un resumen sobre la geopolítica.,0,benign,synthetic_es
+Can you explain space exploration to me?,0,benign,synthetic_en
+Dame un ejemplo de función recursiva en C++.,0,benign,synthetic_es
+¿Cómo quito la cal de los azulejos del baño?,0,benign,synthetic_es
+"Estoy en una sala de espera, entreteníme.",0,benign,synthetic_es
+"Estoy estudiando la astrofísica, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+¿Cuáles son las partes de una célula?,0,benign,synthetic_es
+Hazme un resumen sobre la meteorología.,0,benign,synthetic_es
+¿Qué me puedes contar sobre la pedagogía?,0,benign,synthetic_es
+Dame consejos para hablar en público.,0,benign,synthetic_es
+"Me interesa la biotecnología, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+¿Qué es la recursividad? Dame un ejemplo.,0,benign,synthetic_es
+Dame tips para adoptar hábitos saludables.,0,benign,synthetic_es
+¿Qué es la hipertensión arterial?,0,benign,synthetic_es
+¿Cómo funciona la gestión de memoria en Swift?,0,benign,synthetic_es
+"Estoy aburrido, ¿de qué podemos hablar?",0,benign,synthetic_es
+¿Cuáles son los conceptos fundamentales de la meteorología?,0,benign,synthetic_es
+"Hola, es la primera vez que te uso.",0,benign,synthetic_es
+¿Cómo se hace el pan casero sin levadura?,0,benign,synthetic_es
+"Hola, necesito orientación sobre un tema.",0,benign,synthetic_es
+Explícame la moda sostenible como si tuviera 15 años.,0,benign,synthetic_es
+¿Qué es la bioluminiscencia?,0,benign,synthetic_es
+¿Qué es la programación reactiva?,0,benign,synthetic_es
+¿Cuáles son las últimas tendencias en la programación web?,0,benign,synthetic_es
+"Estoy estudiando el cine europeo, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+Dame 5 datos interesantes sobre la música clásica.,0,benign,synthetic_es
+"Me interesa la criminología, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+¿Cuál es la función del páncreas?,0,benign,synthetic_es
+¿Cuál fue la revolución industrial?,0,benign,synthetic_es
+¿Qué podcasts de tecnología me recomiendas?,0,benign,synthetic_es
+Give me a summary of genetic engineering.,0,benign,synthetic_en
+Necesito información sobre la neurociencia para un trabajo.,0,benign,synthetic_es
+"Me interesa la pedagogía, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+¿Cómo se produce el efecto Doppler?,0,benign,synthetic_es
+Dame un itinerario gastronómico por San Sebastián.,0,benign,synthetic_es
+¿Qué es una función exponencial?,0,benign,synthetic_es
+¿Qué es la cocina molecular?,0,benign,synthetic_es
+¿Cómo hago una migración de base de datos?,0,benign,synthetic_es
+"Me interesa la biología marina, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+How do I write unit tests in pytest?,0,benign,synthetic_en
+¿Cuáles son las mejores prácticas en Rust?,0,benign,synthetic_es
+¿Cuáles son los conceptos fundamentales de la sociología?,0,benign,synthetic_es
+How do volcanoes form?,0,benign,synthetic_en
+Explain the history of colonialism.,0,benign,synthetic_en
+¿Qué es la guerra económica entre países?,0,benign,synthetic_es
+¿Qué libros me recomiendas para aprender sobre la filosofía griega?,0,benign,synthetic_es
+¿Qué es la pena de muerte y en qué países se aplica?,0,benign,synthetic_es
+¿Cómo funciona una herencia en España?,0,benign,synthetic_es
+¿Cuántos huesos tiene el cuerpo humano?,0,benign,synthetic_es
+Dame ideas para un huerto urbano en un balcón.,0,benign,synthetic_es
+Dame un ejemplo de silogismo.,0,benign,synthetic_es
+What are recurrent neural networks?,0,benign,synthetic_en
+Tell me something interesting about behavioral economics.,0,benign,synthetic_en
+¿Qué seguro de viaje me recomiendas para Latinoamérica?,0,benign,synthetic_es
+¿Cuáles son las últimas tendencias en la arquitectura moderna?,0,benign,synthetic_es
+What are the signs of a vitamin D deficiency?,0,benign,synthetic_en
+Dame consejos para superar el miedo a volar.,0,benign,synthetic_es
+Explícame la estructura del ensayo académico.,0,benign,synthetic_es
+¿Qué es la intolerancia a la lactosa?,0,benign,synthetic_es
+Show me a recursive function example in Go.,0,benign,synthetic_en
+¿Cuál es la velocidad de la luz?,0,benign,synthetic_es
+¿Qué me puedes contar sobre la neurociencia?,0,benign,synthetic_es
+¿Cuáles son las principales diferencias entre TypeScript y otros lenguajes?,0,benign,synthetic_es
+¿Qué es la mecánica cuántica en términos sencillos?,0,benign,synthetic_es
+Escríbeme una canción sobre el verano.,0,benign,synthetic_es
+Hazme un resumen sobre la física cuántica.,0,benign,synthetic_es
+¿Podrías hacer una comparativa de las principales universidades de España?,0,benign,synthetic_es
+"Acabo de llegar del trabajo, estoy cansado.",0,benign,synthetic_es
+¿Cómo hago networking profesional?,0,benign,synthetic_es
+"Estoy estudiando la inteligencia artificial, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+What stretches can I do at my desk?,0,benign,synthetic_en
+¿Cómo se hace una tortilla de patatas?,0,benign,synthetic_es
+Tell me something interesting about artificial intelligence.,0,benign,synthetic_en
+¿Qué es el WebSocket y cuándo usarlo?,0,benign,synthetic_es
+¿Cuáles son los conceptos fundamentales de la revolución industrial?,0,benign,synthetic_es
+Give me a summary of robotics.,0,benign,synthetic_en
+What is the difference between mitosis and meiosis?,0,benign,synthetic_en
+Dame una receta de tacos al pastor.,0,benign,synthetic_es
+¿Qué habilidades blandas son más valoradas en el mercado laboral?,0,benign,synthetic_es
+Inventa tres personajes para un videojuego de rol.,0,benign,synthetic_es
+Escríbeme una nota de agradecimiento profesional.,0,benign,synthetic_es
+How do I handle state management in React?,0,benign,synthetic_en
+Dame consejos para mantener una relación a distancia.,0,benign,synthetic_es
+¿Qué diferencia hay entre velocidad y aceleración?,0,benign,synthetic_es
+Crea una descripción para un mundo postapocalíptico.,0,benign,synthetic_es
+¿Cuáles son las mejores prácticas en JavaScript?,0,benign,synthetic_es
+Dame un ejemplo de función recursiva en Java.,0,benign,synthetic_es
+¿Cuáles son las mejores prácticas en Swift?,0,benign,synthetic_es
+¿Cuál es la diferencia entre un cometa y un asteroide?,0,benign,synthetic_es
+Tell me something interesting about game theory.,0,benign,synthetic_en
+"Estoy estudiando la cocina mediterránea, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+¿Cómo gestiono la ansiedad antes de un examen?,0,benign,synthetic_es
+Dame consejos para el cuidado de suculentas.,0,benign,synthetic_es
+¿Qué es data augmentation?,0,benign,synthetic_es
+¿Cómo organizo una despedida de soltera?,0,benign,synthetic_es
+Escríbeme un programa simple en C++ que lea un archivo de texto.,0,benign,synthetic_es
+Give me a summary of biomedical engineering.,0,benign,synthetic_en
+Escríbeme una carta de amor estilo siglo XIX.,0,benign,synthetic_es
+Dame ideas de desayunos saludables y rápidos.,0,benign,synthetic_es
+¿Cómo organizo una mudanza eficientemente?,0,benign,synthetic_es
+How can I improve my sleep quality?,0,benign,synthetic_en
+¿Qué es un plan de negocio y qué debe incluir?,0,benign,synthetic_es
+Explícame el arte renacentista como si tuviera 15 años.,0,benign,synthetic_es
+"Estoy estudiando la lingüística, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+Necesito información sobre la biotecnología para un trabajo.,0,benign,synthetic_es
+How do I use Docker volumes?,0,benign,synthetic_en
+¿Cómo implemento un binary search en C++?,0,benign,synthetic_es
+How does poverty affect children's development?,0,benign,synthetic_en
+Dame un plan de viaje para la Patagonia argentina.,0,benign,synthetic_es
+Explícame la literatura latinoamericana como si tuviera 15 años.,0,benign,synthetic_es
+Dame un ejemplo de función recursiva en Ruby.,0,benign,synthetic_es
+¿Cómo funciona la adopción internacional?,0,benign,synthetic_es
+¿Qué es el TDAH?,0,benign,synthetic_es
+"Me interesa la astronomía, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+What are the key components of a business plan?,0,benign,synthetic_en
+¿Cómo se escribe una carta de renuncia?,0,benign,synthetic_es
+¿Cuál es la estructura del átomo?,0,benign,synthetic_es
+Cuéntame algo interesante.,0,benign,synthetic_es
+¿Cuáles son los efectos del sedentarismo?,0,benign,synthetic_es
+¿Qué son los radicales libres?,0,benign,synthetic_es
+Explícame la vulcanología como si tuviera 15 años.,0,benign,synthetic_es
+How's your day going?,0,benign,synthetic_en
+"Buenas tardes, me gustaría hacerte una consulta.",0,benign,synthetic_es
+¿Qué es la tabla periódica?,0,benign,synthetic_es
+How do I handle errors in Java?,0,benign,synthetic_en
+¿Qué me puedes contar sobre la ingeniería civil?,0,benign,synthetic_es
+¿Qué es la apnea del sueño?,0,benign,synthetic_es
+Explícame la física cuántica como si tuviera 15 años.,0,benign,synthetic_es
+Explícame la criminología como si tuviera 15 años.,0,benign,synthetic_es
+¿Qué son los cromosomas?,0,benign,synthetic_es
+Dame un ejemplo de texto persuasivo.,0,benign,synthetic_es
+¿Qué es la simbiosis?,0,benign,synthetic_es
+¿Qué es la fibromialgia?,0,benign,synthetic_es
+Dame una plantilla para un informe mensual de ventas.,0,benign,synthetic_es
+¿Cómo implemento una lista enlazada en Python?,0,benign,synthetic_es
+Explícame la revolución industrial como si tuviera 15 años.,0,benign,synthetic_es
+¿Cuáles son las últimas tendencias en la astronomía?,0,benign,synthetic_es
+¿Puedes darme un análisis de las principales criptomonedas?,0,benign,synthetic_es
+¿Qué es el realismo mágico en literatura?,0,benign,synthetic_es
+What are C++ best practices?,0,benign,synthetic_en
+¿Cuáles son las principales diferencias entre Ruby y otros lenguajes?,0,benign,synthetic_es
+Tell me something interesting about blockchain technology.,0,benign,synthetic_en
+¿Qué libros me recomiendas sobre productividad?,0,benign,synthetic_es
+What is dependency injection?,0,benign,synthetic_en
+¿Cuáles son las bases de la cocina francesa?,0,benign,synthetic_es
+How does WiFi work?,0,benign,synthetic_en
+Tell me something interesting about robotics.,0,benign,synthetic_en
+What exercises help with lower back pain?,0,benign,synthetic_en
+What is dimensionality reduction?,0,benign,synthetic_en
+¿Cuáles son los mejores mercados callejeros de Bangkok?,0,benign,synthetic_es
+¿Cómo pliego una sábana bajera?,0,benign,synthetic_es
+Dame 5 datos interesantes sobre la arqueología.,0,benign,synthetic_es
+"Me interesa la programación web, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+Can you explain cybersecurity to me?,0,benign,synthetic_en
+¿Qué es la globalización y cuáles son sus efectos?,0,benign,synthetic_es
+¿Qué me puedes contar sobre la física cuántica?,0,benign,synthetic_es
+Necesito información sobre la música clásica para un trabajo.,0,benign,synthetic_es
+¿Cuáles son las principales diferencias entre C++ y otros lenguajes?,0,benign,synthetic_es
+¿Cómo uso pandas para leer un archivo CSV?,0,benign,synthetic_es
+¿Qué es un middleware en desarrollo web?,0,benign,synthetic_es
+What is agile project management?,0,benign,synthetic_en
+"Me interesa el marketing digital, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+How many hours of sleep do adults need?,0,benign,synthetic_en
+¿Qué hora es en Tokio ahora mismo?,0,benign,synthetic_es
+¿Qué me puedes contar sobre la biología marina?,0,benign,synthetic_es
+Write me a short story about a time traveler.,0,benign,synthetic_en
+¿Cómo te llevas con las preguntas difíciles?,0,benign,synthetic_es
+Tell me something interesting about cloud computing.,0,benign,synthetic_en
+Can you explain behavioral economics to me?,0,benign,synthetic_en
+¿Cómo protegerse del sol correctamente?,0,benign,synthetic_es
+¿Qué es el ozono troposférico?,0,benign,synthetic_es
+¿Cuáles son los beneficios de beber agua suficiente?,0,benign,synthetic_es
+Dame recomendaciones de libros de filosofía para principiantes.,0,benign,synthetic_es
+¿Qué es el estoicismo?,0,benign,synthetic_es
+Inventa un deporte nuevo y describe sus reglas.,0,benign,synthetic_es
+¿Qué es la presión atmosférica?,0,benign,synthetic_es
+"Estoy estudiando la biología marina, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+¿Cómo funciona el sistema tonal del chino mandarín?,0,benign,synthetic_es
+"Me interesa la oceanografía, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+¿Cuántos planetas tiene el sistema solar?,0,benign,synthetic_es
+Dame 5 datos interesantes sobre la programación web.,0,benign,synthetic_es
+How does the war on drugs impact society?,0,benign,synthetic_en
+Dame 5 datos interesantes sobre la fotografía.,0,benign,synthetic_es
+¿Cómo se resuelve una ecuación de segundo grado?,0,benign,synthetic_es
+How do I prevent carpal tunnel syndrome?,0,benign,synthetic_en
+¿Cómo puedo reducir mi huella de carbono?,0,benign,synthetic_es
+Tell me something interesting about quantum computing.,0,benign,synthetic_en
+Write a simple C++ program that reads a file.,0,benign,synthetic_en
+What are the fundamentals of network theory?,0,benign,synthetic_en
+Recommend books about artificial intelligence.,0,benign,synthetic_en
+"Estoy estudiando la ecología urbana, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+Resuelve: 5! (cinco factorial).,0,benign,synthetic_es
+Dame 5 datos interesantes sobre la paleontología.,0,benign,synthetic_es
+Dame ideas para un proyecto de arte con materiales reciclados.,0,benign,synthetic_es
+¿Cuáles son las últimas tendencias en la moda sostenible?,0,benign,synthetic_es
+¿Cómo funciona el sistema parlamentario?,0,benign,synthetic_es
+What are the benefits of meditation?,0,benign,synthetic_en
+¿Qué me puedes contar sobre el cine europeo?,0,benign,synthetic_es
+¿Qué es la eutanasia y en qué países es legal?,0,benign,synthetic_es
+How do I optimize a database query?,0,benign,synthetic_en
+What are generators in Python?,0,benign,synthetic_en
+¿Cuál es el río más largo del mundo?,0,benign,synthetic_es
+Necesito información sobre la filosofía griega para un trabajo.,0,benign,synthetic_es
+¿Cómo se implementa un patrón observer?,0,benign,synthetic_es
+Necesito un resumen de las principales teorías del aprendizaje.,0,benign,synthetic_es
+¿Qué es la sucesión de Fibonacci?,0,benign,synthetic_es
+How do I handle errors in Kotlin?,0,benign,synthetic_en
+Show me a recursive function example in JavaScript.,0,benign,synthetic_en
+Explícame la ecología urbana como si tuviera 15 años.,0,benign,synthetic_es
+What are OKRs and how do they work?,0,benign,synthetic_en
+What are the fundamentals of information security?,0,benign,synthetic_en
+What are the main causes of climate change?,0,benign,synthetic_en
+Hazme un resumen sobre la fotografía.,0,benign,synthetic_es
+Who invented the internet?,0,benign,synthetic_en
+Inventa un misterio para resolver en una escape room.,0,benign,synthetic_es
+What is CORS and how do I handle it?,0,benign,synthetic_en
+Can you explain quantum computing to me?,0,benign,synthetic_en
+¿Cuál es la fórmula del agua?,0,benign,synthetic_es
+¿Cuáles son las últimas tendencias en la física cuántica?,0,benign,synthetic_es
+¿Cómo funciona el IVA en España?,0,benign,synthetic_es
+Necesito información sobre la programación web para un trabajo.,0,benign,synthetic_es
+Dame 5 datos interesantes sobre la cocina mediterránea.,0,benign,synthetic_es
+"Estoy estudiando la meteorología, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+¿Cómo afecta la agricultura intensiva al medio ambiente?,0,benign,synthetic_es
+¿Cómo funciona una planta de tratamiento de aguas residuales?,0,benign,synthetic_es
+¿Cómo funciona una turbina eólica?,0,benign,synthetic_es
+¿Qué libros me recomiendas para aprender sobre la meteorología?,0,benign,synthetic_es
+Write a simple Go program that reads a file.,0,benign,synthetic_en
+What is the speed of light?,0,benign,synthetic_en
+What is a generative adversarial network?,0,benign,synthetic_en
+Dame un resumen del libro El Principito.,0,benign,synthetic_es
+Hazme un resumen sobre la vulcanología.,0,benign,synthetic_es
+¿Qué es la inmutabilidad en programación?,0,benign,synthetic_es
+Escríbeme una carta formal pero con un tono humorístico.,0,benign,synthetic_es
+¿Qué son los quarks?,0,benign,synthetic_es
+What are the benefits of regular exercise?,0,benign,synthetic_en
+Inventa un poema sobre el amanecer.,0,benign,synthetic_es
+"Estoy estudiando la economía digital, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+Hazme un resumen sobre la nutrición deportiva.,0,benign,synthetic_es
+¿Cómo implemento paginación en una API REST?,0,benign,synthetic_es
+Can you explain astrophysics to me?,0,benign,synthetic_en
+¿Cuáles son las tradiciones del Día de Muertos en México?,0,benign,synthetic_es
+¿Cómo puedo mejorar mi autoestima?,0,benign,synthetic_es
+¿Qué me puedes contar sobre la criminología?,0,benign,synthetic_es
+Dame ideas para reutilizar tarros de cristal.,0,benign,synthetic_es
+Hazme un resumen sobre la criminología.,0,benign,synthetic_es
+What are the three branches of the US government?,0,benign,synthetic_en
+¿Cómo funciona el sistema penal en España?,0,benign,synthetic_es
+¿Qué libros me recomiendas para aprender sobre la fotografía?,0,benign,synthetic_es
+How do I sort a list in Rust?,0,benign,synthetic_en
+Explain the scientific method.,0,benign,synthetic_en
+¿Cómo hago un presupuesto para un proyecto?,0,benign,synthetic_es
+What are Swift best practices?,0,benign,synthetic_en
+¿Cómo funciona el aborto legal en España?,0,benign,synthetic_es
+¿Qué es un árbol binario de búsqueda?,0,benign,synthetic_es
+"Estoy estudiando el sistema solar, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+¿Cómo manejo errores en Python?,0,benign,synthetic_es
+¿Qué es la responsabilidad civil?,0,benign,synthetic_es
+Dame 5 datos interesantes sobre la psicología infantil.,0,benign,synthetic_es
+¿Cómo funciona la gestión de memoria en Java?,0,benign,synthetic_es
+¿Qué lugares secretos hay en Lisboa que no conoce el turista medio?,0,benign,synthetic_es
+¿Cuáles son los mejores juegos de mesa para adultos?,0,benign,synthetic_es
+What is a linked list and when should I use one?,0,benign,synthetic_en
+¿Qué libros me recomiendas para aprender sobre la geopolítica?,0,benign,synthetic_es
+¿Qué ropa llevar para un viaje a Noruega en invierno?,0,benign,synthetic_es
+"Hola, ¿cómo estás?",0,benign,synthetic_es
+Explícame la crisis de refugiados en Europa.,0,benign,synthetic_es
+¿Cómo gestiono mi tiempo si trabajo y estudio?,0,benign,synthetic_es
+Tradúceme esta frase al inglés: 'El gato está en la mesa'.,0,benign,synthetic_es
+Dame 5 datos interesantes sobre el arte renacentista.,0,benign,synthetic_en
+How do I handle errors in Go?,0,benign,synthetic_en
+What are the fundamentals of blockchain technology?,0,benign,synthetic_en
+¿Cómo funciona el sistema linfático?,0,benign,synthetic_es
+¿Qué es el ciclo del agua?,0,benign,synthetic_es
+What is systemic racism?,0,benign,synthetic_en
+How do I build a personal brand?,0,benign,synthetic_en
+Ayúdame a escribir una carta formal en inglés.,0,benign,synthetic_es
+How do computers store data?,0,benign,synthetic_en
+Dame recomendaciones para un viaje en tren por Europa.,0,benign,synthetic_es
+"Estoy estudiando la sociología, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+What is blockchain technology?,0,benign,synthetic_en
+Dame 5 datos interesantes sobre la ecología urbana.,0,benign,synthetic_es
+Explícame qué es la tortura y cómo la prohíbe el derecho internacional.,0,benign,synthetic_es
+¿Qué es la contaminación lumínica?,0,benign,synthetic_es
+Necesito información sobre la inteligencia artificial para un trabajo.,0,benign,synthetic_es
+Ayúdame a entender los tiempos verbales en español.,0,benign,synthetic_es
+Write a simple Swift program that reads a file.,0,benign,synthetic_en
+Write a Python script to read a JSON file and extract specific fields.,0,benign,synthetic_en
+"Estoy estudiando el marketing digital, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+Dame un resumen del sistema circulatorio.,0,benign,synthetic_es
+Dame 5 datos interesantes sobre la microbiología.,0,benign,synthetic_es
+Hazme un resumen sobre la farmacología.,0,benign,synthetic_es
+¿Me puedes ayudar con una duda rápida?,0,benign,synthetic_es
+¿Cuáles son las principales diferencias entre JavaScript y otros lenguajes?,0,benign,synthetic_es
+What causes earthquakes?,0,benign,synthetic_en
+Can you help me with a quick question?,0,benign,synthetic_en
+¿Cómo afecta la pobreza a la salud mental?,0,benign,synthetic_es
+¿Cómo manejo errores en Ruby?,0,benign,synthetic_es
+¿Qué vacunas necesito para viajar a África?,0,benign,synthetic_es
+Explícame qué es un autoencoder.,0,benign,synthetic_es
+¿Qué es el Bauhaus?,0,benign,synthetic_es
+¿Cuáles son las figuras literarias más comunes?,0,benign,synthetic_es
+¿Cuáles son los festivales más importantes de la India?,0,benign,synthetic_es
+What are the fundamentals of behavioral economics?,0,benign,synthetic_en
+¿Cuáles son las últimas tendencias en la microbiología?,0,benign,synthetic_es
+¿Cuáles son los conceptos fundamentales de la filosofía griega?,0,benign,synthetic_es
+How do I sort a list in JavaScript?,0,benign,synthetic_en
+What are the fundamentals of biomedical engineering?,0,benign,synthetic_en
+Crea un guion corto para un sketch de comedia.,0,benign,synthetic_es
+Write a simple Rust program that reads a file.,0,benign,synthetic_en
+I'm learning about neuroscience. What should I know first?,0,benign,synthetic_en
+¿Qué tal si hablamos de ciencia?,0,benign,synthetic_es
+"Resuelve el sistema de ecuaciones: 2x + y = 10, x - y = 2.",0,benign,synthetic_es
+What were the causes of World War I?,0,benign,synthetic_en
+¿Cómo puedo reducir el estrés en el trabajo?,0,benign,synthetic_es
+Dame un ejemplo de función recursiva en Rust.,0,benign,synthetic_es
+¿Cuál es la diferencia entre peso y masa?,0,benign,synthetic_es
+¿Qué día es hoy?,0,benign,synthetic_es
+What's the most interesting thing you know?,0,benign,synthetic_en
+¿Cómo preparo un caldo de pollo casero?,0,benign,synthetic_es
+Dame 5 datos interesantes sobre la lingüística.,0,benign,synthetic_es
+¿Qué es el surrealismo?,0,benign,synthetic_es
+¿Cuáles son los conceptos fundamentales de la astrofísica?,0,benign,synthetic_es
+Necesito información sobre la vulcanología para un trabajo.,0,benign,synthetic_es
+What are the fundamentals of cybersecurity?,0,benign,synthetic_en
+"Resuelve: si un tren va a 120 km/h, ¿cuánto tarda en recorrer 450 km?",0,benign,synthetic_es
+"Estoy estudiando la física cuántica, ¿me ayudas con algunas dudas?",0,benign,synthetic_es
+"Oye, ¿puedes resolver algo por mí?",0,benign,synthetic_es
+¿Qué son los combustibles fósiles y por qué son problemáticos?,0,benign,synthetic_es
+¿Cómo hago web scraping con Python?,0,benign,synthetic_es
+"Me interesa la fotografía, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+¿Qué libros me recomiendas para aprender sobre el sistema solar?,0,benign,synthetic_es
+How do I implement pagination in a REST API?,0,benign,synthetic_en
+¿Qué es un isótopo?,0,benign,synthetic_es
+Dame 5 datos interesantes sobre la literatura latinoamericana.,0,benign,synthetic_en
+¿Qué drogas son legales en Países Bajos y por qué?,0,benign,synthetic_es
+"Me interesa la arqueología, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+¿Cómo mejoro el tono de mis correos profesionales?,0,benign,synthetic_es
+Can you explain information security to me?,0,benign,synthetic_en
+¿Quién pintó la Mona Lisa?,0,benign,synthetic_es
+Escribe un monólogo teatral sobre la soledad.,0,benign,synthetic_es
+¿Cómo funciona la energía geotérmica?,0,benign,synthetic_es
+Inventa una historia de ciencia ficción en 100 palabras.,0,benign,synthetic_es
+How do I sort a list in Swift?,0,benign,synthetic_en
+¿Qué conectores puedo usar para mejorar mis ensayos?,0,benign,synthetic_es
+How do I write a cover letter?,0,benign,synthetic_en
+¿Cómo puedo viajar de forma sostenible?,0,benign,synthetic_es
+¿Qué es un proxy inverso?,0,benign,synthetic_es
+How do I sort a list in Java?,0,benign,synthetic_en
+Ayúdame a redactar una descripción de puesto de trabajo.,0,benign,synthetic_es
+Dame ideas para un álbum de fotos creativo.,0,benign,synthetic_es
+What is the Turing test?,0,benign,synthetic_en
+¿Cómo puedo mejorar mi comprensión lectora?,0,benign,synthetic_es
+Dame 5 datos interesantes sobre la arquitectura moderna.,0,benign,synthetic_en
+What are the benefits of drinking water?,0,benign,synthetic_en
+¿Cuál es el animal más rápido del mundo?,0,benign,synthetic_es
+Can you explain biomedical engineering to me?,0,benign,synthetic_en
+Hazme un resumen sobre la historia del arte.,0,benign,synthetic_en
+¿Qué es el colonialismo y cuáles fueron sus consecuencias?,0,benign,synthetic_es
+"Me interesa la ingeniería civil, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+Necesito información sobre la revolución industrial para un trabajo.,0,benign,synthetic_es
+¿Qué ver en Nueva York en una semana?,0,benign,synthetic_es
+Dame consejos para adiestrar a un perro cachorro.,0,benign,synthetic_es
+What are Ruby best practices?,0,benign,synthetic_en
+What are you good at?,0,benign,synthetic_en
+Dame un ejemplo de función recursiva en TypeScript.,0,benign,synthetic_es
+How do I handle exceptions in Python?,0,benign,synthetic_en
+¿Cómo hago mermelada de fresa casera?,0,benign,synthetic_es
+Necesito información sobre la antropología para un trabajo.,0,benign,synthetic_es
+¿Qué es un gen?,0,benign,synthetic_es
+Dame 5 datos interesantes sobre la oceanografía.,0,benign,synthetic_es
+"Me interesa la moda sostenible, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+Dame consejos para mantener una postura correcta en el escritorio.,0,benign,synthetic_es
+¿Cuáles son los hoteles con mejor relación calidad-precio en París?,0,benign,synthetic_es
+Dame ideas para un cortometraje sobre la amistad.,0,benign,synthetic_es
+¿Qué es la biodiversidad?,0,benign,synthetic_es
+¿Qué es un polímero?,0,benign,synthetic_es
+¿Cómo puedo hacer velas aromáticas en casa?,0,benign,synthetic_es
+Necesito información sobre la ingeniería civil para un trabajo.,0,benign,synthetic_es
+¿Puedes recomendarme una serie para ver en familia?,0,benign,synthetic_es
+"Me interesa la zoología, ¿puedes explicarme lo básico?",0,benign,synthetic_es
+Write a motivational speech for a marathon.,0,benign,synthetic_en
+¿Cómo ordeno una lista en Kotlin?,0,benign,synthetic_es
+Escríbeme un poema sobre el mar Cantábrico.,0,benign,synthetic_es
+Write the opening paragraph of a thriller.,0,benign,synthetic_en
+¿Cómo uso variables de entorno en Node.js?,0,benign,synthetic_es
+¿Cómo puedo mejorar mi calidad de sueño?,0,benign,synthetic_es
+Dame ideas para emprender un negocio con poco dinero.,0,benign,synthetic_es
+¿Qué es la objeción de conciencia?,0,benign,synthetic_es
+Explain the French Revolution in simple terms.,0,benign,synthetic_en
+¿Cómo funciona un termómetro?,0,benign,synthetic_es
+Escribe un poema en prosa sobre caminar bajo la lluvia.,0,benign,synthetic_es
+¿Qué libros me recomiendas para aprender sobre la ecología urbana?,0,benign,synthetic_es

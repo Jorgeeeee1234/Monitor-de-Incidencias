@@ -53,7 +53,20 @@
       <div class="card fade-up" style="animation-delay:60ms">
         <h4 class="card-title">Detectores</h4>
         <div class="detectors" id="detectorPanel">
-          <span style="color: var(--ink-mute); font-size: 0.88rem;">Cargando…</span>
+          <span style="color: var(--ink-mute); font-size: 0.88rem;">Cargando...</span>
+        </div>
+        <div id="modelPickerWrap" style="display:none; margin-top:12px;">
+          <div class="hint" style="margin-bottom:8px;">Modelo del AI Classifier</div>
+          <div class="row" style="gap:8px; flex-wrap:wrap;">
+            <label class="chip checked" data-model-chip="llama">
+              <input type="radio" name="classifierModelPrompt" value="llama" checked>
+              llama
+            </label>
+            <label class="chip" data-model-chip="xlmr">
+              <input type="radio" name="classifierModelPrompt" value="xlmr">
+              xlmr
+            </label>
+          </div>
         </div>
       </div>
 
@@ -78,7 +91,7 @@
       <div class="card fade-up" style="animation-delay:180ms">
         <h4 class="card-title">Prompt</h4>
         <div class="composer">
-          <textarea id="promptInput" placeholder="Escribe una frase para verificar con las reglas…"></textarea>
+          <textarea id="promptInput" placeholder="Escribe una frase para verificar con las reglas..."></textarea>
           <div class="composer-footer">
             <span class="counter" id="counter">0 / 2000</span>
             <div class="row" style="gap:8px">
@@ -121,6 +134,7 @@ const els = {
   inputHint: $("inputHint"),
   signalBig: $("signalBig"),
   detectorPanel: $("detectorPanel"),
+  modelPickerWrap: $("modelPickerWrap"),
   resultBox: $("resultBox"),
   resultEmpty: $("resultEmpty"),
   resultContent: $("resultContent"),
@@ -143,24 +157,24 @@ els.promptInput.addEventListener("input", () => {
   els.counter.textContent = `${els.promptInput.value.length} / 2000`;
 });
 
-document.querySelectorAll(".phrase").forEach((b) => {
-  b.addEventListener("click", () => {
-    els.promptInput.value = b.dataset.phrase;
+document.querySelectorAll(".phrase").forEach((button) => {
+  button.addEventListener("click", () => {
+    els.promptInput.value = button.dataset.phrase;
     els.promptInput.dispatchEvent(new Event("input"));
     els.promptInput.focus();
   });
 });
 
-function updateSignal(det) {
+function updateSignal(detected) {
   els.inputDot.classList.remove("neutral", "green", "red");
   els.signalBig.classList.remove("detected", "clean");
-  if (det === null) {
+  if (detected === null) {
     els.inputDot.classList.add("neutral");
     els.inputStatus.textContent = "Sin analizar";
     els.inputHint.textContent = "Una coincidencia basta para marcar incidente.";
     return;
   }
-  if (det) {
+  if (detected) {
     els.inputDot.classList.add("red");
     els.signalBig.classList.add("detected");
     els.inputStatus.textContent = "Detectado";
@@ -173,77 +187,98 @@ function updateSignal(det) {
   }
 }
 
+function aiClassifierSelected() {
+  return Boolean(els.detectorPanel.querySelector('input[value="AI_CLASSIFIER"]:checked'));
+}
+
+function syncModelPicker() {
+  els.modelPickerWrap.style.display = aiClassifierSelected() ? "block" : "none";
+}
+
+function selectedModel() {
+  const checked = document.querySelector('input[name="classifierModelPrompt"]:checked');
+  return checked ? checked.value : "llama";
+}
+
 function renderDetectors(detectors) {
-  const list = (detectors || []).filter((d) => !d.is_default);
+  const list = (detectors || []).filter((detector) => !detector.is_default);
   if (!list.length) {
     els.detectorPanel.innerHTML = `<span style="color: var(--ink-mute); font-size: 0.88rem;">Solo GENERAL disponible</span>`;
+    syncModelPicker();
     return;
   }
-  els.detectorPanel.innerHTML = list.map((d) => {
-    const key = String(d.key || "").toUpperCase();
+
+  els.detectorPanel.innerHTML = list.map((detector) => {
+    const key = String(detector.key || "").toUpperCase();
     const label = DETECTOR_LABELS[key] || key;
-    const disabled = !d.enabled;
+    const disabled = !detector.enabled;
     return `
-      <label class="chip ${disabled ? 'disabled' : ''}">
-        <input type="checkbox" value="${escapeHtml(key)}" ${disabled ? 'disabled' : ''}>
+      <label class="chip ${disabled ? "disabled" : ""}">
+        <input type="checkbox" value="${escapeHtml(key)}" ${disabled ? "disabled" : ""}>
         ${escapeHtml(label)}
       </label>
     `;
   }).join("");
+
   els.detectorPanel.querySelectorAll(".chip").forEach((chip) => {
-    chip.addEventListener("click", (e) => {
+    chip.addEventListener("click", (event) => {
       if (chip.classList.contains("disabled")) return;
-      e.preventDefault();
+      event.preventDefault();
       const input = chip.querySelector("input");
       input.checked = !input.checked;
       chip.classList.toggle("checked", input.checked);
+      syncModelPicker();
     });
   });
+
+  syncModelPicker();
 }
 
 async function loadDetectors() {
   try {
-    const r = await fetch(`${API_BASE}/detectors`);
-    if (!r.ok) throw new Error();
-    const d = await r.json();
-    renderDetectors(d.detectors || []);
+    const response = await fetch(`${API_BASE}/detectors`);
+    if (!response.ok) throw new Error();
+    const data = await response.json();
+    renderDetectors(data.detectors || []);
   } catch {
     els.detectorPanel.innerHTML = `<span style="color: var(--ink-mute); font-size: 0.88rem;">No se pudieron cargar detectores</span>`;
+    syncModelPicker();
   }
 }
 
 function selectedDetectors() {
-  return [...els.detectorPanel.querySelectorAll("input:checked:not(:disabled)")].map(i => i.value);
+  return [...els.detectorPanel.querySelectorAll("input:checked:not(:disabled)")].map((input) => input.value);
 }
 
 function renderResult(data) {
   els.resultEmpty.style.display = "none";
   els.resultContent.style.display = "flex";
-  const det = Boolean(data.incident_detected);
+  const detected = Boolean(data.incident_detected);
   const detectors = Array.isArray(data.detectors_used) && data.detectors_used.length
-    ? data.detectors_used.join(", ") : "GENERAL";
+    ? data.detectors_used.join(", ")
+    : "GENERAL";
   const isMulti = Array.isArray(data.matches);
   const matches = isMulti ? data.matches : [];
 
-  els.resultPill.className = `pill ${det ? "danger" : "ok"}`;
-  els.resultPill.textContent = det ? "● incidente" : "● limpio";
+  els.resultPill.className = `pill ${detected ? "danger" : "ok"}`;
+  els.resultPill.textContent = detected ? "● incidente" : "● limpio";
 
   els.resultContent.innerHTML = `
     <div class="meta-grid">
-      <div class="meta-item"><div class="k">Incidente</div><div class="v">${det ? "Sí" : "No"}</div></div>
-      <div class="meta-item"><div class="k">Severidad</div><div class="v">${escapeHtml(data.severity ?? "—")}</div></div>
-      <div class="meta-item"><div class="k">Categoría</div><div class="v">${escapeHtml(data.category ?? "—")}</div></div>
-      <div class="meta-item"><div class="k">Regla</div><div class="v mono" style="font-size:0.82rem">${escapeHtml(data.rule_name ?? "—")}</div></div>
+      <div class="meta-item"><div class="k">Incidente</div><div class="v">${detected ? "Sí" : "No"}</div></div>
+      <div class="meta-item"><div class="k">Severidad</div><div class="v">${escapeHtml(data.severity ?? "-")}</div></div>
+      <div class="meta-item"><div class="k">Categoría</div><div class="v">${escapeHtml(data.category ?? "-")}</div></div>
+      <div class="meta-item"><div class="k">Regla</div><div class="v mono" style="font-size:0.82rem">${escapeHtml(data.rule_name ?? "-")}</div></div>
     </div>
     <div class="meta-item"><div class="k">Detectores</div><div class="v mono" style="font-size:0.82rem">${escapeHtml(detectors)}</div></div>
     ${isMulti ? `
       <div>
         <div class="k mono" style="font-size:0.68rem; color:var(--ink-mute); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:8px;">Coincidencias · ${escapeHtml(data.match_count ?? matches.length)}</div>
         <div class="match-list">
-          ${matches.length ? matches.map((m, i) => `
-            <div class="match-row" style="animation-delay:${i * 60}ms">
-              <span>${escapeHtml(m.rule_name)}</span>
-              <span class="pill danger">${escapeHtml(m.severity)}</span>
+          ${matches.length ? matches.map((match, index) => `
+            <div class="match-row" style="animation-delay:${index * 60}ms">
+              <span>${escapeHtml(match.rule_name)}</span>
+              <span class="pill danger">${escapeHtml(match.severity)}</span>
             </div>`).join("") : `<div style="color:var(--ink-mute); font-size:0.88rem;">Sin coincidencias.</div>`}
         </div>
       </div>
@@ -255,33 +290,42 @@ function renderResult(data) {
 async function submit(endpoint, button) {
   const content = els.promptInput.value.trim();
   if (!content) return;
+
   const original = button.textContent;
   els.checkBtn.disabled = true;
   els.checkMultiBtn.disabled = true;
-  button.textContent = "Verificando…";
+  button.textContent = "Verificando...";
   els.resultBox.classList.add("scanning");
   els.resultPill.className = "pill warn";
   els.resultPill.textContent = "● analizando";
 
   try {
     const payload = { content };
-    const d = selectedDetectors();
-    if (d.length) payload.detectors = d;
-    const r = await fetch(`${API_BASE}/${endpoint}`, {
+    const detectors = selectedDetectors();
+    if (detectors.length) payload.detectors = detectors;
+    if (detectors.includes("AI_CLASSIFIER")) payload.model = selectedModel();
+
+    const response = await fetch(`${API_BASE}/${endpoint}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
     });
-    if (!r.ok) {
-      const err = await r.json().catch(() => ({}));
-      throw new Error(err.detail || "Error al verificar.");
+    if (!response.ok) {
+      const error = await response.json().catch(() => ({}));
+      const message = response.status === 422
+        ? "Datos inválidos; verifica el formato del mensaje."
+        : response.status === 503
+        ? "Servicio no disponible; verifica que el servidor esté corriendo."
+        : error.detail || "Error al verificar.";
+      throw new Error(message);
     }
-    const data = await r.json();
+
+    const data = await response.json();
     renderResult(data);
-  } catch (e) {
+  } catch (error) {
     els.resultEmpty.style.display = "none";
     els.resultContent.style.display = "flex";
-    els.resultContent.innerHTML = `<div style="color:var(--red); font-family:var(--mono); font-size:0.88rem;">Error: ${escapeHtml(e.message || "desconocido")}</div>`;
+    els.resultContent.innerHTML = `<div style="color:var(--red); font-family:var(--mono); font-size:0.88rem;">Error: ${escapeHtml(error.message || "desconocido")}</div>`;
     els.resultPill.className = "pill danger";
     els.resultPill.textContent = "● error";
     updateSignal(null);
@@ -296,8 +340,16 @@ async function submit(endpoint, button) {
 els.checkBtn.addEventListener("click", () => submit("analyze", els.checkBtn));
 els.checkMultiBtn.addEventListener("click", () => submit("analyze-multimatch", els.checkMultiBtn));
 
-els.promptInput.addEventListener("keydown", (e) => {
-  if ((e.metaKey || e.ctrlKey) && e.key === "Enter") els.checkBtn.click();
+els.promptInput.addEventListener("keydown", (event) => {
+  if ((event.metaKey || event.ctrlKey) && event.key === "Enter") els.checkBtn.click();
+});
+
+document.querySelectorAll('input[name="classifierModelPrompt"]').forEach((input) => {
+  input.addEventListener("change", () => {
+    document.querySelectorAll("[data-model-chip]").forEach((chip) => {
+      chip.classList.toggle("checked", chip.querySelector("input").checked);
+    });
+  });
 });
 
 updateSignal(null);
