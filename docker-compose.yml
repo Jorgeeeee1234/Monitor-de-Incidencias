@@ -1,0 +1,82 @@
+services:
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-data:/root/.ollama
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 10s
+    restart: unless-stopped
+
+  ollama-init:
+    image: ollama/ollama:latest
+    depends_on:
+      ollama:
+        condition: service_healthy
+    entrypoint: ["ollama"]
+    environment:
+      OLLAMA_HOST: http://ollama:11434
+    command: ["pull", "${OLLAMA_MODEL:-qwen2.5:3b}"]
+    restart: "no"
+
+  prompt-guard:
+    build:
+      context: .
+      dockerfile: Dockerfile.prompt-guard
+    env_file:
+      - .env
+    environment:
+      PROMPT_GUARD_HOST: 0.0.0.0
+      PROMPT_GUARD_PORT: 8001
+      PROMPT_GUARD_ENABLED_MODELS: ${PROMPT_GUARD_ENABLED_MODELS:-xlmr}
+      PROMPT_GUARD_DEFAULT_MODEL: ${PROMPT_GUARD_DEFAULT_MODEL:-xlmr}
+      PROMPT_GUARD_XLMR_MODEL_ID: ${PROMPT_GUARD_XLMR_MODEL_ID:-modelo_final_xlmr_v2}
+      PROMPT_GUARD_XLMR_LOCAL_DIR: /app/model/modelo_final_xlmr_v2
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8001/health', timeout=5)"]
+      interval: 15s
+      timeout: 10s
+      retries: 8
+      start_period: 20s
+    restart: unless-stopped
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    depends_on:
+      prompt-guard:
+        condition: service_healthy
+      ollama-init:
+        condition: service_completed_successfully
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: sqlite:////app/data/incidents.db
+      OLLAMA_URL: http://ollama:11434/api/generate
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-qwen2.5:3b}
+      PROMPT_GUARD_BASE_URL: http://prompt-guard:8001
+      PROMPT_GUARD_TIMEOUT: ${PROMPT_GUARD_TIMEOUT:-10}
+      AI_CLASSIFIER_DEFAULT_MODEL: ${AI_CLASSIFIER_DEFAULT_MODEL:-xlmr}
+    ports:
+      - "8000:8000"
+    volumes:
+      - app-data:/app/data
+      - app-logs:/app/logs
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/docs', timeout=5)"]
+      interval: 15s
+      timeout: 10s
+      retries: 8
+      start_period: 20s
+    restart: unless-stopped
+
+volumes:
+  ollama-data:
+  app-data:
+  app-logs:

@@ -1,5 +1,6 @@
 import re
 import unicodedata
+import os
 import yaml
 from pathlib import Path
 from typing import Optional
@@ -36,6 +37,7 @@ class _RuleSchema(BaseModel):
 class RuleEngineService:
     DEFAULT_DETECTOR = "GENERAL"
     ML_CLASSIFIER_DETECTOR = "AI_CLASSIFIER"
+    DEFAULT_AI_MODEL = os.getenv("AI_CLASSIFIER_DEFAULT_MODEL", "xlmr").strip().lower()
     SEVERITY_RANK = {
         "CRITICAL": 5,
         "HIGH": 4,
@@ -170,7 +172,7 @@ class RuleEngineService:
         if self.ML_CLASSIFIER_DETECTOR not in selected_detectors:
             return None
 
-        selected_model = (model or "llama").strip().lower()
+        selected_model = (model or self.DEFAULT_AI_MODEL).strip().lower()
         if selected_model not in {"llama", "xlmr"}:
             raise ValueError("Invalid AI classifier model. Use 'llama' or 'xlmr'.")
 

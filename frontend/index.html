@@ -73,12 +73,12 @@
         <div id="modelPickerWrap" style="display:none; margin-top:12px;">
           <div class="hint" style="margin-bottom:8px;">Modelo del AI Classifier</div>
           <div class="row" style="gap:8px; flex-wrap:wrap;">
-            <label class="chip checked" data-model-chip="llama">
-              <input type="radio" name="classifierModelChat" value="llama" checked>
+            <label class="chip" data-model-chip="llama">
+              <input type="radio" name="classifierModelChat" value="llama">
               llama
             </label>
-            <label class="chip" data-model-chip="xlmr">
-              <input type="radio" name="classifierModelChat" value="xlmr">
+            <label class="chip checked" data-model-chip="xlmr">
+              <input type="radio" name="classifierModelChat" value="xlmr" checked>
               xlmr
             </label>
           </div>
@@ -249,7 +249,7 @@ function syncModelPicker() {
 
 function selectedModel() {
   const checked = document.querySelector('input[name="classifierModelChat"]:checked');
-  return checked ? checked.value : "llama";
+  return checked ? checked.value : "xlmr";
 }
 
 async function loadDetectors() {

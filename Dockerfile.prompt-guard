@@ -1,0 +1,21 @@
+FROM python:3.11-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
+
+WORKDIR /app
+
+COPY model/requirements-runtime.txt ./model/requirements-runtime.txt
+RUN pip install --no-cache-dir -r model/requirements-runtime.txt
+
+COPY model/__init__.py ./model/__init__.py
+COPY model/serve_prompt_guard.py ./model/serve_prompt_guard.py
+COPY model/modelo_final_xlmr_v2 ./model/modelo_final_xlmr_v2
+COPY docker/prompt-guard-entrypoint.sh /usr/local/bin/prompt-guard-entrypoint.sh
+
+RUN chmod +x /usr/local/bin/prompt-guard-entrypoint.sh
+
+EXPOSE 8001
+
+ENTRYPOINT ["prompt-guard-entrypoint.sh"]
+CMD ["python", "-m", "uvicorn", "model.serve_prompt_guard:app", "--host", "0.0.0.0", "--port", "8001"]

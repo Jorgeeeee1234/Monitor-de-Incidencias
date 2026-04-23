@@ -4,14 +4,13 @@ from pathlib import Path
 
 import torch
 import uvicorn
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from huggingface_hub import snapshot_download
 from pydantic import BaseModel
 from torch.nn.functional import softmax
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 from dotenv import load_dotenv
 load_dotenv()
-from groq import Groq
 
 MODEL_ID = os.getenv("PROMPT_GUARD_MODEL_ID", "meta-llama/Llama-Prompt-Guard-2-86M")
 XLMR_MODEL_ID = os.getenv("PROMPT_GUARD_XLMR_MODEL_ID", "alexoladom/prompt_guard_xlmr")
@@ -26,6 +25,18 @@ MODEL_THRESHOLD = float(os.getenv("PROMPT_GUARD_THRESHOLD", "0.80"))
 HOST = os.getenv("PROMPT_GUARD_HOST", "127.0.0.1")
 PORT = int(os.getenv("PROMPT_GUARD_PORT", "8001"))
 HF_TOKEN = os.getenv("HF_TOKEN")
+ENABLED_MODELS = tuple(
+    model_name.strip().lower()
+    for model_name in os.getenv("PROMPT_GUARD_ENABLED_MODELS", "llama,xlmr").split(",")
+    if model_name.strip()
+)
+DEFAULT_MODEL = os.getenv("PROMPT_GUARD_DEFAULT_MODEL", "xlmr").strip().lower()
+
+if not ENABLED_MODELS:
+    raise ValueError("PROMPT_GUARD_ENABLED_MODELS must enable at least one model.")
+
+if DEFAULT_MODEL not in ENABLED_MODELS:
+    DEFAULT_MODEL = ENABLED_MODELS[0]
 
 app = FastAPI(title="Prompt Guard Service")
 
@@ -72,6 +83,8 @@ def _resolve_xlmr_model_source() -> str:
 
 @lru_cache(maxsize=2)
 def _load_model(model_name: str):
+    if model_name not in ENABLED_MODELS:
+        raise ValueError(f"Modelo no habilitado: {model_name}")
     if model_name == "llama":
         model_id = _resolve_model_source(MODEL_ID)
         tokenizer = AutoTokenizer.from_pretrained(model_id, token=HF_TOKEN)
@@ -86,21 +99,28 @@ def _load_model(model_name: str):
     return tokenizer, model
 
 
-# Preload both models at startup
+# Preload enabled models at startup
 PRELOADED_MODELS = {}
+PRELOAD_ERRORS = {}
+
+
 def preload_models():
-    for model_name in ["llama", "xlmr"]:
+    PRELOADED_MODELS.clear()
+    PRELOAD_ERRORS.clear()
+    for model_name in ENABLED_MODELS:
         try:
             PRELOADED_MODELS[model_name] = _load_model(model_name)
         except Exception as e:
+            PRELOAD_ERRORS[model_name] = str(e)
             print(f"Error loading model {model_name}: {e}")
+
 
 preload_models()
 
 
 class ClassifyRequest(BaseModel):
     text: str
-    model: str = "llama"  # "llama" (default) or "xlmr"
+    model: str = DEFAULT_MODEL
 
 
 def _severity_from_score(score: float) -> str:
@@ -133,7 +153,7 @@ def _chunk_text(tokenizer, text: str) -> list[str]:
     return chunks or [text]
 
 
-def _classify_text(text: str, model_name: str = "llama") -> dict:
+def _classify_text(text: str, model_name: str = DEFAULT_MODEL) -> dict:
     tokenizer, model = _load_model(model_name)
     chunks = _chunk_text(tokenizer, text)
     best = {
@@ -206,14 +226,53 @@ def _classify_text(text: str, model_name: str = "llama") -> dict:
 
 @app.get("/health")
 def health():
-    _load_model("llama")
-    _load_model("xlmr")
-    return {"status": "ok", "models": list(PRELOADED_MODELS.keys())}
+    ready_models = []
+    errors = dict(PRELOAD_ERRORS)
+
+    for model_name in ENABLED_MODELS:
+        try:
+            _load_model(model_name)
+            ready_models.append(model_name)
+        except Exception as exc:
+            errors[model_name] = str(exc)
+
+    if not ready_models:
+        raise HTTPException(
+            status_code=503,
+            detail={
+                "status": "unavailable",
+                "models": [],
+                "default_model": DEFAULT_MODEL,
+                "errors": errors,
+            },
+        )
+
+    return {
+        "status": "ok",
+        "models": ready_models,
+        "default_model": DEFAULT_MODEL,
+        "errors": errors,
+    }
 
 
 @app.post("/classify")
 def classify(request: ClassifyRequest):
-    return _classify_text(request.text, request.model)
+    model_name = request.model.strip().lower()
+    if model_name not in ENABLED_MODELS:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Modelo no habilitado: {model_name}. Modelos disponibles: {', '.join(ENABLED_MODELS)}",
+        )
+
+    try:
+        return _classify_text(request.text, model_name)
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
+    except Exception as exc:
+        raise HTTPException(
+            status_code=503,
+            detail=f"No se pudo cargar el modelo '{model_name}': {exc}",
+        ) from exc
 
 
 if __name__ == "__main__":
